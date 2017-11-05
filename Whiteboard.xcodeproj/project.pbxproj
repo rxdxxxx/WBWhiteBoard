@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F590A8E4EFC967D179AF110 /* libPods-Whiteboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 575A3AB15B565552AC7D8CE9 /* libPods-Whiteboard.a */; };
+		46639C331FAEE4F6008A7AB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C321FAEE4F6008A7AB9 /* AppDelegate.m */; };
+		46639C3B1FAEE4F6008A7AB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46639C3A1FAEE4F6008A7AB9 /* Assets.xcassets */; };
+		46639C3E1FAEE4F6008A7AB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46639C3C1FAEE4F6008A7AB9 /* LaunchScreen.storyboard */; };
+		46639C411FAEE4F6008A7AB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C401FAEE4F6008A7AB9 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3A4B4B4C7956696616DAD624 /* Pods-Whiteboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whiteboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whiteboard/Pods-Whiteboard.debug.xcconfig"; sourceTree = "<group>"; };
+		46639C2E1FAEE4F6008A7AB9 /* Whiteboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whiteboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		46639C311FAEE4F6008A7AB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		46639C321FAEE4F6008A7AB9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		46639C3A1FAEE4F6008A7AB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46639C3D1FAEE4F6008A7AB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		46639C3F1FAEE4F6008A7AB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46639C401FAEE4F6008A7AB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		575A3AB15B565552AC7D8CE9 /* libPods-Whiteboard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Whiteboard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C44EE0C28D4AF7F5B5DEBA1 /* Pods-Whiteboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whiteboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whiteboard/Pods-Whiteboard.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46639C2B1FAEE4F6008A7AB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F590A8E4EFC967D179AF110 /* libPods-Whiteboard.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46639C251FAEE4F6008A7AB9 = {
+			isa = PBXGroup;
+			children = (
+				46639C301FAEE4F6008A7AB9 /* Whiteboard */,
+				46639C2F1FAEE4F6008A7AB9 /* Products */,
+				500DA24D86A040CD032EBFDF /* Pods */,
+				D1FF2394CE2C30C98654A049 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		46639C2F1FAEE4F6008A7AB9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46639C2E1FAEE4F6008A7AB9 /* Whiteboard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46639C301FAEE4F6008A7AB9 /* Whiteboard */ = {
+			isa = PBXGroup;
+			children = (
+				46639C311FAEE4F6008A7AB9 /* AppDelegate.h */,
+				46639C321FAEE4F6008A7AB9 /* AppDelegate.m */,
+				46639C3A1FAEE4F6008A7AB9 /* Assets.xcassets */,
+				46639C3C1FAEE4F6008A7AB9 /* LaunchScreen.storyboard */,
+				46639C3F1FAEE4F6008A7AB9 /* Info.plist */,
+				46639C401FAEE4F6008A7AB9 /* main.m */,
+			);
+			path = Whiteboard;
+			sourceTree = "<group>";
+		};
+		500DA24D86A040CD032EBFDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A4B4B4C7956696616DAD624 /* Pods-Whiteboard.debug.xcconfig */,
+				5C44EE0C28D4AF7F5B5DEBA1 /* Pods-Whiteboard.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D1FF2394CE2C30C98654A049 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				575A3AB15B565552AC7D8CE9 /* libPods-Whiteboard.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46639C2D1FAEE4F6008A7AB9 /* Whiteboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46639C441FAEE4F6008A7AB9 /* Build configuration list for PBXNativeTarget "Whiteboard" */;
+			buildPhases = (
+				5B85592B37FD5464A3E5AD08 /* [CP] Check Pods Manifest.lock */,
+				46639C2A1FAEE4F6008A7AB9 /* Sources */,
+				46639C2B1FAEE4F6008A7AB9 /* Frameworks */,
+				46639C2C1FAEE4F6008A7AB9 /* Resources */,
+				2E787CD2629D29A83A16E998 /* [CP] Embed Pods Frameworks */,
+				4CE15DD567B29EAA8DAD4431 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Whiteboard;
+			productName = Whiteboard;
+			productReference = 46639C2E1FAEE4F6008A7AB9 /* Whiteboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46639C261FAEE4F6008A7AB9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = RedRain;
+				TargetAttributes = {
+					46639C2D1FAEE4F6008A7AB9 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 46639C291FAEE4F6008A7AB9 /* Build configuration list for PBXProject "Whiteboard" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 46639C251FAEE4F6008A7AB9;
+			productRefGroup = 46639C2F1FAEE4F6008A7AB9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46639C2D1FAEE4F6008A7AB9 /* Whiteboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46639C2C1FAEE4F6008A7AB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46639C3E1FAEE4F6008A7AB9 /* LaunchScreen.storyboard in Resources */,
+				46639C3B1FAEE4F6008A7AB9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E787CD2629D29A83A16E998 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Whiteboard/Pods-Whiteboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CE15DD567B29EAA8DAD4431 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Whiteboard/Pods-Whiteboard-resources.sh",
+				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Whiteboard/Pods-Whiteboard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B85592B37FD5464A3E5AD08 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Whiteboard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46639C2A1FAEE4F6008A7AB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46639C411FAEE4F6008A7AB9 /* main.m in Sources */,
+				46639C331FAEE4F6008A7AB9 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		46639C3C1FAEE4F6008A7AB9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46639C3D1FAEE4F6008A7AB9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		46639C421FAEE4F6008A7AB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		46639C431FAEE4F6008A7AB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		46639C451FAEE4F6008A7AB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A4B4B4C7956696616DAD624 /* Pods-Whiteboard.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Whiteboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.redrain.Whiteboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		46639C461FAEE4F6008A7AB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C44EE0C28D4AF7F5B5DEBA1 /* Pods-Whiteboard.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Whiteboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.redrain.Whiteboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46639C291FAEE4F6008A7AB9 /* Build configuration list for PBXProject "Whiteboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46639C421FAEE4F6008A7AB9 /* Debug */,
+				46639C431FAEE4F6008A7AB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46639C441FAEE4F6008A7AB9 /* Build configuration list for PBXNativeTarget "Whiteboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46639C451FAEE4F6008A7AB9 /* Debug */,
+				46639C461FAEE4F6008A7AB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46639C261FAEE4F6008A7AB9 /* Project object */;
+}

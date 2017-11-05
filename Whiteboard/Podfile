@@ -1,0 +1,15 @@
+platform :ios, '8.0'
+
+target "Whiteboard" do
+
+#use_frameworks!
+
+pod 'AFNetworking'
+pod 'MBProgressHUD'
+pod 'SDWebImage'
+pod 'FMDB'
+pod 'MJRefresh'
+pod 'Masonry'
+pod 'AVOSCloud'
+
+end
