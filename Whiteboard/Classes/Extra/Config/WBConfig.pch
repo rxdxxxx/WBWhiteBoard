@@ -1,0 +1,16 @@
+//
+//  WBConfig.pch
+//  Whiteboard
+//
+//  Created by RedRain on 2017/11/5.
+//  Copyright © 2017年 RedRain. All rights reserved.
+//
+
+#ifndef WBConfig_pch
+#define WBConfig_pch
+
+#import "RRConst.h"
+#import "UIView+Frame.h"
+
+
+#endif /* WBConfig_pch */

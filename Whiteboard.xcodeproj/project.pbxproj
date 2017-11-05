@@ -12,6 +12,13 @@
 		46639C3B1FAEE4F6008A7AB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46639C3A1FAEE4F6008A7AB9 /* Assets.xcassets */; };
 		46639C3E1FAEE4F6008A7AB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46639C3C1FAEE4F6008A7AB9 /* LaunchScreen.storyboard */; };
 		46639C411FAEE4F6008A7AB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C401FAEE4F6008A7AB9 /* main.m */; };
+		46639C561FAEE96C008A7AB9 /* RRBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C551FAEE96C008A7AB9 /* RRBaseController.m */; };
+		46639C5F1FAEEB3E008A7AB9 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C5E1FAEEB3E008A7AB9 /* UIColor+Hex.m */; };
+		46639C6D1FAEEC1E008A7AB9 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C631FAEEC1E008A7AB9 /* UIView+Frame.m */; };
+		46639C6E1FAEEC1E008A7AB9 /* UIView+Inspectable.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C661FAEEC1E008A7AB9 /* UIView+Inspectable.m */; };
+		46639C6F1FAEEC1E008A7AB9 /* UIView+NextResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C691FAEEC1E008A7AB9 /* UIView+NextResponder.m */; };
+		46639C701FAEEC1E008A7AB9 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C6C1FAEEC1E008A7AB9 /* UIView+Toast.m */; };
+		46639C771FAEEC32008A7AB9 /* UIViewController+NavBarItemExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C751FAEEC32008A7AB9 /* UIViewController+NavBarItemExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +30,23 @@
 		46639C3D1FAEE4F6008A7AB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46639C3F1FAEE4F6008A7AB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46639C401FAEE4F6008A7AB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		46639C541FAEE96C008A7AB9 /* RRBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRBaseController.h; sourceTree = "<group>"; };
+		46639C551FAEE96C008A7AB9 /* RRBaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRBaseController.m; sourceTree = "<group>"; };
+		46639C591FAEEA2A008A7AB9 /* WBConfig.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBConfig.pch; sourceTree = "<group>"; };
+		46639C5A1FAEEA99008A7AB9 /* RRConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRConst.h; sourceTree = "<group>"; };
+		46639C5B1FAEEABB008A7AB9 /* LxDBAnything.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LxDBAnything.h; sourceTree = "<group>"; };
+		46639C5D1FAEEB3E008A7AB9 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		46639C5E1FAEEB3E008A7AB9 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		46639C621FAEEC1E008A7AB9 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		46639C631FAEEC1E008A7AB9 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		46639C651FAEEC1E008A7AB9 /* UIView+Inspectable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Inspectable.h"; sourceTree = "<group>"; };
+		46639C661FAEEC1E008A7AB9 /* UIView+Inspectable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Inspectable.m"; sourceTree = "<group>"; };
+		46639C681FAEEC1E008A7AB9 /* UIView+NextResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NextResponder.h"; sourceTree = "<group>"; };
+		46639C691FAEEC1E008A7AB9 /* UIView+NextResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NextResponder.m"; sourceTree = "<group>"; };
+		46639C6B1FAEEC1E008A7AB9 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		46639C6C1FAEEC1E008A7AB9 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		46639C741FAEEC32008A7AB9 /* UIViewController+NavBarItemExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavBarItemExtension.h"; sourceTree = "<group>"; };
+		46639C751FAEEC32008A7AB9 /* UIViewController+NavBarItemExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavBarItemExtension.m"; sourceTree = "<group>"; };
 		575A3AB15B565552AC7D8CE9 /* libPods-Whiteboard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Whiteboard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C44EE0C28D4AF7F5B5DEBA1 /* Pods-Whiteboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whiteboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whiteboard/Pods-Whiteboard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,14 +84,183 @@
 		46639C301FAEE4F6008A7AB9 /* Whiteboard */ = {
 			isa = PBXGroup;
 			children = (
+				46639C471FAEE893008A7AB9 /* Classes */,
 				46639C311FAEE4F6008A7AB9 /* AppDelegate.h */,
 				46639C321FAEE4F6008A7AB9 /* AppDelegate.m */,
 				46639C3A1FAEE4F6008A7AB9 /* Assets.xcassets */,
+				46639C4C1FAEE8A1008A7AB9 /* OtherFiles */,
+			);
+			path = Whiteboard;
+			sourceTree = "<group>";
+		};
+		46639C471FAEE893008A7AB9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				46639C4A1FAEE893008A7AB9 /* UIModules */,
+				46639C481FAEE893008A7AB9 /* ModuleControl */,
+				46639C491FAEE893008A7AB9 /* ServiceSDK */,
+				46639C4B1FAEE893008A7AB9 /* Extra */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		46639C481FAEE893008A7AB9 /* ModuleControl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModuleControl;
+			sourceTree = "<group>";
+		};
+		46639C491FAEE893008A7AB9 /* ServiceSDK */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ServiceSDK;
+			sourceTree = "<group>";
+		};
+		46639C4A1FAEE893008A7AB9 /* UIModules */ = {
+			isa = PBXGroup;
+			children = (
+				46639C511FAEE927008A7AB9 /* LoginAndRegister */,
+			);
+			path = UIModules;
+			sourceTree = "<group>";
+		};
+		46639C4B1FAEE893008A7AB9 /* Extra */ = {
+			isa = PBXGroup;
+			children = (
+				46639C581FAEE9A8008A7AB9 /* Config */,
+				46639C571FAEE993008A7AB9 /* Category */,
+				46639C4D1FAEE8D3008A7AB9 /* Base */,
+			);
+			path = Extra;
+			sourceTree = "<group>";
+		};
+		46639C4C1FAEE8A1008A7AB9 /* OtherFiles */ = {
+			isa = PBXGroup;
+			children = (
 				46639C3C1FAEE4F6008A7AB9 /* LaunchScreen.storyboard */,
 				46639C3F1FAEE4F6008A7AB9 /* Info.plist */,
 				46639C401FAEE4F6008A7AB9 /* main.m */,
 			);
-			path = Whiteboard;
+			name = OtherFiles;
+			sourceTree = "<group>";
+		};
+		46639C4D1FAEE8D3008A7AB9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				46639C531FAEE952008A7AB9 /* BaseViewController */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		46639C511FAEE927008A7AB9 /* LoginAndRegister */ = {
+			isa = PBXGroup;
+			children = (
+				46639C521FAEE936008A7AB9 /* Login */,
+			);
+			path = LoginAndRegister;
+			sourceTree = "<group>";
+		};
+		46639C521FAEE936008A7AB9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		46639C531FAEE952008A7AB9 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				46639C541FAEE96C008A7AB9 /* RRBaseController.h */,
+				46639C551FAEE96C008A7AB9 /* RRBaseController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		46639C571FAEE993008A7AB9 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				46639C711FAEEC32008A7AB9 /* UIViewController */,
+				46639C601FAEEC1E008A7AB9 /* UIView */,
+				46639C5C1FAEEB1E008A7AB9 /* Color */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		46639C581FAEE9A8008A7AB9 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				46639C5B1FAEEABB008A7AB9 /* LxDBAnything.h */,
+				46639C591FAEEA2A008A7AB9 /* WBConfig.pch */,
+				46639C5A1FAEEA99008A7AB9 /* RRConst.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		46639C5C1FAEEB1E008A7AB9 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				46639C5D1FAEEB3E008A7AB9 /* UIColor+Hex.h */,
+				46639C5E1FAEEB3E008A7AB9 /* UIColor+Hex.m */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		46639C601FAEEC1E008A7AB9 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				46639C611FAEEC1E008A7AB9 /* UIView+Frame */,
+				46639C641FAEEC1E008A7AB9 /* UIView+Inspectable */,
+				46639C671FAEEC1E008A7AB9 /* UIView+NextResponder */,
+				46639C6A1FAEEC1E008A7AB9 /* UIView+Toast */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		46639C611FAEEC1E008A7AB9 /* UIView+Frame */ = {
+			isa = PBXGroup;
+			children = (
+				46639C621FAEEC1E008A7AB9 /* UIView+Frame.h */,
+				46639C631FAEEC1E008A7AB9 /* UIView+Frame.m */,
+			);
+			path = "UIView+Frame";
+			sourceTree = "<group>";
+		};
+		46639C641FAEEC1E008A7AB9 /* UIView+Inspectable */ = {
+			isa = PBXGroup;
+			children = (
+				46639C651FAEEC1E008A7AB9 /* UIView+Inspectable.h */,
+				46639C661FAEEC1E008A7AB9 /* UIView+Inspectable.m */,
+			);
+			path = "UIView+Inspectable";
+			sourceTree = "<group>";
+		};
+		46639C671FAEEC1E008A7AB9 /* UIView+NextResponder */ = {
+			isa = PBXGroup;
+			children = (
+				46639C681FAEEC1E008A7AB9 /* UIView+NextResponder.h */,
+				46639C691FAEEC1E008A7AB9 /* UIView+NextResponder.m */,
+			);
+			path = "UIView+NextResponder";
+			sourceTree = "<group>";
+		};
+		46639C6A1FAEEC1E008A7AB9 /* UIView+Toast */ = {
+			isa = PBXGroup;
+			children = (
+				46639C6B1FAEEC1E008A7AB9 /* UIView+Toast.h */,
+				46639C6C1FAEEC1E008A7AB9 /* UIView+Toast.m */,
+			);
+			path = "UIView+Toast";
+			sourceTree = "<group>";
+		};
+		46639C711FAEEC32008A7AB9 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				46639C741FAEEC32008A7AB9 /* UIViewController+NavBarItemExtension.h */,
+				46639C751FAEEC32008A7AB9 /* UIViewController+NavBarItemExtension.m */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 		500DA24D86A040CD032EBFDF /* Pods */ = {
@@ -215,8 +408,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46639C701FAEEC1E008A7AB9 /* UIView+Toast.m in Sources */,
 				46639C411FAEE4F6008A7AB9 /* main.m in Sources */,
+				46639C6E1FAEEC1E008A7AB9 /* UIView+Inspectable.m in Sources */,
+				46639C5F1FAEEB3E008A7AB9 /* UIColor+Hex.m in Sources */,
+				46639C561FAEE96C008A7AB9 /* RRBaseController.m in Sources */,
+				46639C771FAEEC32008A7AB9 /* UIViewController+NavBarItemExtension.m in Sources */,
+				46639C6D1FAEEC1E008A7AB9 /* UIView+Frame.m in Sources */,
 				46639C331FAEE4F6008A7AB9 /* AppDelegate.m in Sources */,
+				46639C6F1FAEEC1E008A7AB9 /* UIView+NextResponder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +545,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "${SRCROOT}/Whiteboard/Classes/Extra/Config/WBConfig.pch";
 				INFOPLIST_FILE = Whiteboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -362,6 +563,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "${SRCROOT}/Whiteboard/Classes/Extra/Config/WBConfig.pch";
 				INFOPLIST_FILE = Whiteboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
