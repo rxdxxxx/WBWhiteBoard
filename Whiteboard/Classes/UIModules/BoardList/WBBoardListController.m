@@ -8,6 +8,7 @@
 
 #import "WBBoardListController.h"
 #import "WBBlackboardListItemCell.h"
+#import "WBBoardAddController.h"
 
 @interface WBBoardListController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -20,8 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self rr_initTitleView:@"我的小黑板"];
-    [self rr_initNavRightBtnWithImageName:@"ico_nav_add" target:self action:@selector(didReceiveMemoryWarning)];
+    [self rr_initTitleView:@"我的小白板"];
+    [self rr_initNavRightBtnWithImageName:@"ico_nav_add" target:self action:@selector(navRightBtnClick)];
     
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"WBBlackboardListItemCell" bundle:nil] forCellWithReuseIdentifier:NSStringFromClass(WBBlackboardListItemCell.class)];
@@ -29,6 +30,11 @@
     flowLayout.itemSize =  CGSizeMake(kScreenWidth * 0.5, 244);
     self.collectionView.collectionViewLayout = flowLayout;
     [self.collectionView reloadData];
+    if (@available(iOS 11.0, *)) {
+        self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        // Fallback on earlier versions
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,6 +54,12 @@
 
 #pragma mark -  CustomDelegate
 #pragma mark -  Event Response
+- (void)navRightBtnClick{
+    WBBoardAddController *vc = [WBBoardAddController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
 #pragma mark -  Private Methods
 #pragma mark -  Public Methods
 #pragma mark -  Getters and Setters

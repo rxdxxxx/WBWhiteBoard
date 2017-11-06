@@ -20,6 +20,10 @@
 		465E47B71FB05CBF0067ABED /* WBBoardListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465E47B51FB05CBF0067ABED /* WBBoardListController.xib */; };
 		465E47BC1FB05D2F0067ABED /* WBBlackboardListItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E47BA1FB05D2F0067ABED /* WBBlackboardListItemCell.m */; };
 		465E47BD1FB05D2F0067ABED /* WBBlackboardListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465E47BB1FB05D2F0067ABED /* WBBlackboardListItemCell.xib */; };
+		465E47C21FB060430067ABED /* WBBoardAddController.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E47C01FB060430067ABED /* WBBoardAddController.m */; };
+		465E47C31FB060430067ABED /* WBBoardAddController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465E47C11FB060430067ABED /* WBBoardAddController.xib */; };
+		465E47C71FB062780067ABED /* WBSelectPhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E47C61FB062780067ABED /* WBSelectPhotoTool.m */; };
+		465E47CB1FB062D40067ABED /* UITools.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E47CA1FB062D40067ABED /* UITools.m */; };
 		46639C331FAEE4F6008A7AB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C321FAEE4F6008A7AB9 /* AppDelegate.m */; };
 		46639C3B1FAEE4F6008A7AB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46639C3A1FAEE4F6008A7AB9 /* Assets.xcassets */; };
 		46639C3E1FAEE4F6008A7AB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46639C3C1FAEE4F6008A7AB9 /* LaunchScreen.storyboard */; };
@@ -66,6 +70,13 @@
 		465E47B91FB05D2F0067ABED /* WBBlackboardListItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBBlackboardListItemCell.h; sourceTree = "<group>"; };
 		465E47BA1FB05D2F0067ABED /* WBBlackboardListItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBBlackboardListItemCell.m; sourceTree = "<group>"; };
 		465E47BB1FB05D2F0067ABED /* WBBlackboardListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBBlackboardListItemCell.xib; sourceTree = "<group>"; };
+		465E47BF1FB060430067ABED /* WBBoardAddController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBBoardAddController.h; sourceTree = "<group>"; };
+		465E47C01FB060430067ABED /* WBBoardAddController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBBoardAddController.m; sourceTree = "<group>"; };
+		465E47C11FB060430067ABED /* WBBoardAddController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBBoardAddController.xib; sourceTree = "<group>"; };
+		465E47C51FB062780067ABED /* WBSelectPhotoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSelectPhotoTool.h; sourceTree = "<group>"; };
+		465E47C61FB062780067ABED /* WBSelectPhotoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSelectPhotoTool.m; sourceTree = "<group>"; };
+		465E47C91FB062D40067ABED /* UITools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITools.h; sourceTree = "<group>"; };
+		465E47CA1FB062D40067ABED /* UITools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITools.m; sourceTree = "<group>"; };
 		46639C2E1FAEE4F6008A7AB9 /* Whiteboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whiteboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46639C311FAEE4F6008A7AB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46639C321FAEE4F6008A7AB9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -204,6 +215,34 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		465E47BE1FB0602D0067ABED /* BoardAdd */ = {
+			isa = PBXGroup;
+			children = (
+				465E47BF1FB060430067ABED /* WBBoardAddController.h */,
+				465E47C01FB060430067ABED /* WBBoardAddController.m */,
+				465E47C11FB060430067ABED /* WBBoardAddController.xib */,
+			);
+			path = BoardAdd;
+			sourceTree = "<group>";
+		};
+		465E47C41FB062780067ABED /* SelectPhotoTool */ = {
+			isa = PBXGroup;
+			children = (
+				465E47C51FB062780067ABED /* WBSelectPhotoTool.h */,
+				465E47C61FB062780067ABED /* WBSelectPhotoTool.m */,
+			);
+			path = SelectPhotoTool;
+			sourceTree = "<group>";
+		};
+		465E47C81FB062C40067ABED /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				465E47C91FB062D40067ABED /* UITools.h */,
+				465E47CA1FB062D40067ABED /* UITools.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		46639C251FAEE4F6008A7AB9 = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +303,7 @@
 		46639C4A1FAEE893008A7AB9 /* UIModules */ = {
 			isa = PBXGroup;
 			children = (
+				465E47BE1FB0602D0067ABED /* BoardAdd */,
 				465E47B21FB05CA50067ABED /* BoardList */,
 				46639CA01FAF1636008A7AB9 /* Me */,
 				46639C9C1FAF162C008A7AB9 /* HomePage */,
@@ -275,6 +315,7 @@
 		46639C4B1FAEE893008A7AB9 /* Extra */ = {
 			isa = PBXGroup;
 			children = (
+				465E47C81FB062C40067ABED /* Tools */,
 				46639CA41FAF1790008A7AB9 /* CustomView */,
 				46639C581FAEE9A8008A7AB9 /* Config */,
 				46639C571FAEE993008A7AB9 /* Category */,
@@ -467,6 +508,7 @@
 		46639CA41FAF1790008A7AB9 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				465E47C41FB062780067ABED /* SelectPhotoTool */,
 				46639CA51FAF179A008A7AB9 /* HUD */,
 			);
 			path = CustomView;
@@ -565,6 +607,7 @@
 				46639C3E1FAEE4F6008A7AB9 /* LaunchScreen.storyboard in Resources */,
 				465E47BD1FB05D2F0067ABED /* WBBlackboardListItemCell.xib in Resources */,
 				465E47B71FB05CBF0067ABED /* WBBoardListController.xib in Resources */,
+				465E47C31FB060430067ABED /* WBBoardAddController.xib in Resources */,
 				46639C3B1FAEE4F6008A7AB9 /* Assets.xcassets in Resources */,
 				465E47B11FB05C6C0067ABED /* WBHomePageCell.xib in Resources */,
 				465E47A21FB04FB40067ABED /* WBMeHeaderView.xib in Resources */,
@@ -639,6 +682,7 @@
 				46639C411FAEE4F6008A7AB9 /* main.m in Sources */,
 				465E47A01FB04FAA0067ABED /* WBMeHeaderView.m in Sources */,
 				46639C7F1FAEF256008A7AB9 /* WBModuleControl.m in Sources */,
+				465E47C71FB062780067ABED /* WBSelectPhotoTool.m in Sources */,
 				46639C6E1FAEEC1E008A7AB9 /* UIView+Inspectable.m in Sources */,
 				46639CA31FAF1642008A7AB9 /* WBMEController.m in Sources */,
 				465E47A61FB050DC0067ABED /* WBMeMoreCell.m in Sources */,
@@ -647,6 +691,7 @@
 				46639C901FAF1334008A7AB9 /* WBTabBar.m in Sources */,
 				46639C8C1FAF12FA008A7AB9 /* WBTabBarController.m in Sources */,
 				46639C561FAEE96C008A7AB9 /* WBBaseController.m in Sources */,
+				465E47CB1FB062D40067ABED /* UITools.m in Sources */,
 				465E47B61FB05CBF0067ABED /* WBBoardListController.m in Sources */,
 				465E47951FB04AFA0067ABED /* WBHomePageCellModel.m in Sources */,
 				46639C7B1FAEF0FC008A7AB9 /* WBLoginController.m in Sources */,
@@ -658,6 +703,7 @@
 				46639C331FAEE4F6008A7AB9 /* AppDelegate.m in Sources */,
 				46639CA81FAF17AF008A7AB9 /* WBHUD.m in Sources */,
 				46639C6F1FAEEC1E008A7AB9 /* UIView+NextResponder.m in Sources */,
+				465E47C21FB060430067ABED /* WBBoardAddController.m in Sources */,
 				46639C9F1FAF162D008A7AB9 /* WBHomePageController.m in Sources */,
 				46639C841FAEF569008A7AB9 /* WBRegisterController.m in Sources */,
 			);
