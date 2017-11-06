@@ -7,32 +7,51 @@
 //
 
 #import "WBMEController.h"
+#import "WBMeMoreCell.h"
+#import "WBMeHeaderView.h"
 
 @interface WBMEController ()
 
 @end
 
 @implementation WBMEController
+#pragma mark -  Life Cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self rr_initTitleView:@"小白板"];
+    
+    self.tableView.tableHeaderView = [WBMeHeaderView lcg_viewFromXib];
+    [self.view addSubview:self.tableView];
+}
+- (void)viewDidLayoutSubviews{
+    
+    self.tableView.frame = self.view.bounds;
+    self.tableView.height = self.tableView.height - 49;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark -  UITableViewDelegate
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    WBMeMoreCell *cell = [WBMeMoreCell cellWithTableView:tableView];
+    return cell;
 }
-*/
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}
+#pragma mark -  CustomDelegate
+#pragma mark -  Event Response
+#pragma mark -  Private Methods
+#pragma mark -  Public Methods
+#pragma mark -  Getters and Setters
 
 @end

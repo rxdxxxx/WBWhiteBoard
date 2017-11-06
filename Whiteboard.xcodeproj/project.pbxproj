@@ -12,6 +12,10 @@
 		465E47951FB04AFA0067ABED /* WBHomePageCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E47941FB04AFA0067ABED /* WBHomePageCellModel.m */; };
 		465E47991FB04B110067ABED /* WBHomePageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E47971FB04B110067ABED /* WBHomePageCell.m */; };
 		465E479A1FB04B110067ABED /* WBHomePageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465E47981FB04B110067ABED /* WBHomePageCell.xib */; };
+		465E47A01FB04FAA0067ABED /* WBMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E479F1FB04FAA0067ABED /* WBMeHeaderView.m */; };
+		465E47A21FB04FB40067ABED /* WBMeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465E47A11FB04FB40067ABED /* WBMeHeaderView.xib */; };
+		465E47A61FB050DC0067ABED /* WBMeMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E47A41FB050DC0067ABED /* WBMeMoreCell.m */; };
+		465E47A71FB050DC0067ABED /* WBMeMoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465E47A51FB050DC0067ABED /* WBMeMoreCell.xib */; };
 		46639C331FAEE4F6008A7AB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C321FAEE4F6008A7AB9 /* AppDelegate.m */; };
 		46639C3B1FAEE4F6008A7AB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46639C3A1FAEE4F6008A7AB9 /* Assets.xcassets */; };
 		46639C3E1FAEE4F6008A7AB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46639C3C1FAEE4F6008A7AB9 /* LaunchScreen.storyboard */; };
@@ -46,6 +50,12 @@
 		465E47961FB04B110067ABED /* WBHomePageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WBHomePageCell.h; path = Whiteboard/Classes/UIModules/HomePage/Model/WBHomePageCell.h; sourceTree = SOURCE_ROOT; };
 		465E47971FB04B110067ABED /* WBHomePageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WBHomePageCell.m; path = Whiteboard/Classes/UIModules/HomePage/Model/WBHomePageCell.m; sourceTree = SOURCE_ROOT; };
 		465E47981FB04B110067ABED /* WBHomePageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WBHomePageCell.xib; path = Whiteboard/Classes/UIModules/HomePage/Model/WBHomePageCell.xib; sourceTree = SOURCE_ROOT; };
+		465E479E1FB04FAA0067ABED /* WBMeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBMeHeaderView.h; sourceTree = "<group>"; };
+		465E479F1FB04FAA0067ABED /* WBMeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBMeHeaderView.m; sourceTree = "<group>"; };
+		465E47A11FB04FB40067ABED /* WBMeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBMeHeaderView.xib; sourceTree = "<group>"; };
+		465E47A31FB050DC0067ABED /* WBMeMoreCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBMeMoreCell.h; sourceTree = "<group>"; };
+		465E47A41FB050DC0067ABED /* WBMeMoreCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBMeMoreCell.m; sourceTree = "<group>"; };
+		465E47A51FB050DC0067ABED /* WBMeMoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBMeMoreCell.xib; sourceTree = "<group>"; };
 		46639C2E1FAEE4F6008A7AB9 /* Whiteboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whiteboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46639C311FAEE4F6008A7AB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46639C321FAEE4F6008A7AB9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -135,6 +145,33 @@
 			);
 			name = Cell;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		465E479B1FB04EE90067ABED /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				465E47A31FB050DC0067ABED /* WBMeMoreCell.h */,
+				465E47A41FB050DC0067ABED /* WBMeMoreCell.m */,
+				465E47A51FB050DC0067ABED /* WBMeMoreCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		465E479C1FB04EF30067ABED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		465E479D1FB04F9A0067ABED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				465E479E1FB04FAA0067ABED /* WBMeHeaderView.h */,
+				465E479F1FB04FAA0067ABED /* WBMeHeaderView.m */,
+				465E47A11FB04FB40067ABED /* WBMeHeaderView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		46639C251FAEE4F6008A7AB9 = {
@@ -387,6 +424,9 @@
 		46639CA01FAF1636008A7AB9 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				465E479D1FB04F9A0067ABED /* Views */,
+				465E479C1FB04EF30067ABED /* Model */,
+				465E479B1FB04EE90067ABED /* Cell */,
 				46639CA11FAF1642008A7AB9 /* WBMEController.h */,
 				46639CA21FAF1642008A7AB9 /* WBMEController.m */,
 			);
@@ -489,10 +529,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465E47A71FB050DC0067ABED /* WBMeMoreCell.xib in Resources */,
 				465E479A1FB04B110067ABED /* WBHomePageCell.xib in Resources */,
 				46639C7C1FAEF0FC008A7AB9 /* WBLoginController.xib in Resources */,
 				46639C3E1FAEE4F6008A7AB9 /* LaunchScreen.storyboard in Resources */,
 				46639C3B1FAEE4F6008A7AB9 /* Assets.xcassets in Resources */,
+				465E47A21FB04FB40067ABED /* WBMeHeaderView.xib in Resources */,
 				46639C851FAEF569008A7AB9 /* WBRegisterController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,9 +604,11 @@
 				46639C701FAEEC1E008A7AB9 /* UIView+Toast.m in Sources */,
 				465E478D1FB0454C0067ABED /* NSString+OPSize.m in Sources */,
 				46639C411FAEE4F6008A7AB9 /* main.m in Sources */,
+				465E47A01FB04FAA0067ABED /* WBMeHeaderView.m in Sources */,
 				46639C7F1FAEF256008A7AB9 /* WBModuleControl.m in Sources */,
 				46639C6E1FAEEC1E008A7AB9 /* UIView+Inspectable.m in Sources */,
 				46639CA31FAF1642008A7AB9 /* WBMEController.m in Sources */,
+				465E47A61FB050DC0067ABED /* WBMeMoreCell.m in Sources */,
 				46639C881FAF0C03008A7AB9 /* WBNavigationController.m in Sources */,
 				46639C5F1FAEEB3E008A7AB9 /* UIColor+Hex.m in Sources */,
 				46639C901FAF1334008A7AB9 /* WBTabBar.m in Sources */,

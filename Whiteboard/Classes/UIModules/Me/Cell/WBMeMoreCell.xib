@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WBMeMoreCell" id="KGk-i7-Jjw" customClass="WBMeMoreCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oc5-NU-yDq">
+                        <rect key="frame" x="20" y="8" width="280" height="83.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_cell_full" translatesAutoresizingMaskIntoConstraints="NO" id="bNL-ML-PPb">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="83.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="其他小黑板" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abw-3h-924">
+                                <rect key="frame" x="20" y="29.5" width="107" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_arrow_thick_next" translatesAutoresizingMaskIntoConstraints="NO" id="pJI-bm-d4y">
+                                <rect key="frame" x="256" y="34" width="9" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="9" id="1ED-Bk-4OM"/>
+                                    <constraint firstAttribute="height" constant="15" id="j6Y-xE-IQq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="bNL-ML-PPb" secondAttribute="bottom" id="6cn-tJ-jcm"/>
+                            <constraint firstItem="abw-3h-924" firstAttribute="centerY" secondItem="bNL-ML-PPb" secondAttribute="centerY" id="Dii-I3-FWf"/>
+                            <constraint firstItem="bNL-ML-PPb" firstAttribute="top" secondItem="oc5-NU-yDq" secondAttribute="top" id="JF2-x1-XQa"/>
+                            <constraint firstAttribute="trailing" secondItem="pJI-bm-d4y" secondAttribute="trailing" constant="15" id="KtS-A1-8qf"/>
+                            <constraint firstItem="pJI-bm-d4y" firstAttribute="centerY" secondItem="bNL-ML-PPb" secondAttribute="centerY" id="Xb5-Dh-m6d"/>
+                            <constraint firstItem="abw-3h-924" firstAttribute="leading" secondItem="oc5-NU-yDq" secondAttribute="leading" constant="20" id="ZfQ-OG-CKe"/>
+                            <constraint firstAttribute="trailing" secondItem="bNL-ML-PPb" secondAttribute="trailing" id="Zzs-WM-cJZ"/>
+                            <constraint firstItem="bNL-ML-PPb" firstAttribute="leading" secondItem="oc5-NU-yDq" secondAttribute="leading" id="tit-Pj-7ZZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="oc5-NU-yDq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Aiq-Fj-e3M"/>
+                    <constraint firstAttribute="bottom" secondItem="oc5-NU-yDq" secondAttribute="bottom" constant="8" id="Auf-b3-XA2"/>
+                    <constraint firstItem="oc5-NU-yDq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="NEg-wj-Uel"/>
+                    <constraint firstAttribute="trailing" secondItem="oc5-NU-yDq" secondAttribute="trailing" constant="20" id="SBl-l7-gNu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bg_cell_full" width="18" height="20"/>
+        <image name="ico_arrow_thick_next" width="9" height="15"/>
+    </resources>
+</document>
