@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WBHomePageCell" id="KGk-i7-Jjw" customClass="WBHomePageCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="348"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="347.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y8B-tb-QsL">
+                        <rect key="frame" x="10" y="10" width="300" height="327.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_cell_full" translatesAutoresizingMaskIntoConstraints="NO" id="mnC-3c-uIh">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="327.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="永和九年，岁在癸丑，暮春之初，会于会稽山阴之兰亭，修禊事也。群贤毕至，少长咸集。此地有崇山峻岭，茂林修竹，又有清流激湍，映带左右，引以为流觞曲水，列坐其次。虽无" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csD-XM-eZH">
+                                <rect key="frame" x="20" y="40" width="260" height="267.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="有故事的列宁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYf-No-phF">
+                                <rect key="frame" x="8" y="8" width="120" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="U4j-hZ-LGd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017-10-10 12:21:31" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ps7-4B-sud">
+                                <rect key="frame" x="172" y="10" width="120" height="13.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="fh2-az-IQe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="csD-XM-eZH" firstAttribute="top" secondItem="Y8B-tb-QsL" secondAttribute="top" constant="40" id="0FS-Ps-FR4"/>
+                            <constraint firstAttribute="trailing" secondItem="csD-XM-eZH" secondAttribute="trailing" constant="20" id="0ru-uw-HJQ"/>
+                            <constraint firstAttribute="trailing" secondItem="mnC-3c-uIh" secondAttribute="trailing" id="F1B-Zd-j4p"/>
+                            <constraint firstAttribute="bottom" secondItem="csD-XM-eZH" secondAttribute="bottom" constant="20" id="LR4-wY-UnM"/>
+                            <constraint firstAttribute="trailing" secondItem="Ps7-4B-sud" secondAttribute="trailing" constant="8" id="USk-68-7O5"/>
+                            <constraint firstAttribute="bottom" secondItem="mnC-3c-uIh" secondAttribute="bottom" id="Way-U4-4tv"/>
+                            <constraint firstItem="Ps7-4B-sud" firstAttribute="centerY" secondItem="TYf-No-phF" secondAttribute="centerY" id="cU8-6Y-aTQ"/>
+                            <constraint firstItem="TYf-No-phF" firstAttribute="leading" secondItem="Y8B-tb-QsL" secondAttribute="leading" constant="8" id="gUt-lF-vWW"/>
+                            <constraint firstItem="mnC-3c-uIh" firstAttribute="leading" secondItem="Y8B-tb-QsL" secondAttribute="leading" id="np2-EH-bCa"/>
+                            <constraint firstItem="TYf-No-phF" firstAttribute="top" secondItem="Y8B-tb-QsL" secondAttribute="top" constant="8" id="oaO-A6-Saf"/>
+                            <constraint firstItem="mnC-3c-uIh" firstAttribute="top" secondItem="Y8B-tb-QsL" secondAttribute="top" id="pLT-Tb-yjP"/>
+                            <constraint firstItem="csD-XM-eZH" firstAttribute="leading" secondItem="Y8B-tb-QsL" secondAttribute="leading" constant="20" id="sUH-dv-4Wu"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="Y8B-tb-QsL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="2zW-NC-BM5"/>
+                    <constraint firstAttribute="bottom" secondItem="Y8B-tb-QsL" secondAttribute="bottom" constant="10" id="5RU-Vn-q6m"/>
+                    <constraint firstAttribute="trailing" secondItem="Y8B-tb-QsL" secondAttribute="trailing" constant="10" id="krW-Ut-Zv5"/>
+                    <constraint firstItem="Y8B-tb-QsL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="mhp-MG-Vyb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="changerLabel" destination="TYf-No-phF" id="I89-FY-zUO"/>
+                <outlet property="messageLabel" destination="csD-XM-eZH" id="ziV-h3-Nok"/>
+                <outlet property="timeLabel" destination="Ps7-4B-sud" id="rJ6-3g-nXj"/>
+            </connections>
+            <point key="canvasLocation" x="-123" y="-30"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bg_cell_full" width="18" height="20"/>
+    </resources>
+</document>

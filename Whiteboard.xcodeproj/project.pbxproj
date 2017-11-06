@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2F590A8E4EFC967D179AF110 /* libPods-Whiteboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 575A3AB15B565552AC7D8CE9 /* libPods-Whiteboard.a */; };
 		465E478D1FB0454C0067ABED /* NSString+OPSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E478C1FB0454C0067ABED /* NSString+OPSize.m */; };
+		465E47951FB04AFA0067ABED /* WBHomePageCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E47941FB04AFA0067ABED /* WBHomePageCellModel.m */; };
+		465E47991FB04B110067ABED /* WBHomePageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E47971FB04B110067ABED /* WBHomePageCell.m */; };
+		465E479A1FB04B110067ABED /* WBHomePageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465E47981FB04B110067ABED /* WBHomePageCell.xib */; };
 		46639C331FAEE4F6008A7AB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C321FAEE4F6008A7AB9 /* AppDelegate.m */; };
 		46639C3B1FAEE4F6008A7AB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46639C3A1FAEE4F6008A7AB9 /* Assets.xcassets */; };
 		46639C3E1FAEE4F6008A7AB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46639C3C1FAEE4F6008A7AB9 /* LaunchScreen.storyboard */; };
@@ -38,6 +41,11 @@
 		3A4B4B4C7956696616DAD624 /* Pods-Whiteboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whiteboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whiteboard/Pods-Whiteboard.debug.xcconfig"; sourceTree = "<group>"; };
 		465E478B1FB0454C0067ABED /* NSString+OPSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+OPSize.h"; sourceTree = "<group>"; };
 		465E478C1FB0454C0067ABED /* NSString+OPSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+OPSize.m"; sourceTree = "<group>"; };
+		465E47931FB04AFA0067ABED /* WBHomePageCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBHomePageCellModel.h; sourceTree = "<group>"; };
+		465E47941FB04AFA0067ABED /* WBHomePageCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBHomePageCellModel.m; sourceTree = "<group>"; };
+		465E47961FB04B110067ABED /* WBHomePageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WBHomePageCell.h; path = Whiteboard/Classes/UIModules/HomePage/Model/WBHomePageCell.h; sourceTree = SOURCE_ROOT; };
+		465E47971FB04B110067ABED /* WBHomePageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WBHomePageCell.m; path = Whiteboard/Classes/UIModules/HomePage/Model/WBHomePageCell.m; sourceTree = SOURCE_ROOT; };
+		465E47981FB04B110067ABED /* WBHomePageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WBHomePageCell.xib; path = Whiteboard/Classes/UIModules/HomePage/Model/WBHomePageCell.xib; sourceTree = SOURCE_ROOT; };
 		46639C2E1FAEE4F6008A7AB9 /* Whiteboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whiteboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46639C311FAEE4F6008A7AB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46639C321FAEE4F6008A7AB9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -107,6 +115,26 @@
 				465E478C1FB0454C0067ABED /* NSString+OPSize.m */,
 			);
 			path = NSString;
+			sourceTree = "<group>";
+		};
+		465E478E1FB04A930067ABED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				465E47931FB04AFA0067ABED /* WBHomePageCellModel.h */,
+				465E47941FB04AFA0067ABED /* WBHomePageCellModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		465E478F1FB04A9B0067ABED /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				465E47961FB04B110067ABED /* WBHomePageCell.h */,
+				465E47971FB04B110067ABED /* WBHomePageCell.m */,
+				465E47981FB04B110067ABED /* WBHomePageCell.xib */,
+			);
+			name = Cell;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		46639C251FAEE4F6008A7AB9 = {
@@ -348,6 +376,8 @@
 		46639C9C1FAF162C008A7AB9 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				465E478F1FB04A9B0067ABED /* Cell */,
+				465E478E1FB04A930067ABED /* Model */,
 				46639C9D1FAF162C008A7AB9 /* WBHomePageController.h */,
 				46639C9E1FAF162C008A7AB9 /* WBHomePageController.m */,
 			);
@@ -459,6 +489,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465E479A1FB04B110067ABED /* WBHomePageCell.xib in Resources */,
 				46639C7C1FAEF0FC008A7AB9 /* WBLoginController.xib in Resources */,
 				46639C3E1FAEE4F6008A7AB9 /* LaunchScreen.storyboard in Resources */,
 				46639C3B1FAEE4F6008A7AB9 /* Assets.xcassets in Resources */,
@@ -539,8 +570,10 @@
 				46639C901FAF1334008A7AB9 /* WBTabBar.m in Sources */,
 				46639C8C1FAF12FA008A7AB9 /* WBTabBarController.m in Sources */,
 				46639C561FAEE96C008A7AB9 /* WBBaseController.m in Sources */,
+				465E47951FB04AFA0067ABED /* WBHomePageCellModel.m in Sources */,
 				46639C7B1FAEF0FC008A7AB9 /* WBLoginController.m in Sources */,
 				46639C771FAEEC32008A7AB9 /* UIViewController+NavBarItemExtension.m in Sources */,
+				465E47991FB04B110067ABED /* WBHomePageCell.m in Sources */,
 				46639C6D1FAEEC1E008A7AB9 /* UIView+Frame.m in Sources */,
 				46639C931FAF1345008A7AB9 /* WBTabBarButton.m in Sources */,
 				46639C331FAEE4F6008A7AB9 /* AppDelegate.m in Sources */,

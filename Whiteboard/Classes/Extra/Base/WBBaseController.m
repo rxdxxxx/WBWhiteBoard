@@ -33,6 +33,14 @@
 
 #pragma mark -  Life Cycle
 #pragma mark -  UITableViewDelegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DefaultCell"];
+}
+
 #pragma mark -  CustomDelegate
 #pragma mark -  Event Response
 #pragma mark -  Private Methods
@@ -45,11 +53,12 @@
 
 //        self.tableEmptyView.delegate = self;
 //        _tableView.backgroundView = self.tableEmptyView;
-        _tableView.backgroundColor = [UIColor whiteColor];
-        _tableView.dataSource = (id<UITableViewDataSource>)self;
-        _tableView.delegate = (id<UITableViewDelegate>)self;
+        _tableView.backgroundColor = [UIColor clearColor];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
         _tableView.autoresizingMask = UIViewAutoresizingNone;
         _tableView.tableFooterView = [UIView new];
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
         if (@available(iOS 11.0, *)) {
             _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
@@ -63,3 +72,4 @@
 }
 
 @end
+

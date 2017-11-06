@@ -10,7 +10,7 @@
 #import "UIViewController+NavBarItemExtension.h"
 #import "WBNavigationController.h"
 
-@interface WBBaseController : UIViewController
+@interface WBBaseController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, retain) UITableView *tableView;
 
