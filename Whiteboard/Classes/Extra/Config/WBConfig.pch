@@ -9,8 +9,20 @@
 #ifndef WBConfig_pch
 #define WBConfig_pch
 
-#import "RRConst.h"
+// 第三方库, 要放在最上面
+#import <AVOSCloud.h>
+#import "WBHUD.h"
+
+// 分类
+#import "WBConst.h"
+
 #import "UIView+Frame.h"
+#import "UIColor+Hex.h"
+#import "NSString+OPSize.h"
+
+
+// 工具类
+#import "WBModuleControl.h"
 
 
 #endif /* WBConfig_pch */

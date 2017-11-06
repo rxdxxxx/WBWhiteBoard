@@ -11,11 +11,11 @@
 @implementation UIColor (Hex)
 
 
-+ (UIColor *)rr_navigationBarColor{
++ (UIColor *)wb_navigationBarColor{
     return [UIColor colorWithRed:242/255.0 green:239/255.0 blue:238/255.0 alpha:1];
 }
 
-+ (UIColor *)rr_hexStringToColor:(NSString *)stringToConvert
++ (UIColor *)wb_hexStringToColor:(NSString *)stringToConvert
 {
     NSString *cString = [[stringToConvert stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     // String should be 6 or 8 charactersif ([cString length] < 6) return [UIColor blackColor];
@@ -45,7 +45,7 @@
                            alpha:1.0f];
 }
 
-- (UIImage*)rr_colorImage;
+- (UIImage*)wb_colorImage;
 {
     CGRect rect=CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContext(rect.size);

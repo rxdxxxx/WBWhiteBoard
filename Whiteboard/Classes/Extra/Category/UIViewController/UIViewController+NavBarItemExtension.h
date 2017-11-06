@@ -29,14 +29,14 @@
 - (void) rr_backAction:(UIButton *)button;
 
 /** 右: 初始化控制器右侧的按钮, 需要添加target方法和 设置按钮的文字或图片 */
-- (UIButton *) rr_initNavRightBtn;
-
+- (UIButton *)rr_initNavRightBtn;
 - (UIButton *)rr_initNavRightBtnWithTitle:(NSString *)title target:(id)target action:(SEL)action;
+- (UIButton *)rr_initNavRightBtnWithImageName:(NSString *)imageName target:(id)target action:(SEL)action;
 
 /** 左: 初始化控制器左侧的按钮, 需要添加target方法和 设置按钮的文字或图片 */
-- (UIButton *) rr_initNavLeftBtn;
-
-- (UIButton *) rr_initNavLeftBtnWithTitle:(NSString *)title target:(id)target action:(SEL)action;
+- (UIButton *)rr_initNavLeftBtn;
+- (UIButton *)rr_initNavLeftBtnWithTitle:(NSString *)title target:(id)target action:(SEL)action;
+- (UIButton *)rr_initNavLeftBtnWithImageName:(NSString *)imageName target:(id)target action:(SEL)action;
 
 
 /** 中:初始化titleView 附带点击事件*/

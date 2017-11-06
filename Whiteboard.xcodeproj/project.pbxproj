@@ -8,21 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		2F590A8E4EFC967D179AF110 /* libPods-Whiteboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 575A3AB15B565552AC7D8CE9 /* libPods-Whiteboard.a */; };
+		465E478D1FB0454C0067ABED /* NSString+OPSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E478C1FB0454C0067ABED /* NSString+OPSize.m */; };
 		46639C331FAEE4F6008A7AB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C321FAEE4F6008A7AB9 /* AppDelegate.m */; };
 		46639C3B1FAEE4F6008A7AB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46639C3A1FAEE4F6008A7AB9 /* Assets.xcassets */; };
 		46639C3E1FAEE4F6008A7AB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46639C3C1FAEE4F6008A7AB9 /* LaunchScreen.storyboard */; };
 		46639C411FAEE4F6008A7AB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C401FAEE4F6008A7AB9 /* main.m */; };
-		46639C561FAEE96C008A7AB9 /* RRBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C551FAEE96C008A7AB9 /* RRBaseController.m */; };
+		46639C561FAEE96C008A7AB9 /* WBBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C551FAEE96C008A7AB9 /* WBBaseController.m */; };
 		46639C5F1FAEEB3E008A7AB9 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C5E1FAEEB3E008A7AB9 /* UIColor+Hex.m */; };
 		46639C6D1FAEEC1E008A7AB9 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C631FAEEC1E008A7AB9 /* UIView+Frame.m */; };
 		46639C6E1FAEEC1E008A7AB9 /* UIView+Inspectable.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C661FAEEC1E008A7AB9 /* UIView+Inspectable.m */; };
 		46639C6F1FAEEC1E008A7AB9 /* UIView+NextResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C691FAEEC1E008A7AB9 /* UIView+NextResponder.m */; };
 		46639C701FAEEC1E008A7AB9 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C6C1FAEEC1E008A7AB9 /* UIView+Toast.m */; };
 		46639C771FAEEC32008A7AB9 /* UIViewController+NavBarItemExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C751FAEEC32008A7AB9 /* UIViewController+NavBarItemExtension.m */; };
+		46639C7B1FAEF0FC008A7AB9 /* WBLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C791FAEF0FC008A7AB9 /* WBLoginController.m */; };
+		46639C7C1FAEF0FC008A7AB9 /* WBLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46639C7A1FAEF0FC008A7AB9 /* WBLoginController.xib */; };
+		46639C7F1FAEF256008A7AB9 /* WBModuleControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C7E1FAEF256008A7AB9 /* WBModuleControl.m */; };
+		46639C841FAEF569008A7AB9 /* WBRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C821FAEF569008A7AB9 /* WBRegisterController.m */; };
+		46639C851FAEF569008A7AB9 /* WBRegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46639C831FAEF569008A7AB9 /* WBRegisterController.xib */; };
+		46639C881FAF0C03008A7AB9 /* WBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C871FAF0C03008A7AB9 /* WBNavigationController.m */; };
+		46639C8C1FAF12FA008A7AB9 /* WBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C8B1FAF12FA008A7AB9 /* WBTabBarController.m */; };
+		46639C901FAF1334008A7AB9 /* WBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C8F1FAF1334008A7AB9 /* WBTabBar.m */; };
+		46639C931FAF1345008A7AB9 /* WBTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C921FAF1345008A7AB9 /* WBTabBarButton.m */; };
+		46639C9F1FAF162D008A7AB9 /* WBHomePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C9E1FAF162C008A7AB9 /* WBHomePageController.m */; };
+		46639CA31FAF1642008A7AB9 /* WBMEController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639CA21FAF1642008A7AB9 /* WBMEController.m */; };
+		46639CA81FAF17AF008A7AB9 /* WBHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639CA71FAF17AF008A7AB9 /* WBHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A4B4B4C7956696616DAD624 /* Pods-Whiteboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whiteboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whiteboard/Pods-Whiteboard.debug.xcconfig"; sourceTree = "<group>"; };
+		465E478B1FB0454C0067ABED /* NSString+OPSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+OPSize.h"; sourceTree = "<group>"; };
+		465E478C1FB0454C0067ABED /* NSString+OPSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+OPSize.m"; sourceTree = "<group>"; };
 		46639C2E1FAEE4F6008A7AB9 /* Whiteboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whiteboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46639C311FAEE4F6008A7AB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46639C321FAEE4F6008A7AB9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -30,10 +45,10 @@
 		46639C3D1FAEE4F6008A7AB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46639C3F1FAEE4F6008A7AB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46639C401FAEE4F6008A7AB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		46639C541FAEE96C008A7AB9 /* RRBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRBaseController.h; sourceTree = "<group>"; };
-		46639C551FAEE96C008A7AB9 /* RRBaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRBaseController.m; sourceTree = "<group>"; };
+		46639C541FAEE96C008A7AB9 /* WBBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBBaseController.h; sourceTree = "<group>"; };
+		46639C551FAEE96C008A7AB9 /* WBBaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBBaseController.m; sourceTree = "<group>"; };
 		46639C591FAEEA2A008A7AB9 /* WBConfig.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBConfig.pch; sourceTree = "<group>"; };
-		46639C5A1FAEEA99008A7AB9 /* RRConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRConst.h; sourceTree = "<group>"; };
+		46639C5A1FAEEA99008A7AB9 /* WBConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBConst.h; sourceTree = "<group>"; };
 		46639C5B1FAEEABB008A7AB9 /* LxDBAnything.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LxDBAnything.h; sourceTree = "<group>"; };
 		46639C5D1FAEEB3E008A7AB9 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		46639C5E1FAEEB3E008A7AB9 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
@@ -47,6 +62,28 @@
 		46639C6C1FAEEC1E008A7AB9 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		46639C741FAEEC32008A7AB9 /* UIViewController+NavBarItemExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavBarItemExtension.h"; sourceTree = "<group>"; };
 		46639C751FAEEC32008A7AB9 /* UIViewController+NavBarItemExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavBarItemExtension.m"; sourceTree = "<group>"; };
+		46639C781FAEF0FC008A7AB9 /* WBLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBLoginController.h; sourceTree = "<group>"; };
+		46639C791FAEF0FC008A7AB9 /* WBLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBLoginController.m; sourceTree = "<group>"; };
+		46639C7A1FAEF0FC008A7AB9 /* WBLoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBLoginController.xib; sourceTree = "<group>"; };
+		46639C7D1FAEF256008A7AB9 /* WBModuleControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBModuleControl.h; sourceTree = "<group>"; };
+		46639C7E1FAEF256008A7AB9 /* WBModuleControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBModuleControl.m; sourceTree = "<group>"; };
+		46639C811FAEF569008A7AB9 /* WBRegisterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBRegisterController.h; sourceTree = "<group>"; };
+		46639C821FAEF569008A7AB9 /* WBRegisterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBRegisterController.m; sourceTree = "<group>"; };
+		46639C831FAEF569008A7AB9 /* WBRegisterController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBRegisterController.xib; sourceTree = "<group>"; };
+		46639C861FAF0C03008A7AB9 /* WBNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBNavigationController.h; sourceTree = "<group>"; };
+		46639C871FAF0C03008A7AB9 /* WBNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBNavigationController.m; sourceTree = "<group>"; };
+		46639C8A1FAF12FA008A7AB9 /* WBTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBTabBarController.h; sourceTree = "<group>"; };
+		46639C8B1FAF12FA008A7AB9 /* WBTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBTabBarController.m; sourceTree = "<group>"; };
+		46639C8E1FAF1334008A7AB9 /* WBTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBTabBar.h; sourceTree = "<group>"; };
+		46639C8F1FAF1334008A7AB9 /* WBTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBTabBar.m; sourceTree = "<group>"; };
+		46639C911FAF1345008A7AB9 /* WBTabBarButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBTabBarButton.h; sourceTree = "<group>"; };
+		46639C921FAF1345008A7AB9 /* WBTabBarButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBTabBarButton.m; sourceTree = "<group>"; };
+		46639C9D1FAF162C008A7AB9 /* WBHomePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHomePageController.h; sourceTree = "<group>"; };
+		46639C9E1FAF162C008A7AB9 /* WBHomePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBHomePageController.m; sourceTree = "<group>"; };
+		46639CA11FAF1642008A7AB9 /* WBMEController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBMEController.h; sourceTree = "<group>"; };
+		46639CA21FAF1642008A7AB9 /* WBMEController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBMEController.m; sourceTree = "<group>"; };
+		46639CA61FAF17AF008A7AB9 /* WBHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBHUD.h; sourceTree = "<group>"; };
+		46639CA71FAF17AF008A7AB9 /* WBHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBHUD.m; sourceTree = "<group>"; };
 		575A3AB15B565552AC7D8CE9 /* libPods-Whiteboard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Whiteboard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C44EE0C28D4AF7F5B5DEBA1 /* Pods-Whiteboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whiteboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whiteboard/Pods-Whiteboard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		465E478A1FB0454C0067ABED /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				465E478B1FB0454C0067ABED /* NSString+OPSize.h */,
+				465E478C1FB0454C0067ABED /* NSString+OPSize.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
 		46639C251FAEE4F6008A7AB9 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +153,8 @@
 		46639C481FAEE893008A7AB9 /* ModuleControl */ = {
 			isa = PBXGroup;
 			children = (
+				46639C7D1FAEF256008A7AB9 /* WBModuleControl.h */,
+				46639C7E1FAEF256008A7AB9 /* WBModuleControl.m */,
 			);
 			path = ModuleControl;
 			sourceTree = "<group>";
@@ -121,6 +169,8 @@
 		46639C4A1FAEE893008A7AB9 /* UIModules */ = {
 			isa = PBXGroup;
 			children = (
+				46639CA01FAF1636008A7AB9 /* Me */,
+				46639C9C1FAF162C008A7AB9 /* HomePage */,
 				46639C511FAEE927008A7AB9 /* LoginAndRegister */,
 			);
 			path = UIModules;
@@ -129,6 +179,7 @@
 		46639C4B1FAEE893008A7AB9 /* Extra */ = {
 			isa = PBXGroup;
 			children = (
+				46639CA41FAF1790008A7AB9 /* CustomView */,
 				46639C581FAEE9A8008A7AB9 /* Config */,
 				46639C571FAEE993008A7AB9 /* Category */,
 				46639C4D1FAEE8D3008A7AB9 /* Base */,
@@ -149,7 +200,11 @@
 		46639C4D1FAEE8D3008A7AB9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				46639C531FAEE952008A7AB9 /* BaseViewController */,
+				46639C891FAF12DE008A7AB9 /* TabbarVC */,
+				46639C541FAEE96C008A7AB9 /* WBBaseController.h */,
+				46639C551FAEE96C008A7AB9 /* WBBaseController.m */,
+				46639C861FAF0C03008A7AB9 /* WBNavigationController.h */,
+				46639C871FAF0C03008A7AB9 /* WBNavigationController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -157,6 +212,7 @@
 		46639C511FAEE927008A7AB9 /* LoginAndRegister */ = {
 			isa = PBXGroup;
 			children = (
+				46639C801FAEF550008A7AB9 /* Register */,
 				46639C521FAEE936008A7AB9 /* Login */,
 			);
 			path = LoginAndRegister;
@@ -165,22 +221,17 @@
 		46639C521FAEE936008A7AB9 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				46639C781FAEF0FC008A7AB9 /* WBLoginController.h */,
+				46639C791FAEF0FC008A7AB9 /* WBLoginController.m */,
+				46639C7A1FAEF0FC008A7AB9 /* WBLoginController.xib */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		46639C531FAEE952008A7AB9 /* BaseViewController */ = {
-			isa = PBXGroup;
-			children = (
-				46639C541FAEE96C008A7AB9 /* RRBaseController.h */,
-				46639C551FAEE96C008A7AB9 /* RRBaseController.m */,
-			);
-			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 		46639C571FAEE993008A7AB9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				465E478A1FB0454C0067ABED /* NSString */,
 				46639C711FAEEC32008A7AB9 /* UIViewController */,
 				46639C601FAEEC1E008A7AB9 /* UIView */,
 				46639C5C1FAEEB1E008A7AB9 /* Color */,
@@ -191,9 +242,9 @@
 		46639C581FAEE9A8008A7AB9 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				46639C5B1FAEEABB008A7AB9 /* LxDBAnything.h */,
 				46639C591FAEEA2A008A7AB9 /* WBConfig.pch */,
-				46639C5A1FAEEA99008A7AB9 /* RRConst.h */,
+				46639C5B1FAEEABB008A7AB9 /* LxDBAnything.h */,
+				46639C5A1FAEEA99008A7AB9 /* WBConst.h */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -263,6 +314,72 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
+		46639C801FAEF550008A7AB9 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				46639C811FAEF569008A7AB9 /* WBRegisterController.h */,
+				46639C821FAEF569008A7AB9 /* WBRegisterController.m */,
+				46639C831FAEF569008A7AB9 /* WBRegisterController.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		46639C891FAF12DE008A7AB9 /* TabbarVC */ = {
+			isa = PBXGroup;
+			children = (
+				46639C8D1FAF12FE008A7AB9 /* Views */,
+				46639C8A1FAF12FA008A7AB9 /* WBTabBarController.h */,
+				46639C8B1FAF12FA008A7AB9 /* WBTabBarController.m */,
+			);
+			path = TabbarVC;
+			sourceTree = "<group>";
+		};
+		46639C8D1FAF12FE008A7AB9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				46639C8E1FAF1334008A7AB9 /* WBTabBar.h */,
+				46639C8F1FAF1334008A7AB9 /* WBTabBar.m */,
+				46639C911FAF1345008A7AB9 /* WBTabBarButton.h */,
+				46639C921FAF1345008A7AB9 /* WBTabBarButton.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		46639C9C1FAF162C008A7AB9 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				46639C9D1FAF162C008A7AB9 /* WBHomePageController.h */,
+				46639C9E1FAF162C008A7AB9 /* WBHomePageController.m */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		46639CA01FAF1636008A7AB9 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				46639CA11FAF1642008A7AB9 /* WBMEController.h */,
+				46639CA21FAF1642008A7AB9 /* WBMEController.m */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		46639CA41FAF1790008A7AB9 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				46639CA51FAF179A008A7AB9 /* HUD */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		46639CA51FAF179A008A7AB9 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				46639CA61FAF17AF008A7AB9 /* WBHUD.h */,
+				46639CA71FAF17AF008A7AB9 /* WBHUD.m */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
 		500DA24D86A040CD032EBFDF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +426,7 @@
 		46639C261FAEE4F6008A7AB9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WB;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = RedRain;
 				TargetAttributes = {
@@ -341,8 +459,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46639C7C1FAEF0FC008A7AB9 /* WBLoginController.xib in Resources */,
 				46639C3E1FAEE4F6008A7AB9 /* LaunchScreen.storyboard in Resources */,
 				46639C3B1FAEE4F6008A7AB9 /* Assets.xcassets in Resources */,
+				46639C851FAEF569008A7AB9 /* WBRegisterController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,14 +529,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				46639C701FAEEC1E008A7AB9 /* UIView+Toast.m in Sources */,
+				465E478D1FB0454C0067ABED /* NSString+OPSize.m in Sources */,
 				46639C411FAEE4F6008A7AB9 /* main.m in Sources */,
+				46639C7F1FAEF256008A7AB9 /* WBModuleControl.m in Sources */,
 				46639C6E1FAEEC1E008A7AB9 /* UIView+Inspectable.m in Sources */,
+				46639CA31FAF1642008A7AB9 /* WBMEController.m in Sources */,
+				46639C881FAF0C03008A7AB9 /* WBNavigationController.m in Sources */,
 				46639C5F1FAEEB3E008A7AB9 /* UIColor+Hex.m in Sources */,
-				46639C561FAEE96C008A7AB9 /* RRBaseController.m in Sources */,
+				46639C901FAF1334008A7AB9 /* WBTabBar.m in Sources */,
+				46639C8C1FAF12FA008A7AB9 /* WBTabBarController.m in Sources */,
+				46639C561FAEE96C008A7AB9 /* WBBaseController.m in Sources */,
+				46639C7B1FAEF0FC008A7AB9 /* WBLoginController.m in Sources */,
 				46639C771FAEEC32008A7AB9 /* UIViewController+NavBarItemExtension.m in Sources */,
 				46639C6D1FAEEC1E008A7AB9 /* UIView+Frame.m in Sources */,
+				46639C931FAF1345008A7AB9 /* WBTabBarButton.m in Sources */,
 				46639C331FAEE4F6008A7AB9 /* AppDelegate.m in Sources */,
+				46639CA81FAF17AF008A7AB9 /* WBHUD.m in Sources */,
 				46639C6F1FAEEC1E008A7AB9 /* UIView+NextResponder.m in Sources */,
+				46639C9F1FAF162D008A7AB9 /* WBHomePageController.m in Sources */,
+				46639C841FAEF569008A7AB9 /* WBRegisterController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

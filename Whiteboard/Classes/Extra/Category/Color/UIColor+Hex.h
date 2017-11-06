@@ -10,8 +10,8 @@
 
 @interface UIColor (Hex)
 
-+ (UIColor *)rr_navigationBarColor;
-+ (UIColor *)rr_hexStringToColor:(NSString *)stringToConver;
-- (UIImage *)rr_colorImage;
++ (UIColor *)wb_navigationBarColor;
++ (UIColor *)wb_hexStringToColor:(NSString *)stringToConver;
+- (UIImage *)wb_colorImage;
 
 @end

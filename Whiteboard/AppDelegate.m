@@ -16,7 +16,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [AVOSCloud setApplicationId:@"yUtcziocTsIBC336nErfmcbX-gzGzoHsz" clientKey:@"wmKbLC4ggjbyHSvYbte06RQf"];
+    
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    [self.window setRootViewController:[WBModuleControl controllerFromDidFinishLaunching]];
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

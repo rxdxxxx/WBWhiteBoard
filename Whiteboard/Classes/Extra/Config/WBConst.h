@@ -1,21 +1,22 @@
 //
-//  RRConst.h
+//  WBConst.h
 //  Whiteboard
 //
 //  Created by RedRain on 2017/11/5.
 //  Copyright © 2017年 RedRain. All rights reserved.
 //
 
-#ifndef RRConst_h
-#define RRConst_h
+#ifndef WBConst_h
+#define WBConst_h
 
+#import "LxDBAnything.h"
 
 #define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
 #define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
 #define kNavigationBarHeight (64)
 #define kSearchBarHeightHeight (55)
 
-#define RRNotificationCenter [NSNotificationCenter defaultCenter]
+#define WBNotificationCenter [NSNotificationCenter defaultCenter]
 
 
 #define kiPhone4sHeight (480)
@@ -30,13 +31,13 @@
 
 //如果有Debug这个宏的话,就允许log输出...可变参数
 #ifdef DEBUG
-#define RRLog(...) LxPrintf(__VA_ARGS__)
+#define WBLog(...) LxPrintf(__VA_ARGS__)
 #else
-#define RRLog(...)
+#define WBLog(...)
 #endif
 
 // 重写对象的debugDescription方法, 方便于控制台打印
-#define kRROverwriteDebugDescription \
+#define kWBOverwriteDebugDescription \
 - (NSString *)debugDescription { \
 NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];\
 uint count;\
@@ -53,7 +54,7 @@ return [NSString stringWithFormat:@"<%@: %p> -- %@",[self class],self,dictionary
 
 #define kAlphaNum   @"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 
-#define kRROverwriteCopyWithZone \
+#define kWBOverwriteCopyWithZone \
 - (id)copyWithZone:(NSZone *)zone{\
 id newOne = [[self class] new];\
 [[OPPropertyListManager shareInstance] setupPropertyValueFromObj:self toObj:newOne];\
@@ -67,11 +68,11 @@ return newOne;\
  
  
  // 打印属性的值
- kRROverwriteDebugDescription
+ kWBOverwriteDebugDescription
  
  // 用户支持 NSCopying 协议
- kRROverwriteCopyWithZone
+ kWBOverwriteCopyWithZone
  
  */
 
-#endif /* RRConst_h */
+#endif /* WBConst_h */

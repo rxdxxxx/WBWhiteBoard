@@ -24,7 +24,6 @@
 @implementation UIViewController (NavBarItemExtension)
 /** 设置navigation的titleView */
 - (UILabel *)rr_initTitleView:(NSString *)title{
-    
     UIView *rrTitleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.navigationItem.titleView.frame), 30)];
     rrTitleView.backgroundColor = [UIColor clearColor];
     self.navigationItem.titleView = rrTitleView;
@@ -32,10 +31,10 @@
     
     UILabel *rrTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
     rrTitleLabel.center = rrTitleView.center;
-    rrTitleLabel.textColor = [UIColor whiteColor];
+    rrTitleLabel.textColor = [UIColor colorWithRed:0.22 green:0.53 blue:0.94 alpha:1.00];
     rrTitleLabel.textAlignment = NSTextAlignmentCenter;
     rrTitleLabel.backgroundColor = [UIColor clearColor];
-    rrTitleLabel.font = [UIFont systemFontOfSize:18.0f];
+    rrTitleLabel.font = [UIFont boldSystemFontOfSize:22];
     rrTitleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
     
     [rrTitleView addSubview:rrTitleLabel];
@@ -51,11 +50,10 @@
 - (UIButton *)rr_initBtn{
     
     UIButton *btn = [[UIButton alloc ]init];
-    btn.frame = CGRectMake(0, 0, 55, 40);
+    btn.frame = CGRectMake(0, 0, 50, 40);
     [btn setBackgroundImage:[UIImage imageNamed:@"btn_nav"] forState:UIControlStateNormal];
     [btn setBackgroundImage:[UIImage imageNamed:@"btn_nav_pressed"] forState:UIControlStateHighlighted];
     btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
-    btn.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 2, 0);
     return btn;
 }
 
@@ -65,14 +63,7 @@
     // 返回按钮
     self.rrBackButton = [self rr_initBtn];
     [self.rrBackButton setImage:[UIImage imageNamed:@"ico_nav_back"] forState:UIControlStateNormal];
-    
-    NSString *version = [UIDevice currentDevice].systemVersion;
-    if (version.doubleValue >= 11.0){
-        self.rrBackButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-    }
-    self.rrBackButton.contentEdgeInsets = UIEdgeInsetsMake(0, -5, 0, 5);
     [self.rrBackButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    
     [self.rrBackButton addTarget:self action:@selector(rr_backAction:) forControlEvents:UIControlEventTouchUpInside];
     
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.rrBackButton];
@@ -112,10 +103,7 @@
         // 返回按钮
         UIBarButtonItem* ButtonItem = [self rr_creatNavBtn];
         self.rrRightBtn = (UIButton *) ButtonItem.customView;
-        NSString *version = [UIDevice currentDevice].systemVersion;
-        if (version.doubleValue >= 11.0){
-            self.rrRightBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
-        }
+
         // 向右侧移动的空格
         UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
                                                                                target:nil action:nil];
@@ -140,10 +128,7 @@
     // 返回按钮
     UIBarButtonItem* ButtonItem = [self rr_creatNavBtn];
     self.rrLeftBtn = (UIButton *) ButtonItem.customView;
-    NSString *version = [UIDevice currentDevice].systemVersion;
-    if (version.doubleValue >= 11.0){
-        self.rrLeftBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-    }
+
     // 向右侧移动的空格
     UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
                                                                            target:nil action:nil];
@@ -163,11 +148,6 @@
     UIBarButtonItem* ButtonItem = [self rr_creatNavBtn];
     self.rrRightBtn = (UIButton *) ButtonItem.customView;
     
-    NSString *version = [UIDevice currentDevice].systemVersion;
-    if (version.doubleValue >= 11.0){
-        self.rrRightBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
-    }
-    self.rrRightBtn.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, -5);
     //设置title
     [self.rrRightBtn setTitle:title forState:UIControlStateNormal];
     
@@ -184,6 +164,28 @@
     return self.rrRightBtn;
 };
 
+- (UIButton *)rr_initNavRightBtnWithImageName:(NSString *)imageName target:(id)target action:(SEL)action{
+
+    // 返回按钮
+    UIBarButtonItem* ButtonItem = [self rr_creatNavBtn];
+    self.rrRightBtn = (UIButton *) ButtonItem.customView;
+    
+    //设置图片
+    [self.rrRightBtn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    //添加点击事件
+    [self.rrRightBtn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    
+    // 向右侧移动的空格
+    UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                                                           target:nil action:nil];
+    space.width = -15.0f;
+    
+    self.navigationItem.rightBarButtonItems = @[space,ButtonItem];
+    
+    return self.rrRightBtn;
+};
+
+
 
 
 /** 左: 初始化控制器左侧的按钮, 需要添加target方法和 设置按钮的文字或图片 */
@@ -196,13 +198,6 @@
     //设置title
     [self.rrLeftBtn setTitle:title forState:UIControlStateNormal];
     
-    NSString *version = [UIDevice currentDevice].systemVersion;
-    if (version.doubleValue >= 11.0){
-        self.rrBackButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-        self.rrLeftBtn.titleEdgeInsets = UIEdgeInsetsMake(0, -15, 0, 15);
-    }
-    self.rrLeftBtn.imageEdgeInsets = UIEdgeInsetsMake(0, -15, 0, 15);
-
     //添加点击事件
     [self.rrLeftBtn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     
@@ -216,6 +211,29 @@
     return (UIButton *)ButtonItem.customView;
     
 };
+
+
+- (UIButton *)rr_initNavLeftBtnWithImageName:(NSString *)imageName target:(id)target action:(SEL)action{
+    // 返回按钮
+    UIBarButtonItem* ButtonItem = [self rr_creatNavBtn];
+    self.rrLeftBtn = (UIButton *) ButtonItem.customView;
+    
+    //设置图片
+    [self.rrLeftBtn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+
+    
+    //添加点击事件
+    [self.rrLeftBtn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    
+    // 向右侧移动的空格
+    UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                                                           target:nil action:nil];
+    space.width = - 15.0f;
+    
+    self.navigationItem.leftBarButtonItems = @[space,ButtonItem];
+    
+    return (UIButton *)ButtonItem.customView;
+}
 
 - (UIView *)rr_initTitleViewWithTitle:(NSString *)title target:(id)target action:(SEL)action{
     
@@ -263,7 +281,10 @@
 - (UIBarButtonItem *)rr_creatNavBtn
 {
     UIButton* Button = [[UIButton alloc ]init];
-    Button.frame = CGRectMake(0, 0, 55, 44);
+    Button.frame = CGRectMake(0, 0, 50, 44);
+    
+    [Button setBackgroundImage:[UIImage imageNamed:@"btn_nav"] forState:UIControlStateNormal];
+    [Button setBackgroundImage:[UIImage imageNamed:@"btn_navbtn_nav_pressed"] forState:UIControlStateHighlighted];
     [Button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [Button setTitleColor:[UIColor colorWithRed:1.000 green:1.000 blue:1.000 alpha:0.50] forState:UIControlStateDisabled];
     Button.titleLabel.textAlignment = NSTextAlignmentCenter;

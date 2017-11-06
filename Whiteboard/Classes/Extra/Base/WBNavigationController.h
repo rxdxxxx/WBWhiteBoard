@@ -1,5 +1,5 @@
 //
-//  RRBaseController.h
+//  WBNavigationController.h
 //  Whiteboard
 //
 //  Created by RedRain on 2017/11/5.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RRBaseController : UIViewController
+@interface WBNavigationController : UINavigationController
 
 @end
