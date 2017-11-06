@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2F590A8E4EFC967D179AF110 /* libPods-Whiteboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 575A3AB15B565552AC7D8CE9 /* libPods-Whiteboard.a */; };
+		464ACCC11FB0662E003778D9 /* WBMessageEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464ACCBF1FB0662E003778D9 /* WBMessageEditController.m */; };
+		464ACCC21FB0662E003778D9 /* WBMessageEditController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 464ACCC01FB0662E003778D9 /* WBMessageEditController.xib */; };
 		465E478D1FB0454C0067ABED /* NSString+OPSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E478C1FB0454C0067ABED /* NSString+OPSize.m */; };
 		465E47951FB04AFA0067ABED /* WBHomePageCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E47941FB04AFA0067ABED /* WBHomePageCellModel.m */; };
 		465E47A01FB04FAA0067ABED /* WBMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E479F1FB04FAA0067ABED /* WBMeHeaderView.m */; };
@@ -51,6 +53,9 @@
 
 /* Begin PBXFileReference section */
 		3A4B4B4C7956696616DAD624 /* Pods-Whiteboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whiteboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whiteboard/Pods-Whiteboard.debug.xcconfig"; sourceTree = "<group>"; };
+		464ACCBE1FB0662E003778D9 /* WBMessageEditController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBMessageEditController.h; sourceTree = "<group>"; };
+		464ACCBF1FB0662E003778D9 /* WBMessageEditController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBMessageEditController.m; sourceTree = "<group>"; };
+		464ACCC01FB0662E003778D9 /* WBMessageEditController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBMessageEditController.xib; sourceTree = "<group>"; };
 		465E478B1FB0454C0067ABED /* NSString+OPSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+OPSize.h"; sourceTree = "<group>"; };
 		465E478C1FB0454C0067ABED /* NSString+OPSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+OPSize.m"; sourceTree = "<group>"; };
 		465E47931FB04AFA0067ABED /* WBHomePageCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBHomePageCellModel.h; sourceTree = "<group>"; };
@@ -139,6 +144,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		464ACCBD1FB06610003778D9 /* MessageEdit */ = {
+			isa = PBXGroup;
+			children = (
+				464ACCBE1FB0662E003778D9 /* WBMessageEditController.h */,
+				464ACCBF1FB0662E003778D9 /* WBMessageEditController.m */,
+				464ACCC01FB0662E003778D9 /* WBMessageEditController.xib */,
+			);
+			path = MessageEdit;
+			sourceTree = "<group>";
+		};
 		465E478A1FB0454C0067ABED /* NSString */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +318,7 @@
 		46639C4A1FAEE893008A7AB9 /* UIModules */ = {
 			isa = PBXGroup;
 			children = (
+				464ACCBD1FB06610003778D9 /* MessageEdit */,
 				465E47BE1FB0602D0067ABED /* BoardAdd */,
 				465E47B21FB05CA50067ABED /* BoardList */,
 				46639CA01FAF1636008A7AB9 /* Me */,
@@ -603,6 +619,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				465E47A71FB050DC0067ABED /* WBMeMoreCell.xib in Resources */,
+				464ACCC21FB0662E003778D9 /* WBMessageEditController.xib in Resources */,
 				46639C7C1FAEF0FC008A7AB9 /* WBLoginController.xib in Resources */,
 				46639C3E1FAEE4F6008A7AB9 /* LaunchScreen.storyboard in Resources */,
 				465E47BD1FB05D2F0067ABED /* WBBlackboardListItemCell.xib in Resources */,
@@ -699,6 +716,7 @@
 				46639C6D1FAEEC1E008A7AB9 /* UIView+Frame.m in Sources */,
 				465E47BC1FB05D2F0067ABED /* WBBlackboardListItemCell.m in Sources */,
 				46639C931FAF1345008A7AB9 /* WBTabBarButton.m in Sources */,
+				464ACCC11FB0662E003778D9 /* WBMessageEditController.m in Sources */,
 				465E47B01FB05C6C0067ABED /* WBHomePageCell.m in Sources */,
 				46639C331FAEE4F6008A7AB9 /* AppDelegate.m in Sources */,
 				46639CA81FAF17AF008A7AB9 /* WBHUD.m in Sources */,
