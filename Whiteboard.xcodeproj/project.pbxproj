@@ -10,6 +10,8 @@
 		2F590A8E4EFC967D179AF110 /* libPods-Whiteboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 575A3AB15B565552AC7D8CE9 /* libPods-Whiteboard.a */; };
 		464ACCC11FB0662E003778D9 /* WBMessageEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464ACCBF1FB0662E003778D9 /* WBMessageEditController.m */; };
 		464ACCC21FB0662E003778D9 /* WBMessageEditController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 464ACCC01FB0662E003778D9 /* WBMessageEditController.xib */; };
+		464ACCC61FB06815003778D9 /* WBMessageHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464ACCC51FB06815003778D9 /* WBMessageHistoryController.m */; };
+		464ACCCA1FB069BB003778D9 /* WBMessageDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464ACCC91FB069BB003778D9 /* WBMessageDetailController.m */; };
 		465E478D1FB0454C0067ABED /* NSString+OPSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E478C1FB0454C0067ABED /* NSString+OPSize.m */; };
 		465E47951FB04AFA0067ABED /* WBHomePageCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E47941FB04AFA0067ABED /* WBHomePageCellModel.m */; };
 		465E47A01FB04FAA0067ABED /* WBMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E479F1FB04FAA0067ABED /* WBMeHeaderView.m */; };
@@ -56,6 +58,10 @@
 		464ACCBE1FB0662E003778D9 /* WBMessageEditController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBMessageEditController.h; sourceTree = "<group>"; };
 		464ACCBF1FB0662E003778D9 /* WBMessageEditController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBMessageEditController.m; sourceTree = "<group>"; };
 		464ACCC01FB0662E003778D9 /* WBMessageEditController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBMessageEditController.xib; sourceTree = "<group>"; };
+		464ACCC41FB06815003778D9 /* WBMessageHistoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBMessageHistoryController.h; sourceTree = "<group>"; };
+		464ACCC51FB06815003778D9 /* WBMessageHistoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBMessageHistoryController.m; sourceTree = "<group>"; };
+		464ACCC81FB069BB003778D9 /* WBMessageDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBMessageDetailController.h; sourceTree = "<group>"; };
+		464ACCC91FB069BB003778D9 /* WBMessageDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBMessageDetailController.m; sourceTree = "<group>"; };
 		465E478B1FB0454C0067ABED /* NSString+OPSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+OPSize.h"; sourceTree = "<group>"; };
 		465E478C1FB0454C0067ABED /* NSString+OPSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+OPSize.m"; sourceTree = "<group>"; };
 		465E47931FB04AFA0067ABED /* WBHomePageCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBHomePageCellModel.h; sourceTree = "<group>"; };
@@ -152,6 +158,24 @@
 				464ACCC01FB0662E003778D9 /* WBMessageEditController.xib */,
 			);
 			path = MessageEdit;
+			sourceTree = "<group>";
+		};
+		464ACCC31FB06800003778D9 /* MessageHistory */ = {
+			isa = PBXGroup;
+			children = (
+				464ACCC41FB06815003778D9 /* WBMessageHistoryController.h */,
+				464ACCC51FB06815003778D9 /* WBMessageHistoryController.m */,
+			);
+			path = MessageHistory;
+			sourceTree = "<group>";
+		};
+		464ACCC71FB069A4003778D9 /* MessageDetail */ = {
+			isa = PBXGroup;
+			children = (
+				464ACCC81FB069BB003778D9 /* WBMessageDetailController.h */,
+				464ACCC91FB069BB003778D9 /* WBMessageDetailController.m */,
+			);
+			path = MessageDetail;
 			sourceTree = "<group>";
 		};
 		465E478A1FB0454C0067ABED /* NSString */ = {
@@ -318,6 +342,8 @@
 		46639C4A1FAEE893008A7AB9 /* UIModules */ = {
 			isa = PBXGroup;
 			children = (
+				464ACCC71FB069A4003778D9 /* MessageDetail */,
+				464ACCC31FB06800003778D9 /* MessageHistory */,
 				464ACCBD1FB06610003778D9 /* MessageEdit */,
 				465E47BE1FB0602D0067ABED /* BoardAdd */,
 				465E47B21FB05CA50067ABED /* BoardList */,
@@ -702,8 +728,10 @@
 				465E47C71FB062780067ABED /* WBSelectPhotoTool.m in Sources */,
 				46639C6E1FAEEC1E008A7AB9 /* UIView+Inspectable.m in Sources */,
 				46639CA31FAF1642008A7AB9 /* WBMEController.m in Sources */,
+				464ACCC61FB06815003778D9 /* WBMessageHistoryController.m in Sources */,
 				465E47A61FB050DC0067ABED /* WBMeMoreCell.m in Sources */,
 				46639C881FAF0C03008A7AB9 /* WBNavigationController.m in Sources */,
+				464ACCCA1FB069BB003778D9 /* WBMessageDetailController.m in Sources */,
 				46639C5F1FAEEB3E008A7AB9 /* UIColor+Hex.m in Sources */,
 				46639C901FAF1334008A7AB9 /* WBTabBar.m in Sources */,
 				46639C8C1FAF12FA008A7AB9 /* WBTabBarController.m in Sources */,

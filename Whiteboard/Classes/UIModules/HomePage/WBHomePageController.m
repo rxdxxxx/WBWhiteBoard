@@ -9,6 +9,8 @@
 #import "WBHomePageController.h"
 #import "WBHomePageCell.h"
 #import "WBMessageEditController.h"
+#import "WBNavigationController.h"
+#import "WBMessageHistoryController.h"
 
 @interface WBHomePageController ()
 @property (nonatomic, strong) WBHomePageCellModel *dataModel;
@@ -69,6 +71,10 @@
 }
 
 - (void)navLeftBtnClick{
+    
+    UINavigationController *nav = [[WBNavigationController alloc] initWithRootViewController:[WBMessageHistoryController new]];
+    nav.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:nav animated:YES completion:nil];
     
 }
 #pragma mark -  Private Methods
