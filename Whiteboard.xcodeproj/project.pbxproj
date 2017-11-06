@@ -10,12 +10,16 @@
 		2F590A8E4EFC967D179AF110 /* libPods-Whiteboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 575A3AB15B565552AC7D8CE9 /* libPods-Whiteboard.a */; };
 		465E478D1FB0454C0067ABED /* NSString+OPSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E478C1FB0454C0067ABED /* NSString+OPSize.m */; };
 		465E47951FB04AFA0067ABED /* WBHomePageCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E47941FB04AFA0067ABED /* WBHomePageCellModel.m */; };
-		465E47991FB04B110067ABED /* WBHomePageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E47971FB04B110067ABED /* WBHomePageCell.m */; };
-		465E479A1FB04B110067ABED /* WBHomePageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465E47981FB04B110067ABED /* WBHomePageCell.xib */; };
 		465E47A01FB04FAA0067ABED /* WBMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E479F1FB04FAA0067ABED /* WBMeHeaderView.m */; };
 		465E47A21FB04FB40067ABED /* WBMeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465E47A11FB04FB40067ABED /* WBMeHeaderView.xib */; };
 		465E47A61FB050DC0067ABED /* WBMeMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E47A41FB050DC0067ABED /* WBMeMoreCell.m */; };
 		465E47A71FB050DC0067ABED /* WBMeMoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465E47A51FB050DC0067ABED /* WBMeMoreCell.xib */; };
+		465E47B01FB05C6C0067ABED /* WBHomePageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E47AE1FB05C6B0067ABED /* WBHomePageCell.m */; };
+		465E47B11FB05C6C0067ABED /* WBHomePageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465E47AF1FB05C6B0067ABED /* WBHomePageCell.xib */; };
+		465E47B61FB05CBF0067ABED /* WBBoardListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E47B41FB05CBF0067ABED /* WBBoardListController.m */; };
+		465E47B71FB05CBF0067ABED /* WBBoardListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465E47B51FB05CBF0067ABED /* WBBoardListController.xib */; };
+		465E47BC1FB05D2F0067ABED /* WBBlackboardListItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E47BA1FB05D2F0067ABED /* WBBlackboardListItemCell.m */; };
+		465E47BD1FB05D2F0067ABED /* WBBlackboardListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465E47BB1FB05D2F0067ABED /* WBBlackboardListItemCell.xib */; };
 		46639C331FAEE4F6008A7AB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639C321FAEE4F6008A7AB9 /* AppDelegate.m */; };
 		46639C3B1FAEE4F6008A7AB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46639C3A1FAEE4F6008A7AB9 /* Assets.xcassets */; };
 		46639C3E1FAEE4F6008A7AB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46639C3C1FAEE4F6008A7AB9 /* LaunchScreen.storyboard */; };
@@ -47,15 +51,21 @@
 		465E478C1FB0454C0067ABED /* NSString+OPSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+OPSize.m"; sourceTree = "<group>"; };
 		465E47931FB04AFA0067ABED /* WBHomePageCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBHomePageCellModel.h; sourceTree = "<group>"; };
 		465E47941FB04AFA0067ABED /* WBHomePageCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBHomePageCellModel.m; sourceTree = "<group>"; };
-		465E47961FB04B110067ABED /* WBHomePageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WBHomePageCell.h; path = Whiteboard/Classes/UIModules/HomePage/Model/WBHomePageCell.h; sourceTree = SOURCE_ROOT; };
-		465E47971FB04B110067ABED /* WBHomePageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WBHomePageCell.m; path = Whiteboard/Classes/UIModules/HomePage/Model/WBHomePageCell.m; sourceTree = SOURCE_ROOT; };
-		465E47981FB04B110067ABED /* WBHomePageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WBHomePageCell.xib; path = Whiteboard/Classes/UIModules/HomePage/Model/WBHomePageCell.xib; sourceTree = SOURCE_ROOT; };
 		465E479E1FB04FAA0067ABED /* WBMeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBMeHeaderView.h; sourceTree = "<group>"; };
 		465E479F1FB04FAA0067ABED /* WBMeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBMeHeaderView.m; sourceTree = "<group>"; };
 		465E47A11FB04FB40067ABED /* WBMeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBMeHeaderView.xib; sourceTree = "<group>"; };
 		465E47A31FB050DC0067ABED /* WBMeMoreCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBMeMoreCell.h; sourceTree = "<group>"; };
 		465E47A41FB050DC0067ABED /* WBMeMoreCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBMeMoreCell.m; sourceTree = "<group>"; };
 		465E47A51FB050DC0067ABED /* WBMeMoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBMeMoreCell.xib; sourceTree = "<group>"; };
+		465E47AD1FB05C6B0067ABED /* WBHomePageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHomePageCell.h; sourceTree = "<group>"; };
+		465E47AE1FB05C6B0067ABED /* WBHomePageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBHomePageCell.m; sourceTree = "<group>"; };
+		465E47AF1FB05C6B0067ABED /* WBHomePageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBHomePageCell.xib; sourceTree = "<group>"; };
+		465E47B31FB05CBF0067ABED /* WBBoardListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBBoardListController.h; sourceTree = "<group>"; };
+		465E47B41FB05CBF0067ABED /* WBBoardListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBBoardListController.m; sourceTree = "<group>"; };
+		465E47B51FB05CBF0067ABED /* WBBoardListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBBoardListController.xib; sourceTree = "<group>"; };
+		465E47B91FB05D2F0067ABED /* WBBlackboardListItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBBlackboardListItemCell.h; sourceTree = "<group>"; };
+		465E47BA1FB05D2F0067ABED /* WBBlackboardListItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBBlackboardListItemCell.m; sourceTree = "<group>"; };
+		465E47BB1FB05D2F0067ABED /* WBBlackboardListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBBlackboardListItemCell.xib; sourceTree = "<group>"; };
 		46639C2E1FAEE4F6008A7AB9 /* Whiteboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whiteboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46639C311FAEE4F6008A7AB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46639C321FAEE4F6008A7AB9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -136,17 +146,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		465E478F1FB04A9B0067ABED /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				465E47961FB04B110067ABED /* WBHomePageCell.h */,
-				465E47971FB04B110067ABED /* WBHomePageCell.m */,
-				465E47981FB04B110067ABED /* WBHomePageCell.xib */,
-			);
-			name = Cell;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		465E479B1FB04EE90067ABED /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +171,37 @@
 				465E47A11FB04FB40067ABED /* WBMeHeaderView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		465E47AC1FB05C6B0067ABED /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				465E47AD1FB05C6B0067ABED /* WBHomePageCell.h */,
+				465E47AE1FB05C6B0067ABED /* WBHomePageCell.m */,
+				465E47AF1FB05C6B0067ABED /* WBHomePageCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		465E47B21FB05CA50067ABED /* BoardList */ = {
+			isa = PBXGroup;
+			children = (
+				465E47B81FB05CF40067ABED /* Cell */,
+				465E47B31FB05CBF0067ABED /* WBBoardListController.h */,
+				465E47B41FB05CBF0067ABED /* WBBoardListController.m */,
+				465E47B51FB05CBF0067ABED /* WBBoardListController.xib */,
+			);
+			path = BoardList;
+			sourceTree = "<group>";
+		};
+		465E47B81FB05CF40067ABED /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				465E47B91FB05D2F0067ABED /* WBBlackboardListItemCell.h */,
+				465E47BA1FB05D2F0067ABED /* WBBlackboardListItemCell.m */,
+				465E47BB1FB05D2F0067ABED /* WBBlackboardListItemCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		46639C251FAEE4F6008A7AB9 = {
@@ -234,6 +264,7 @@
 		46639C4A1FAEE893008A7AB9 /* UIModules */ = {
 			isa = PBXGroup;
 			children = (
+				465E47B21FB05CA50067ABED /* BoardList */,
 				46639CA01FAF1636008A7AB9 /* Me */,
 				46639C9C1FAF162C008A7AB9 /* HomePage */,
 				46639C511FAEE927008A7AB9 /* LoginAndRegister */,
@@ -413,7 +444,7 @@
 		46639C9C1FAF162C008A7AB9 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
-				465E478F1FB04A9B0067ABED /* Cell */,
+				465E47AC1FB05C6B0067ABED /* Cell */,
 				465E478E1FB04A930067ABED /* Model */,
 				46639C9D1FAF162C008A7AB9 /* WBHomePageController.h */,
 				46639C9E1FAF162C008A7AB9 /* WBHomePageController.m */,
@@ -530,10 +561,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				465E47A71FB050DC0067ABED /* WBMeMoreCell.xib in Resources */,
-				465E479A1FB04B110067ABED /* WBHomePageCell.xib in Resources */,
 				46639C7C1FAEF0FC008A7AB9 /* WBLoginController.xib in Resources */,
 				46639C3E1FAEE4F6008A7AB9 /* LaunchScreen.storyboard in Resources */,
+				465E47BD1FB05D2F0067ABED /* WBBlackboardListItemCell.xib in Resources */,
+				465E47B71FB05CBF0067ABED /* WBBoardListController.xib in Resources */,
 				46639C3B1FAEE4F6008A7AB9 /* Assets.xcassets in Resources */,
+				465E47B11FB05C6C0067ABED /* WBHomePageCell.xib in Resources */,
 				465E47A21FB04FB40067ABED /* WBMeHeaderView.xib in Resources */,
 				46639C851FAEF569008A7AB9 /* WBRegisterController.xib in Resources */,
 			);
@@ -614,12 +647,14 @@
 				46639C901FAF1334008A7AB9 /* WBTabBar.m in Sources */,
 				46639C8C1FAF12FA008A7AB9 /* WBTabBarController.m in Sources */,
 				46639C561FAEE96C008A7AB9 /* WBBaseController.m in Sources */,
+				465E47B61FB05CBF0067ABED /* WBBoardListController.m in Sources */,
 				465E47951FB04AFA0067ABED /* WBHomePageCellModel.m in Sources */,
 				46639C7B1FAEF0FC008A7AB9 /* WBLoginController.m in Sources */,
 				46639C771FAEEC32008A7AB9 /* UIViewController+NavBarItemExtension.m in Sources */,
-				465E47991FB04B110067ABED /* WBHomePageCell.m in Sources */,
 				46639C6D1FAEEC1E008A7AB9 /* UIView+Frame.m in Sources */,
+				465E47BC1FB05D2F0067ABED /* WBBlackboardListItemCell.m in Sources */,
 				46639C931FAF1345008A7AB9 /* WBTabBarButton.m in Sources */,
+				465E47B01FB05C6C0067ABED /* WBHomePageCell.m in Sources */,
 				46639C331FAEE4F6008A7AB9 /* AppDelegate.m in Sources */,
 				46639CA81FAF17AF008A7AB9 /* WBHUD.m in Sources */,
 				46639C6F1FAEEC1E008A7AB9 /* UIView+NextResponder.m in Sources */,

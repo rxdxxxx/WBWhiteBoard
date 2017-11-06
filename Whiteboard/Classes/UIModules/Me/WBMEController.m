@@ -9,6 +9,7 @@
 #import "WBMEController.h"
 #import "WBMeMoreCell.h"
 #import "WBMeHeaderView.h"
+#import "WBBoardListController.h"
 
 @interface WBMEController ()
 
@@ -43,6 +44,11 @@
 {
     WBMeMoreCell *cell = [WBMeMoreCell cellWithTableView:tableView];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    WBBoardListController *vc = [WBBoardListController new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
