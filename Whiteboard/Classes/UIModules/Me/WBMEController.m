@@ -10,6 +10,7 @@
 #import "WBMeMoreCell.h"
 #import "WBMeHeaderView.h"
 #import "WBBoardListController.h"
+#import "WBQRScanViewController.h"
 
 @interface WBMEController ()
 @property (nonatomic, strong) WBMeHeaderView *headerView;
@@ -46,19 +47,33 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     WBMeMoreCell *cell = [WBMeMoreCell cellWithTableView:tableView];
+    if (indexPath.row == 0) {
+        cell.cellNameLabel.text = @"我的小白板";
+    }else{
+        cell.cellNameLabel.text = @"发现小白板";
+    }
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    WBBoardListController *vc = [WBBoardListController new];
-    [self.navigationController pushViewController:vc animated:YES];
+    if (indexPath.row == 0) {
+
+        WBBoardListController *vc = [WBBoardListController new];
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    }else{
+
+        WBQRScanViewController *vc = [WBQRScanViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<string>zh_CN</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,6 +20,25 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>应用需要您开启此权限</string>
+	<key>NSContactsUsageDescription</key>
+	<string>应用需要您开启此权限</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>应用需要您开启此权限</string>
+	<key>NSLocationUsageDescription</key>
+	<string>应用需要您开启此权限</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>应用需要您开启此权限</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>应用需要您开启此权限</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>应用需要您开启此权限</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -37,32 +56,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    
-    <!--  增加的Key Value  -->
-    <key>CFBundleDevelopmentRegion</key>
-    <string>zh_CN</string>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-        <key>NSAllowsArbitraryLoads</key>
-        <true/>
-    </dict>
-    <key>NSCameraUsageDescription</key>
-    <string>应用需要您开启此权限</string>
-    <key>NSContactsUsageDescription</key>
-    <string>应用需要您开启此权限</string>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>应用需要您开启此权限</string>
-    <key>NSLocationUsageDescription</key>
-    <string>应用需要您开启此权限</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>应用需要您开启此权限</string>
-    <key>NSMicrophoneUsageDescription</key>
-    <string>应用需要您开启此权限</string>
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string>应用需要您开启此权限</string>
-    
-    <!--    状态栏颜色-->
-    <!--    <key>UIStatusBarStyle</key>-->
-    <!--    <string>UIStatusBarStyleLightContent</string>-->
 </dict>
 </plist>

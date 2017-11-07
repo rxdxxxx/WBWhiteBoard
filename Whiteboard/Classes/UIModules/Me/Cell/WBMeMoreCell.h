@@ -13,4 +13,8 @@
  创建cell, cell的复用逻辑已经实现, 使用类名作为唯一标识ID
  */
 + (instancetype)cellWithTableView:(UITableView *)tableView;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *cellNameLabel;
+
 @end

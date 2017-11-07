@@ -9,7 +9,6 @@
 #ifndef WBConst_h
 #define WBConst_h
 
-#import "LxDBAnything.h"
 
 #define kBoardHoldImage [UIImage imageNamed:@"star_bg"]
 #define kUserHeaderHoldImage [UIImage imageNamed:@"ico_ac_s_other_13"]
