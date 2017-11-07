@@ -25,7 +25,6 @@
     [super viewDidLayoutSubviews];
     
     self.tableView.frame = self.view.bounds;
-    self.tableView.height = self.tableView.height - 49;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

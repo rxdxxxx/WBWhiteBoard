@@ -27,4 +27,18 @@
  */
 + (void)lastMessageOfCurrentBoardForSuccessBlock:(void (^)(WBMessageModel *model))successBlock
                                      failedBlock:(void (^)(NSString *message))failedBlock;
+
+
+
+/**
+ 分页拉取,消息内容展示历史记录
+
+ @param message 如果传nil, 从当前时间开始搜索
+ @param limit 每一页多少个数据项
+ */
++ (void)messageListStartIndexMessage:(WBMessageModel *)message
+                               limit:(NSInteger)limit
+                        successBlock:(void (^)(NSArray<WBMessageModel *> *dataArray))successBlock
+                         failedBlock:(void (^)(NSString *message))failedBlock;
+
 @end

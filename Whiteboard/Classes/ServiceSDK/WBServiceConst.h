@@ -17,5 +17,6 @@
 #define k_User @"user"
 #define k_Blackboard @"blackboard"
 #define k_CreatedAt @"createdAt"
+#define k_UpdatedAt @"updatedAt"
 
 #endif /* WBServiceConst_h */

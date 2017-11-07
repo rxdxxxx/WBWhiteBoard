@@ -128,7 +128,10 @@
         if (model) {
             self.dataModel = [WBHomePageCellModel new];
             self.dataModel.dataModel = model;
+        }else{
+            self.dataModel = nil;
         }
+        
         [self.tableView reloadData];
         
     } failedBlock:^(NSString *message) {

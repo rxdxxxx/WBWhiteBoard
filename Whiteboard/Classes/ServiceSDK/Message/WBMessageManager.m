@@ -69,4 +69,49 @@
     
 }
 
+/**
+ 分页拉取,消息内容展示历史记录
+ 
+ @param message 起始的index,0从第一个开始
+ @param limit 每一页多少个数据项
+ */
++ (void)messageListStartIndexMessage:(WBMessageModel *)message
+                               limit:(NSInteger)limit
+                        successBlock:(void (^)(NSArray<WBMessageModel *> *dataArray))successBlock
+                         failedBlock:(void (^)(NSString *message))failedBlock{
+    
+    
+    
+    AVQuery *startDateQuery = [AVQuery queryWithClassName:t_Message];
+    
+    if (message == nil) {
+        [startDateQuery whereKey:@"updatedAt" lessThan:[NSDate date]];
+    }else{
+        [startDateQuery whereKey:@"updatedAt" lessThan:message.updatedAt];
+    }
+    
+    
+    AVQuery *query = [AVQuery andQueryWithSubqueries:[NSArray arrayWithObjects:startDateQuery,nil]];
+    [query whereKey:k_Blackboard equalTo:WBUserModel.currentUser.currentBlackboard];
+    [query addDescendingOrder:k_UpdatedAt];
+    [query setLimit:limit];
+    
+    [query includeKey:@"createUser"];
+    [query includeKey:@"updateUser"];
+    [query includeKey:k_Blackboard];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        if (successBlock) {
+            successBlock(objects);
+        }else{
+            if (failedBlock) {
+                failedBlock(error.localizedDescription);
+            }
+        }
+        
+    }];
+    
+    
+}
+
 @end
