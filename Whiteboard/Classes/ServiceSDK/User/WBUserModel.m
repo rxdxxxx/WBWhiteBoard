@@ -9,4 +9,12 @@
 #import "WBUserModel.h"
 
 @implementation WBUserModel
+
+- (NSString *)displayName{
+    if (self.nickName.length) {
+        return self.nickName;
+    }else{
+        return self.username;
+    }
+}
 @end

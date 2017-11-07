@@ -41,6 +41,8 @@
     
     self.photoTool = [[WBSelectPhotoTool alloc] init];
     self.photoTool.delegate = self;
+    
+    self.createNameLabel.text = WBUserModel.currentUser.displayName;
 }
 
 - (void)didReceiveMemoryWarning {

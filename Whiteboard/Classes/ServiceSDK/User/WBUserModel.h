@@ -12,8 +12,10 @@
 
 @interface WBUserModel : AVUser
 
-@property (nonatomic, copy) NSString *avatarUrl;
-@property (nonatomic, copy) NSString *nickName;
+@property (nonatomic, copy) NSString *avatarUrl; ///< 用户头像地址
+@property (nonatomic, copy) NSString *nickName; ///< 用户昵称
 @property (nonatomic, strong) WBBoardModel *currentBlackboard;
+
+- (NSString *)displayName;
 
 @end

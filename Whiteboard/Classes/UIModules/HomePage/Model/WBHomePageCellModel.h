@@ -15,4 +15,6 @@
 @property (nonatomic, copy) NSString *timeString;
 @property (nonatomic, assign) CGFloat cellHeight;
 
+@property (nonatomic, strong) WBMessageModel *dataModel;
+
 @end

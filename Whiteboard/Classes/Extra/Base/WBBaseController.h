@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "UIViewController+NavBarItemExtension.h"
 #import "WBNavigationController.h"
+#import "WBTableEmptyView.h"
 
-@interface WBBaseController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface WBBaseController : UIViewController<UITableViewDataSource,UITableViewDelegate,WBTableEmptyViewDelegate>
 
-@property (nonatomic, retain) UITableView *tableView;
+@property (nonatomic, strong) WBTableEmptyView *tableEmptyView;
+@property (nonatomic, strong) UITableView *tableView;
 
 @end

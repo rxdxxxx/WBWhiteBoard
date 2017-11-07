@@ -48,7 +48,6 @@
     [blackboardNew saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if (succeeded) {
             [self createBoardUserMap:blackboardNew successBlock:successBlock failedBlock:failedBlock];
-            
         }else{
             if (failedBlock) {
                 failedBlock(error.localizedDescription);

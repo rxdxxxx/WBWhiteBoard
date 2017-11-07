@@ -51,8 +51,8 @@
         CGRect frame =[UIScreen mainScreen].bounds;
         _tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
 
-//        self.tableEmptyView.delegate = self;
-//        _tableView.backgroundView = self.tableEmptyView;
+        self.tableEmptyView.delegate = self;
+        _tableView.backgroundView = self.tableEmptyView;
         _tableView.backgroundColor = [UIColor clearColor];
         _tableView.dataSource = self;
         _tableView.delegate = self;
@@ -69,6 +69,15 @@
         
     }
     return _tableView;
+}
+
+- (WBTableEmptyView *)tableEmptyView{
+    
+    if (!_tableEmptyView) {
+        _tableEmptyView = [WBTableEmptyView lcg_viewFromXib];
+        _tableEmptyView.hidden = YES;
+    }
+    return _tableEmptyView;
 }
 
 @end

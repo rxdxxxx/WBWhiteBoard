@@ -10,4 +10,8 @@
 
 @interface WBMeHeaderView : UIView
 
+@property (weak, nonatomic) IBOutlet UIImageView *userHeaderImageView;
+@property (weak, nonatomic) IBOutlet UILabel *userNickLabel;
+
+
 @end

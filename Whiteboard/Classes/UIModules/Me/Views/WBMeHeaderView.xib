@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="Zb5-Lk-YjW">
+        <view contentMode="scaleToFill" id="Zb5-Lk-YjW" customClass="WBMeHeaderView">
             <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -55,6 +55,10 @@
                 <constraint firstAttribute="trailing" secondItem="N09-Pf-QVC" secondAttribute="trailing" constant="20" id="chf-WZ-hQc"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="userHeaderImageView" destination="5Bf-JY-1gL" id="43F-H4-T7x"/>
+                <outlet property="userNickLabel" destination="hDt-tm-4ld" id="PQc-Ak-8m0"/>
+            </connections>
             <point key="canvasLocation" x="175.5" y="201"/>
         </view>
     </objects>

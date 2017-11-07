@@ -11,6 +11,7 @@
 #import "WBMessageEditController.h"
 #import "WBNavigationController.h"
 #import "WBMessageHistoryController.h"
+#import "WBBoardListController.h"
 
 @interface WBHomePageController ()
 @property (nonatomic, strong) WBHomePageCellModel *dataModel;
@@ -23,13 +24,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self rr_initTitleView:@"小白板"];
-    [self rr_initNavRightBtnWithImageName:@"ico_schedule_edit" target:self action:@selector(navRightBtnClick)];
-    [self rr_initNavLeftBtnWithImageName:@"ico_nav_history" target:self action:@selector(navLeftBtnClick)];
     
-    self.dataModel = [WBHomePageCellModel new];
-    
-    [self.view addSubview:self.tableView];
 
+    [self.view addSubview:self.tableView];
+    
+
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self loadNewData];
 }
 - (void)viewDidLayoutSubviews{
     
@@ -41,7 +45,14 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    if (self.dataModel) {
+        self.tableEmptyView.hidden = YES;
+        return 1;
+
+    }else{
+        self.tableEmptyView.hidden = NO;
+        return 0;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -64,6 +75,23 @@
 
 
 #pragma mark -  CustomDelegate
+#pragma mark - WBTableEmptyViewDelegate
+- (void)tableEmptyViewDidClickAction:(WBTableEmptyView *)emptyView{
+    
+    // 有板子,去发消息,
+    if (WBUserModel.currentUser.currentBlackboard) {
+        [self navRightBtnClick];
+    }
+    
+    // 没板子,去选择板子
+    else{
+        
+        WBBoardListController *vc = [WBBoardListController new];
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    }
+}
+
 #pragma mark -  Event Response
 - (void)navRightBtnClick{
     WBMessageEditController *vc = [WBMessageEditController new];
@@ -78,6 +106,38 @@
     
 }
 #pragma mark -  Private Methods
+- (void)loadNewData{
+    // 有板子,设置按钮的文字
+    if (WBUserModel.currentUser.currentBlackboard) {
+        [self.tableEmptyView resetActionBtnTitleWithString:@"发条信息去~"];
+        
+        if (self.rrRightBtn == nil) {
+            [self rr_initNavRightBtnWithImageName:@"ico_schedule_edit" target:self action:@selector(navRightBtnClick)];
+            [self rr_initNavLeftBtnWithImageName:@"ico_nav_history" target:self action:@selector(navLeftBtnClick)];
+        }
+    }else{
+        [self.tableEmptyView resetActionBtnTitleWithString:@"选择板子去~"];
+        
+        self.navigationItem.rightBarButtonItem = nil;
+        self.navigationItem.leftBarButtonItem = nil;
+        
+    }
+    
+    
+    [WBMessageManager lastMessageOfCurrentBoardForSuccessBlock:^(WBMessageModel *model) {
+        if (model) {
+            self.dataModel = [WBHomePageCellModel new];
+            self.dataModel.dataModel = model;
+        }
+        [self.tableView reloadData];
+        
+    } failedBlock:^(NSString *message) {
+        self.dataModel = nil;
+        [WBHUD showMessage:message toView:self.view];
+        [self.tableView reloadData];
+
+    }];
+}
 #pragma mark -  Public Methods
 #pragma mark -  Getters and Setters
 

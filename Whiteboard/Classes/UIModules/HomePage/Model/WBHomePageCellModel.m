@@ -28,4 +28,12 @@
     
 }
 
+- (void)setDataModel:(WBMessageModel *)dataModel{
+    _dataModel = dataModel;
+    
+    self.changerName = dataModel.updateUser.displayName;
+    self.timeString = dataModel.updatedAt.rr_formatStrig;
+    self.message = dataModel.content;
+}
+
 @end

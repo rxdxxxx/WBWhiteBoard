@@ -20,4 +20,11 @@
                     successBlock:(void(^)(void))successBlock
                      failedBlock:(void(^)(NSString *message))failedBlock;
 
+
+
+/**
+ 拉取当前用户,所在板子的最新一条消息
+ */
++ (void)lastMessageOfCurrentBoardForSuccessBlock:(void (^)(WBMessageModel *model))successBlock
+                                     failedBlock:(void (^)(NSString *message))failedBlock;
 @end

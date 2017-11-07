@@ -56,6 +56,9 @@
 		46639CA81FAF17AF008A7AB9 /* WBHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 46639CA71FAF17AF008A7AB9 /* WBHUD.m */; };
 		46A22D9A1FB18FB2003688BA /* WBMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A22D991FB18FB2003688BA /* WBMessageManager.m */; };
 		46A22D9E1FB18FD3003688BA /* WBMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A22D9D1FB18FD3003688BA /* WBMessageModel.m */; };
+		46A22DA71FB1970D003688BA /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A22DA61FB1970D003688BA /* NSDate+Extension.m */; };
+		46A22DAB1FB1987A003688BA /* WBTableEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A22DAA1FB1987A003688BA /* WBTableEmptyView.m */; };
+		46A22DAD1FB19883003688BA /* WBTableEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46A22DAC1FB19883003688BA /* WBTableEmptyView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,6 +155,11 @@
 		46A22D991FB18FB2003688BA /* WBMessageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBMessageManager.m; sourceTree = "<group>"; };
 		46A22D9C1FB18FD3003688BA /* WBMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBMessageModel.h; sourceTree = "<group>"; };
 		46A22D9D1FB18FD3003688BA /* WBMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBMessageModel.m; sourceTree = "<group>"; };
+		46A22DA51FB1970D003688BA /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		46A22DA61FB1970D003688BA /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		46A22DA91FB1987A003688BA /* WBTableEmptyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBTableEmptyView.h; sourceTree = "<group>"; };
+		46A22DAA1FB1987A003688BA /* WBTableEmptyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBTableEmptyView.m; sourceTree = "<group>"; };
+		46A22DAC1FB19883003688BA /* WBTableEmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBTableEmptyView.xib; sourceTree = "<group>"; };
 		575A3AB15B565552AC7D8CE9 /* libPods-Whiteboard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Whiteboard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C44EE0C28D4AF7F5B5DEBA1 /* Pods-Whiteboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whiteboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whiteboard/Pods-Whiteboard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -462,6 +470,7 @@
 		46639C571FAEE993008A7AB9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				46A22DA41FB196F9003688BA /* Date */,
 				465E478A1FB0454C0067ABED /* NSString */,
 				46639C711FAEEC32008A7AB9 /* UIViewController */,
 				46639C601FAEEC1E008A7AB9 /* UIView */,
@@ -602,6 +611,7 @@
 		46639CA41FAF1790008A7AB9 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				46A22DA81FB19868003688BA /* TableEmptyView */,
 				465E47C41FB062780067ABED /* SelectPhotoTool */,
 				46639CA51FAF179A008A7AB9 /* HUD */,
 			);
@@ -634,6 +644,25 @@
 				46A22D9D1FB18FD3003688BA /* WBMessageModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		46A22DA41FB196F9003688BA /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				46A22DA51FB1970D003688BA /* NSDate+Extension.h */,
+				46A22DA61FB1970D003688BA /* NSDate+Extension.m */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		46A22DA81FB19868003688BA /* TableEmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				46A22DA91FB1987A003688BA /* WBTableEmptyView.h */,
+				46A22DAA1FB1987A003688BA /* WBTableEmptyView.m */,
+				46A22DAC1FB19883003688BA /* WBTableEmptyView.xib */,
+			);
+			path = TableEmptyView;
 			sourceTree = "<group>";
 		};
 		500DA24D86A040CD032EBFDF /* Pods */ = {
@@ -723,6 +752,7 @@
 				465E47C31FB060430067ABED /* WBBoardAddController.xib in Resources */,
 				46639C3B1FAEE4F6008A7AB9 /* Assets.xcassets in Resources */,
 				465E47B11FB05C6C0067ABED /* WBHomePageCell.xib in Resources */,
+				46A22DAD1FB19883003688BA /* WBTableEmptyView.xib in Resources */,
 				465E47A21FB04FB40067ABED /* WBMeHeaderView.xib in Resources */,
 				46639C851FAEF569008A7AB9 /* WBRegisterController.xib in Resources */,
 			);
@@ -801,10 +831,12 @@
 				46639CA31FAF1642008A7AB9 /* WBMEController.m in Sources */,
 				464ACCC61FB06815003778D9 /* WBMessageHistoryController.m in Sources */,
 				465E47A61FB050DC0067ABED /* WBMeMoreCell.m in Sources */,
+				46A22DA71FB1970D003688BA /* NSDate+Extension.m in Sources */,
 				46639C881FAF0C03008A7AB9 /* WBNavigationController.m in Sources */,
 				464ACCCA1FB069BB003778D9 /* WBMessageDetailController.m in Sources */,
 				46639C5F1FAEEB3E008A7AB9 /* UIColor+Hex.m in Sources */,
 				46639C901FAF1334008A7AB9 /* WBTabBar.m in Sources */,
+				46A22DAB1FB1987A003688BA /* WBTableEmptyView.m in Sources */,
 				464ACCCD1FB09B8A003778D9 /* WBBoardManager.m in Sources */,
 				46639C8C1FAF12FA008A7AB9 /* WBTabBarController.m in Sources */,
 				46639C561FAEE96C008A7AB9 /* WBBaseController.m in Sources */,

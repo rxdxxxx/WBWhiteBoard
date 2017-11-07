@@ -28,7 +28,7 @@
     [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:cellModel.coverUrl] placeholderImage:kBoardHoldImage];
     
     self.boardNameLabel.text = cellModel.boardName;
-    self.createNameLabel.text = cellModel.createUser.nickName;
+    self.createNameLabel.text = cellModel.createUser.displayName;
     
     if([WBUserModel.currentUser.currentBlackboard.objectId isEqualToString:cellModel.objectId]){
         self.boardSelectImageView.hidden = NO;

@@ -45,4 +45,28 @@
     }];
 }
 
+
++ (void)lastMessageOfCurrentBoardForSuccessBlock:(void (^)(WBMessageModel *model))successBlock
+                                     failedBlock:(void (^)(NSString *message))failedBlock{
+    AVQuery *query = [AVQuery queryWithClassName:t_Message];
+    [query whereKey:k_Blackboard equalTo:WBUserModel.currentUser.currentBlackboard];
+    [query includeKey:@"createUser"];
+    [query includeKey:@"updateUser"];
+    [query includeKey:k_Blackboard];
+    [query addDescendingOrder:k_CreatedAt];
+    [query setLimit:1];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        if (successBlock) {
+            successBlock(objects.firstObject);
+        }else{
+            if (failedBlock) {
+                failedBlock(error.localizedDescription);
+            }
+        }
+        
+    }];
+    
+}
+
 @end

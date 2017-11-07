@@ -12,7 +12,7 @@
 #import "WBBoardListController.h"
 
 @interface WBMEController ()
-
+@property (nonatomic, strong) WBMeHeaderView *headerView;
 @end
 
 @implementation WBMEController
@@ -23,9 +23,19 @@
     // Do any additional setup after loading the view.
     [self rr_initTitleView:@"小白板"];
     
-    self.tableView.tableHeaderView = [WBMeHeaderView lcg_viewFromXib];
+    self.headerView = [WBMeHeaderView lcg_viewFromXib];
+    self.tableView.tableHeaderView = self.headerView;
+    
     [self.view addSubview:self.tableView];
 }
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    WBUserModel *userModel = [WBUserModel currentUser];
+    self.headerView.userNickLabel.text = userModel.displayName;
+    [self.headerView.userHeaderImageView sd_setImageWithURL:[NSURL URLWithString:userModel.avatarUrl] placeholderImage:kUserHeaderHoldImage];
+}
+
 - (void)viewDidLayoutSubviews{
     
     self.tableView.frame = self.view.bounds;

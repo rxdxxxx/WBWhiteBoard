@@ -10,7 +10,7 @@
 #import "WBBlackboardListItemCell.h"
 #import "WBBoardAddController.h"
 
-@interface WBBoardListController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface WBBoardListController ()<UICollectionViewDelegate,UICollectionViewDataSource,WBTableEmptyViewDelegate>
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @end
@@ -40,7 +40,11 @@
 
 #pragma mark -  UICollectionViewDelegate
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return self.dataArray.count;
+    NSInteger dataCount = self.dataArray.count;
+    
+    self.tableEmptyView.hidden = (dataCount != 0);
+    
+    return dataCount;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -81,6 +85,11 @@
 
 
 #pragma mark -  CustomDelegate
+#pragma mark - WBTableEmptyViewDelegate
+- (void)tableEmptyViewDidClickAction:(WBTableEmptyView *)emptyView{
+    [self navRightBtnClick];
+}
+
 #pragma mark -  Event Response
 - (void)navRightBtnClick{
     WBBoardAddController *vc = [WBBoardAddController new];
@@ -118,10 +127,15 @@
     self.collectionView.backgroundColor = [UIColor clearColor];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+    self.collectionView.backgroundView = self.tableEmptyView;
+    self.tableEmptyView.delegate = self;
     [self.collectionView reloadData];
     if (@available(iOS 11.0, *)) {
         self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }
+    
+    [self.tableEmptyView resetActionBtnTitleWithString:@"加块白板去~"];
+    
     [self.view addSubview:self.collectionView];
 }
 #pragma mark -  Public Methods

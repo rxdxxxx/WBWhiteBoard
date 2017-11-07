@@ -28,10 +28,10 @@
     
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     image = [UIImage imageWithData:[UITools compressOriginalImage:image toMaxDataSizeKBytes:200]];
-    [self.showController dismissViewControllerAnimated:YES completion:nil];
     
     dispatch_async(dispatch_get_main_queue(), ^(void) {
-        
+        [self.showController dismissViewControllerAnimated:YES completion:nil];
+
         if ([self.delegate respondsToSelector:@selector(tool:didSelectImage:)]) {
             [self.delegate tool:self didSelectImage:image];
         }
