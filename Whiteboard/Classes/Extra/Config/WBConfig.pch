@@ -20,10 +20,13 @@
 #import "UIColor+Hex.h"
 #import "NSString+OPSize.h"
 #import "UIView+NextResponder.h"
+#import <UIImageView+WebCache.h>
 
 
 // 工具类
 #import "WBModuleControl.h"
 #import "UITools.h"
+
+#import "ServiceSDKHeaders.h"
 
 #endif /* WBConfig_pch */

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface WBBlackboardListItemCell : UICollectionViewCell
-
+@property (nonatomic, strong) WBBoardModel *cellModel;
 @end

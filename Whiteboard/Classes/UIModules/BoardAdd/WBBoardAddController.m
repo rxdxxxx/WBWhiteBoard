@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) WBSelectPhotoTool *photoTool;
 
+@property (nonatomic, strong) UIImage *pickerImage;
+
 @end
 
 @implementation WBBoardAddController
@@ -53,6 +55,7 @@
 #pragma mark - WBSelectPhotoToolDelegate
 - (void)tool:(WBSelectPhotoTool *)tool didSelectImage:(UIImage *)image{
     self.coverImageView.image = image;
+    self.pickerImage = image;
 }
 
 #pragma mark -  Event Response
@@ -68,7 +71,32 @@
 
 - (void)navRightBtnClick{
     
+    if (self.pickerImage == nil) {
+        [WBHUD showErrorMessage:@"请为小白板,选一个封面" toView:self.view];
+        return;
+    }
+    
+    if ([self.boardNameLabel.text lcg_removeWhitespaceAndNewlineCharacterSet].length == 0) {
+        [WBHUD showErrorMessage:@"请为小白板,起一个名字" toView:self.view];
+        return;
+    }
+    
+    [WBHUD showMessage:@"创建中" toView:self.view];
+    [WBBoardManager createNewBoardWithName:self.boardNameLabel.text
+                                     image:self.pickerImage
+                              successBlock:^
+    {
+        [WBHUD showSuccessMessage:@"创建成功" toView:self.view];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.navigationController popViewControllerAnimated:YES];
+        });
+        
+    } failedBlock:^(NSString *message) {
+        [WBHUD showErrorMessage:message toView:self.view];
+    }];
 }
+
+
 
 #pragma mark -  Private Methods
 #pragma mark -  Public Methods

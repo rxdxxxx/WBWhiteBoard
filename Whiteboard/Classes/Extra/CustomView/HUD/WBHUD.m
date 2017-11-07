@@ -13,8 +13,8 @@
 
 + (MBProgressHUD *)showMessage:(NSString *)message toView:(UIView *)view{
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    [hud hideAnimated:YES afterDelay:10];
-    hud.label.text = message;
+    [hud hideAnimated:YES afterDelay:30];
+    hud.detailsLabel.text = message;
     hud.removeFromSuperViewOnHide = YES;
     return hud;
 }
@@ -39,7 +39,7 @@
     
     MBProgressHUD *hud = [self createCustomHUDFromView:view];
     hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_tab_badge_check"]];
-    hud.label.text = message;
+    hud.detailsLabel.text = message;
     return hud;
 }
 + (MBProgressHUD *)showErrorMessage:(NSString *)message toView:(UIView *)view{
@@ -47,9 +47,19 @@
 
     MBProgressHUD *hud = [self createCustomHUDFromView:view];
     hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ico_notification_warning"]];
-    hud.label.text = message;
+    hud.detailsLabel.text = message;
     return hud;
 
 }
+
++ (MBProgressHUD *)progressFromView:(UIView *)view{
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    hud.mode = MBProgressHUDModeAnnularDeterminate;
+    hud.removeFromSuperViewOnHide = YES;
+    [hud hideAnimated:YES afterDelay:30];
+    return hud;
+}
+
 
 @end

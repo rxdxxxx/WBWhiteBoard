@@ -15,5 +15,5 @@
 + (BOOL)hideForView:(UIView *)view;
 + (MBProgressHUD *)showSuccessMessage:(NSString *)message toView:(UIView *)view;
 + (MBProgressHUD *)showErrorMessage:(NSString *)message toView:(UIView *)view;
-
++ (MBProgressHUD *)progressFromView:(UIView *)view;
 @end

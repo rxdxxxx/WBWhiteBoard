@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self rr_initTitleView:@"书写板报"];
-    [self rr_initNavRightBtnWithImageName:@"ico_iap_tick" target:self action:@selector(editComplete)];
+    [self rr_initNavRightBtnWithImageName:@"ico_iap_tick" target:self action:@selector(editComplete:)];
 
     if (self.messageModel) {
         self.textView.text = self.messageModel.message;
@@ -38,11 +38,39 @@
 #pragma mark -  CustomDelegate
 #pragma mark -  Event Response
 
-- (void)editComplete{
-    
+- (void)editComplete:(UIButton *)btn{
+    if (self.messageModel) {
+        [self updateMessage:btn];
+    }else{
+        [self createMessage:btn];
+    }
 }
 
 #pragma mark -  Private Methods
+- (void)updateMessage:(UIButton *)btn{
+    
+}
+- (void)createMessage:(UIButton *)btn{
+    if ([self.textView.text lcg_removeWhitespaceAndNewlineCharacterSet].length == 0) {
+        [WBHUD showErrorMessage:@"请输入要发布的内容"
+                         toView:self.view];
+        return;
+    }
+    
+    btn.userInteractionEnabled = NO;
+    [WBMessageManager createMessageWithContent:self.textView.text
+                                  successBlock:^
+    {
+        [WBHUD showSuccessMessage:@"发布成功" toView:self.view];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.navigationController popViewControllerAnimated:YES];
+        });
+        
+    } failedBlock:^(NSString *message) {
+        btn.userInteractionEnabled = YES;
+        [WBHUD showErrorMessage:message toView:self.view];
+    }];
+}
 #pragma mark -  Public Methods
 #pragma mark -  Getters and Setters
 

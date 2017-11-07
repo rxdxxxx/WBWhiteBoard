@@ -17,14 +17,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [AVOSCloud setApplicationId:@"yUtcziocTsIBC336nErfmcbX-gzGzoHsz" clientKey:@"wmKbLC4ggjbyHSvYbte06RQf"];
-    
+    [self avosRegister];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     [self.window setRootViewController:[WBModuleControl controllerFromDidFinishLaunching]];
     
     [self.window makeKeyAndVisible];
+    
+    
+    
     
     return YES;
 }
@@ -56,5 +58,14 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)avosRegister{
+    
+    [WBBoardModel registerSubclass];
+    [WBBoardMapUserModel registerSubclass];
+    [WBUserModel registerSubclass];
+    [WBMessageModel registerSubclass];
 
+    
+    [AVOSCloud setApplicationId:@"yUtcziocTsIBC336nErfmcbX-gzGzoHsz" clientKey:@"wmKbLC4ggjbyHSvYbte06RQf"];
+}
 @end
