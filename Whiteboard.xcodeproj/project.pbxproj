@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2F590A8E4EFC967D179AF110 /* libPods-Whiteboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 575A3AB15B565552AC7D8CE9 /* libPods-Whiteboard.a */; };
 		4600BC371FB1C0F8008E0759 /* WBQRScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4600BC2D1FB1C0F8008E0759 /* WBQRScanViewController.m */; };
+		4600BC401FB1C549008E0759 /* WBBoardDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4600BC3E1FB1C549008E0759 /* WBBoardDetailController.m */; };
+		4600BC411FB1C549008E0759 /* WBBoardDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4600BC3F1FB1C549008E0759 /* WBBoardDetailController.xib */; };
 		464ACCC11FB0662E003778D9 /* WBMessageEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464ACCBF1FB0662E003778D9 /* WBMessageEditController.m */; };
 		464ACCC21FB0662E003778D9 /* WBMessageEditController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 464ACCC01FB0662E003778D9 /* WBMessageEditController.xib */; };
 		464ACCC61FB06815003778D9 /* WBMessageHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464ACCC51FB06815003778D9 /* WBMessageHistoryController.m */; };
@@ -66,6 +68,9 @@
 		3A4B4B4C7956696616DAD624 /* Pods-Whiteboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whiteboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whiteboard/Pods-Whiteboard.debug.xcconfig"; sourceTree = "<group>"; };
 		4600BC2C1FB1C0F8008E0759 /* WBQRScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBQRScanViewController.h; sourceTree = "<group>"; };
 		4600BC2D1FB1C0F8008E0759 /* WBQRScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBQRScanViewController.m; sourceTree = "<group>"; };
+		4600BC3D1FB1C549008E0759 /* WBBoardDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBBoardDetailController.h; sourceTree = "<group>"; };
+		4600BC3E1FB1C549008E0759 /* WBBoardDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBBoardDetailController.m; sourceTree = "<group>"; };
+		4600BC3F1FB1C549008E0759 /* WBBoardDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBBoardDetailController.xib; sourceTree = "<group>"; };
 		464ACCBE1FB0662E003778D9 /* WBMessageEditController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBMessageEditController.h; sourceTree = "<group>"; };
 		464ACCBF1FB0662E003778D9 /* WBMessageEditController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBMessageEditController.m; sourceTree = "<group>"; };
 		464ACCC01FB0662E003778D9 /* WBMessageEditController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBMessageEditController.xib; sourceTree = "<group>"; };
@@ -186,6 +191,16 @@
 				4600BC2D1FB1C0F8008E0759 /* WBQRScanViewController.m */,
 			);
 			path = QRScan;
+			sourceTree = "<group>";
+		};
+		4600BC3C1FB1C533008E0759 /* BoardDetail */ = {
+			isa = PBXGroup;
+			children = (
+				4600BC3D1FB1C549008E0759 /* WBBoardDetailController.h */,
+				4600BC3E1FB1C549008E0759 /* WBBoardDetailController.m */,
+				4600BC3F1FB1C549008E0759 /* WBBoardDetailController.xib */,
+			);
+			path = BoardDetail;
 			sourceTree = "<group>";
 		};
 		464ACCBD1FB06610003778D9 /* MessageEdit */ = {
@@ -414,6 +429,7 @@
 		46639C4A1FAEE893008A7AB9 /* UIModules */ = {
 			isa = PBXGroup;
 			children = (
+				4600BC3C1FB1C533008E0759 /* BoardDetail */,
 				4600BC261FB1C0F8008E0759 /* QRScan */,
 				464ACCC71FB069A4003778D9 /* MessageDetail */,
 				464ACCC31FB06800003778D9 /* MessageHistory */,
@@ -757,6 +773,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4600BC411FB1C549008E0759 /* WBBoardDetailController.xib in Resources */,
 				465E47A71FB050DC0067ABED /* WBMeMoreCell.xib in Resources */,
 				464ACCC21FB0662E003778D9 /* WBMessageEditController.xib in Resources */,
 				46639C7C1FAEF0FC008A7AB9 /* WBLoginController.xib in Resources */,
@@ -837,6 +854,7 @@
 				46639C701FAEEC1E008A7AB9 /* UIView+Toast.m in Sources */,
 				465E478D1FB0454C0067ABED /* NSString+OPSize.m in Sources */,
 				46639C411FAEE4F6008A7AB9 /* main.m in Sources */,
+				4600BC401FB1C549008E0759 /* WBBoardDetailController.m in Sources */,
 				465E47A01FB04FAA0067ABED /* WBMeHeaderView.m in Sources */,
 				46639C7F1FAEF256008A7AB9 /* WBModuleControl.m in Sources */,
 				465E47C71FB062780067ABED /* WBSelectPhotoTool.m in Sources */,

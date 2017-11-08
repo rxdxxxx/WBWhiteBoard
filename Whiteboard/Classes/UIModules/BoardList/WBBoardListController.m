@@ -9,6 +9,7 @@
 #import "WBBoardListController.h"
 #import "WBBlackboardListItemCell.h"
 #import "WBBoardAddController.h"
+#import "WBBoardDetailController.h"
 
 @interface WBBoardListController ()<UICollectionViewDelegate,UICollectionViewDataSource,WBTableEmptyViewDelegate>
 @property (nonatomic, strong) UICollectionView *collectionView;
@@ -55,32 +56,9 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     WBBoardModel *selectBoard = self.dataArray[indexPath.row];
-    if(![WBUserModel.currentUser.currentBlackboard.objectId isEqualToString:selectBoard.objectId]){
-        UIAlertController *VC = [UIAlertController alertControllerWithTitle:@"是否确认切换?"
-                                                                    message:nil
-                                                             preferredStyle:(UIAlertControllerStyleAlert)];
-        [VC addAction: [UIAlertAction actionWithTitle:@"确认"
-                                                style:(UIAlertActionStyleDefault)
-                                              handler:^(UIAlertAction * _Nonnull action)
-                        {
-                            
-                            [WBHUD showMessage:@"切换中.." toView:self.view];
-                            [WBBoardManager changeUsingBoard:selectBoard successBlock:^{
-                                [WBHUD showSuccessMessage:@"切换成功" toView:self.view];
-                                [self loadData];
-
-                            } failedBlock:^(NSString *message) {
-                                [WBHUD showErrorMessage:message toView:self.view];
-                            }];
-                        }]];
-        
-        [VC addAction: [UIAlertAction actionWithTitle:@"取消"
-                                                style:(UIAlertActionStyleCancel)
-                                              handler:nil]];
-        
-        [self presentViewController:VC animated:YES completion:nil];
-        
-    }
+    WBBoardDetailController *vc = [WBBoardDetailController new];
+    vc.boardModel = selectBoard;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
