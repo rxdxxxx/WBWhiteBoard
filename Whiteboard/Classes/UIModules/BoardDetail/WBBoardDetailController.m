@@ -8,6 +8,7 @@
 
 #import "WBBoardDetailController.h"
 #import "WBSelectPhotoTool.h"
+#import "QRImageViewController.h"
 @interface WBBoardDetailController ()<WBSelectPhotoToolDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
@@ -39,7 +40,13 @@
     [self setupBoardUI];
     [self setupUI];
     [self editBtnMessage];
-    
+    [WBBoardManager boardDetailWithObjectID:self.boardModel.objectId
+                               successBlock:^(WBBoardModel *boardModel)
+    {
+        
+    } failedBlock:^(NSString *message) {
+        
+    }];
 
 }
 
@@ -110,12 +117,21 @@
 }
 - (IBAction)qrCodeBtnClick:(UIButton *)sender {
     
+    QRImageViewController *vc = [[QRImageViewController alloc]init];
+    WBNavigationController *nav = [[WBNavigationController alloc] initWithRootViewController:vc];
+    
+    NSString *qrCodeString = [NSString stringWithFormat:@"%@%@",kQRCodePrefix,self.boardModel.objectId];
+    
+    vc.qrImage = [QRCodeMaker generateWithDefaultQRCodeData:qrCodeString imageViewWidth:200];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 - (IBAction)deleteBoardBtnClick:(UIButton *)sender {
     
 }
 
 - (void)navRightBtnClick{
+    
+    
     
 }
 #pragma mark -  Private Methods

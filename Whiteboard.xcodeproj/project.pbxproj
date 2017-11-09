@@ -11,6 +11,11 @@
 		4600BC371FB1C0F8008E0759 /* WBQRScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4600BC2D1FB1C0F8008E0759 /* WBQRScanViewController.m */; };
 		4600BC401FB1C549008E0759 /* WBBoardDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4600BC3E1FB1C549008E0759 /* WBBoardDetailController.m */; };
 		4600BC411FB1C549008E0759 /* WBBoardDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4600BC3F1FB1C549008E0759 /* WBBoardDetailController.xib */; };
+		4629225A1FB3088A0076A4B9 /* QRCodeMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 462922571FB3088A0076A4B9 /* QRCodeMaker.m */; };
+		4629225B1FB3088A0076A4B9 /* QRImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 462922581FB3088A0076A4B9 /* QRImageViewController.xib */; };
+		4629225C1FB3088A0076A4B9 /* QRImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462922591FB3088A0076A4B9 /* QRImageViewController.m */; };
+		462922631FB310260076A4B9 /* WBQRScanResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462922611FB310260076A4B9 /* WBQRScanResultController.m */; };
+		462922641FB310260076A4B9 /* WBQRScanResultController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 462922621FB310260076A4B9 /* WBQRScanResultController.xib */; };
 		464ACCC11FB0662E003778D9 /* WBMessageEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464ACCBF1FB0662E003778D9 /* WBMessageEditController.m */; };
 		464ACCC21FB0662E003778D9 /* WBMessageEditController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 464ACCC01FB0662E003778D9 /* WBMessageEditController.xib */; };
 		464ACCC61FB06815003778D9 /* WBMessageHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464ACCC51FB06815003778D9 /* WBMessageHistoryController.m */; };
@@ -71,6 +76,14 @@
 		4600BC3D1FB1C549008E0759 /* WBBoardDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBBoardDetailController.h; sourceTree = "<group>"; };
 		4600BC3E1FB1C549008E0759 /* WBBoardDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBBoardDetailController.m; sourceTree = "<group>"; };
 		4600BC3F1FB1C549008E0759 /* WBBoardDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBBoardDetailController.xib; sourceTree = "<group>"; };
+		462922551FB308890076A4B9 /* QRCodeMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeMaker.h; sourceTree = "<group>"; };
+		462922561FB308890076A4B9 /* QRImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRImageViewController.h; sourceTree = "<group>"; };
+		462922571FB3088A0076A4B9 /* QRCodeMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeMaker.m; sourceTree = "<group>"; };
+		462922581FB3088A0076A4B9 /* QRImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRImageViewController.xib; sourceTree = "<group>"; };
+		462922591FB3088A0076A4B9 /* QRImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRImageViewController.m; sourceTree = "<group>"; };
+		462922601FB310260076A4B9 /* WBQRScanResultController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBQRScanResultController.h; sourceTree = "<group>"; };
+		462922611FB310260076A4B9 /* WBQRScanResultController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBQRScanResultController.m; sourceTree = "<group>"; };
+		462922621FB310260076A4B9 /* WBQRScanResultController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBQRScanResultController.xib; sourceTree = "<group>"; };
 		464ACCBE1FB0662E003778D9 /* WBMessageEditController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBMessageEditController.h; sourceTree = "<group>"; };
 		464ACCBF1FB0662E003778D9 /* WBMessageEditController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBMessageEditController.m; sourceTree = "<group>"; };
 		464ACCC01FB0662E003778D9 /* WBMessageEditController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBMessageEditController.xib; sourceTree = "<group>"; };
@@ -187,8 +200,9 @@
 		4600BC261FB1C0F8008E0759 /* QRScan */ = {
 			isa = PBXGroup;
 			children = (
-				4600BC2C1FB1C0F8008E0759 /* WBQRScanViewController.h */,
-				4600BC2D1FB1C0F8008E0759 /* WBQRScanViewController.m */,
+				4629225F1FB310110076A4B9 /* Result */,
+				4629225E1FB310080076A4B9 /* Scan */,
+				4629225D1FB30FFC0076A4B9 /* QRShow */,
 			);
 			path = QRScan;
 			sourceTree = "<group>";
@@ -201,6 +215,44 @@
 				4600BC3F1FB1C549008E0759 /* WBBoardDetailController.xib */,
 			);
 			path = BoardDetail;
+			sourceTree = "<group>";
+		};
+		462922541FB3086F0076A4B9 /* QRMaker */ = {
+			isa = PBXGroup;
+			children = (
+				462922551FB308890076A4B9 /* QRCodeMaker.h */,
+				462922571FB3088A0076A4B9 /* QRCodeMaker.m */,
+			);
+			path = QRMaker;
+			sourceTree = "<group>";
+		};
+		4629225D1FB30FFC0076A4B9 /* QRShow */ = {
+			isa = PBXGroup;
+			children = (
+				462922561FB308890076A4B9 /* QRImageViewController.h */,
+				462922591FB3088A0076A4B9 /* QRImageViewController.m */,
+				462922581FB3088A0076A4B9 /* QRImageViewController.xib */,
+			);
+			path = QRShow;
+			sourceTree = "<group>";
+		};
+		4629225E1FB310080076A4B9 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				4600BC2C1FB1C0F8008E0759 /* WBQRScanViewController.h */,
+				4600BC2D1FB1C0F8008E0759 /* WBQRScanViewController.m */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		4629225F1FB310110076A4B9 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				462922601FB310260076A4B9 /* WBQRScanResultController.h */,
+				462922611FB310260076A4B9 /* WBQRScanResultController.m */,
+				462922621FB310260076A4B9 /* WBQRScanResultController.xib */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 		464ACCBD1FB06610003778D9 /* MessageEdit */ = {
@@ -358,6 +410,7 @@
 		465E47C81FB062C40067ABED /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				462922541FB3086F0076A4B9 /* QRMaker */,
 				465E47C91FB062D40067ABED /* UITools.h */,
 				465E47CA1FB062D40067ABED /* UITools.m */,
 			);
@@ -784,7 +837,9 @@
 				465E47B11FB05C6C0067ABED /* WBHomePageCell.xib in Resources */,
 				46A22DAD1FB19883003688BA /* WBTableEmptyView.xib in Resources */,
 				465E47A21FB04FB40067ABED /* WBMeHeaderView.xib in Resources */,
+				462922641FB310260076A4B9 /* WBQRScanResultController.xib in Resources */,
 				46639C851FAEF569008A7AB9 /* WBRegisterController.xib in Resources */,
+				4629225B1FB3088A0076A4B9 /* QRImageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -856,6 +911,8 @@
 				46639C411FAEE4F6008A7AB9 /* main.m in Sources */,
 				4600BC401FB1C549008E0759 /* WBBoardDetailController.m in Sources */,
 				465E47A01FB04FAA0067ABED /* WBMeHeaderView.m in Sources */,
+				462922631FB310260076A4B9 /* WBQRScanResultController.m in Sources */,
+				4629225A1FB3088A0076A4B9 /* QRCodeMaker.m in Sources */,
 				46639C7F1FAEF256008A7AB9 /* WBModuleControl.m in Sources */,
 				465E47C71FB062780067ABED /* WBSelectPhotoTool.m in Sources */,
 				46639C6E1FAEEC1E008A7AB9 /* UIView+Inspectable.m in Sources */,
@@ -872,6 +929,7 @@
 				46639C8C1FAF12FA008A7AB9 /* WBTabBarController.m in Sources */,
 				46639C561FAEE96C008A7AB9 /* WBBaseController.m in Sources */,
 				465E47CB1FB062D40067ABED /* UITools.m in Sources */,
+				4629225C1FB3088A0076A4B9 /* QRImageViewController.m in Sources */,
 				465E47B61FB05CBF0067ABED /* WBBoardListController.m in Sources */,
 				465E47951FB04AFA0067ABED /* WBHomePageCellModel.m in Sources */,
 				46639C7B1FAEF0FC008A7AB9 /* WBLoginController.m in Sources */,

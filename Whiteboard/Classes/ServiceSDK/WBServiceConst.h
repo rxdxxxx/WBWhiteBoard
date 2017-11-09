@@ -14,6 +14,8 @@
 #define t_BlackboardUserMap @"Blackboard_User"
 #define t_Message @"BlackboardMessage"
 
+#define k_ObjectId  @"objectId"
+#define k_CreateUser @"createUser"
 #define k_User @"user"
 #define k_Blackboard @"blackboard"
 #define k_CreatedAt @"createdAt"

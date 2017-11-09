@@ -11,8 +11,9 @@
 #import "WBMeHeaderView.h"
 #import "WBBoardListController.h"
 #import "WBQRScanViewController.h"
+#import "WBQRScanResultController.h"
 
-@interface WBMEController ()
+@interface WBMEController ()<QRScanDelegate>
 @property (nonatomic, strong) WBMeHeaderView *headerView;
 @end
 
@@ -26,8 +27,10 @@
     
     self.headerView = [WBMeHeaderView lcg_viewFromXib];
     self.tableView.tableHeaderView = self.headerView;
-    
     [self.view addSubview:self.tableView];
+    
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -71,6 +74,7 @@
     }else{
 
         WBQRScanViewController *vc = [WBQRScanViewController new];
+        vc.delegate = self;
         [self.navigationController pushViewController:vc animated:YES];
         
     }
@@ -80,6 +84,29 @@
     return 100;
 }
 #pragma mark -  CustomDelegate
+#pragma mark - QRScanDelegate
+- (void)qrScanResult:(NSString *)result viewController:(WBQRScanViewController *)qrScanVC{
+    [qrScanVC.navigationController popViewControllerAnimated:YES];
+    
+    if ([result hasPrefix:kQRCodePrefix]) {
+        
+        NSArray *objectIDArray = [result componentsSeparatedByString:kQRCodePrefix];
+        
+        [WBHUD showMessage:@"什么好东西~" toView:self.view];
+        [WBBoardManager boardDetailWithObjectID:objectIDArray.lastObject successBlock:^(WBBoardModel *boardModel) {
+            WBQRScanResultController *vc = [WBQRScanResultController new];
+            vc.boardModel = boardModel;
+            [self.navigationController pushViewController:vc animated:YES];
+            [WBHUD hideForView:self.view];
+        } failedBlock:^(NSString *message) {
+            [WBHUD showErrorMessage:message toView:self.view];
+        }];
+    }else{
+        [WBHUD showErrorMessage:@"这个不是我菜,换一个试试." toView:self.view];
+    }
+    
+}
+
 #pragma mark -  Event Response
 #pragma mark -  Private Methods
 #pragma mark -  Public Methods

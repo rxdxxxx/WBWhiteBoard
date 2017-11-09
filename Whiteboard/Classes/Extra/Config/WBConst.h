@@ -12,6 +12,7 @@
 
 #define kBoardHoldImage [UIImage imageNamed:@"star_bg"]
 #define kUserHeaderHoldImage [UIImage imageNamed:@"ico_ac_s_other_13"]
+#define kQRCodePrefix @"WhiteBoard-"
 
 #define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
 #define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
