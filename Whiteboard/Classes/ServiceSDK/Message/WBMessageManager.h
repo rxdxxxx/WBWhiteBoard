@@ -41,4 +41,17 @@
                         successBlock:(void (^)(NSArray<WBMessageModel *> *dataArray))successBlock
                          failedBlock:(void (^)(NSString *message))failedBlock;
 
+
+
+/**
+ 编辑一条已经发布的消息
+
+ @param aNewString 新内容
+ */
++ (void)editMessageContentWithString:(NSString *)aNewString
+                      changedMessage:(WBMessageModel *)messageModel
+                        successBlock:(void (^)(void))successBlock
+                         failedBlock:(void (^)(NSString *message))failedBlock;
+
+
 @end

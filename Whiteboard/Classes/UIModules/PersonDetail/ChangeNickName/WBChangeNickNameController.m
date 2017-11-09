@@ -11,7 +11,7 @@
 @interface WBChangeNickNameController ()
 @property (weak, nonatomic) IBOutlet UITextField *nickNameTextField;
 @property (weak, nonatomic) IBOutlet UIButton *saveBtn;
-
+@property (nonatomic, copy) NSString *originalNickName;
 @end
 
 @implementation WBChangeNickNameController
@@ -25,6 +25,9 @@
     
     WBUserModel *userModel = [WBUserModel currentUser];
     self.nickNameTextField.text = userModel.displayName;
+    self.originalNickName = self.nickNameTextField.text;
+    
+    
     [self lcg_textDidChange:self.nickNameTextField];
 
 }
@@ -34,11 +37,16 @@
         textField.text = [textField.text substringToIndex:17];
     }
     
-    if (textField.text.length == 0) {
+    if ([textField.text isEqualToString:self.originalNickName]) {
         self.saveBtn.enabled = NO;
     }else{
-        self.saveBtn.enabled = YES;
+        if (textField.text.length == 0) {
+            self.saveBtn.enabled = NO;
+        }else{
+            self.saveBtn.enabled = YES;
+        }
     }
+    
 }
 
 - (void)didReceiveMemoryWarning {

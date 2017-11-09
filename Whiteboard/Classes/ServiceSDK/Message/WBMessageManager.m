@@ -114,4 +114,45 @@
     
 }
 
++ (void)editMessageContentWithString:(NSString *)aNewString
+                      changedMessage:(WBMessageModel *)messageModel
+                        successBlock:(void (^)(void))successBlock
+                         failedBlock:(void (^)(NSString *message))failedBlock{
+    
+    if (aNewString.lcg_removeWhitespaceAndNewlineCharacterSet.length == 0) {
+        if (failedBlock) {
+            failedBlock(@"请输入内容.");
+        }
+        return;
+    }
+    
+    if (messageModel == nil) {
+        if (failedBlock) {
+            failedBlock(@"这个消息...伦家改不了");
+        }
+        return;
+    }
+    
+    
+    // 修改属性
+    [messageModel setObject:aNewString forKey:@"content"];
+    // 保存到云端
+    [messageModel saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            
+            [WBNotificationCenter postNotificationName:kNotificationUserChangeUserName object:nil];
+            
+            if (successBlock) {
+                successBlock();
+            }
+        }else{
+            if (failedBlock) {
+                failedBlock(error.localizedDescription);
+            }
+        }
+    }];
+    
+    
+}
+
 @end

@@ -69,7 +69,7 @@
     if (indexPath.row == 0) {
         cell.cellNameLabel.text = @"我的小白板";
     }else{
-        cell.cellNameLabel.text = @"发现小白板";
+        cell.cellNameLabel.text = @"发现";
     }
     return cell;
 }
