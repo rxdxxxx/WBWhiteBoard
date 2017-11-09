@@ -8,14 +8,23 @@
 
 #import "WBMeHeaderView.h"
 
+@interface WBMeHeaderView ()
+@property (weak, nonatomic) IBOutlet UIView *userInfoContentView;
+
+@end
+
 @implementation WBMeHeaderView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    
+    [self.userInfoContentView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapUserInfoView)]];
 }
-*/
+
+- (void)didTapUserInfoView{
+    if (self.tapCallback) {
+        self.tapCallback();
+    }
+}
 
 @end

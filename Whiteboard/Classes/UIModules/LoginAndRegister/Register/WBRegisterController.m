@@ -11,6 +11,7 @@
 @interface WBRegisterController ()
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTextField;
 
 @end
 
@@ -35,29 +36,19 @@
 
 - (IBAction)registerBtnClick:(id)sender {
     
-//    let randomUser = UserModel()
-//
-//    guard
-//    let userName = userNameTextField.text,
-//    userNameTextField.text!.characters.count > 0,
-//    let password = passwordTextField.text,
-//    passwordTextField.text!.characters.count > 0 else {
-//        print("需要输入内容的啊")
-//        return
-//    }
-//
-//
-//    randomUser.username = LCString(userName)
-//    randomUser.password = LCString(password)
-//
-//    if(randomUser.signUp().isSuccess){
-//        print("注册成功")
-//    }else{
-//        print("注册失败")
-//
-//    }
-    if ([self.userNameTextField.text lcg_removeWhitespaceAndNewlineCharacterSet].length == 0 || [self.passwordTextField.text lcg_removeWhitespaceAndNewlineCharacterSet].length == 0) {
-        [WBHUD showErrorMessage:@"需要输入内容的啊" toView:self.view];
+    
+    if (![UITools isValidateEmail:self.userNameTextField.text]) {
+        [WBHUD showErrorMessage:@"请输入正确的邮箱地址" toView:self.view];
+        return;
+    }
+    
+    if (![UITools isValidatePassWord:self.passwordTextField.text]) {
+        [WBHUD showErrorMessage:@"密码必须是8-16位数字、字符组合" toView:self.view];
+        return;
+    }
+    
+    if (![self.passwordTextField.text isEqualToString:self.confirmPasswordTextField.text]) {
+        [WBHUD showErrorMessage:@"两次密码不一致" toView:self.view];
         return;
     }
     

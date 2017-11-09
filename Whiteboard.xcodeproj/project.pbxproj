@@ -67,6 +67,12 @@
 		46A22DA71FB1970D003688BA /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A22DA61FB1970D003688BA /* NSDate+Extension.m */; };
 		46A22DAB1FB1987A003688BA /* WBTableEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A22DAA1FB1987A003688BA /* WBTableEmptyView.m */; };
 		46A22DAD1FB19883003688BA /* WBTableEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46A22DAC1FB19883003688BA /* WBTableEmptyView.xib */; };
+		46C020201FB43789006C089E /* WBPersonDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C0201E1FB43789006C089E /* WBPersonDetailController.m */; };
+		46C020211FB43789006C089E /* WBPersonDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46C0201F1FB43789006C089E /* WBPersonDetailController.xib */; };
+		46C020271FB439B5006C089E /* WBChangeHeaderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C020251FB439B5006C089E /* WBChangeHeaderController.m */; };
+		46C020281FB439B5006C089E /* WBChangeHeaderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46C020261FB439B5006C089E /* WBChangeHeaderController.xib */; };
+		46C0202C1FB4448A006C089E /* WBChangeNickNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C0202A1FB4448A006C089E /* WBChangeNickNameController.m */; };
+		46C0202D1FB4448A006C089E /* WBChangeNickNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46C0202B1FB4448A006C089E /* WBChangeNickNameController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -181,6 +187,15 @@
 		46A22DA91FB1987A003688BA /* WBTableEmptyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBTableEmptyView.h; sourceTree = "<group>"; };
 		46A22DAA1FB1987A003688BA /* WBTableEmptyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBTableEmptyView.m; sourceTree = "<group>"; };
 		46A22DAC1FB19883003688BA /* WBTableEmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBTableEmptyView.xib; sourceTree = "<group>"; };
+		46C0201D1FB43789006C089E /* WBPersonDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBPersonDetailController.h; sourceTree = "<group>"; };
+		46C0201E1FB43789006C089E /* WBPersonDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBPersonDetailController.m; sourceTree = "<group>"; };
+		46C0201F1FB43789006C089E /* WBPersonDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBPersonDetailController.xib; sourceTree = "<group>"; };
+		46C020241FB439B5006C089E /* WBChangeHeaderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBChangeHeaderController.h; sourceTree = "<group>"; };
+		46C020251FB439B5006C089E /* WBChangeHeaderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBChangeHeaderController.m; sourceTree = "<group>"; };
+		46C020261FB439B5006C089E /* WBChangeHeaderController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBChangeHeaderController.xib; sourceTree = "<group>"; };
+		46C020291FB4448A006C089E /* WBChangeNickNameController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBChangeNickNameController.h; sourceTree = "<group>"; };
+		46C0202A1FB4448A006C089E /* WBChangeNickNameController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBChangeNickNameController.m; sourceTree = "<group>"; };
+		46C0202B1FB4448A006C089E /* WBChangeNickNameController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBChangeNickNameController.xib; sourceTree = "<group>"; };
 		575A3AB15B565552AC7D8CE9 /* libPods-Whiteboard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Whiteboard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C44EE0C28D4AF7F5B5DEBA1 /* Pods-Whiteboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whiteboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whiteboard/Pods-Whiteboard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -482,6 +497,7 @@
 		46639C4A1FAEE893008A7AB9 /* UIModules */ = {
 			isa = PBXGroup;
 			children = (
+				46C0201C1FB43778006C089E /* PersonDetail */,
 				4600BC3C1FB1C533008E0759 /* BoardDetail */,
 				4600BC261FB1C0F8008E0759 /* QRScan */,
 				464ACCC71FB069A4003778D9 /* MessageDetail */,
@@ -747,6 +763,38 @@
 			path = TableEmptyView;
 			sourceTree = "<group>";
 		};
+		46C0201C1FB43778006C089E /* PersonDetail */ = {
+			isa = PBXGroup;
+			children = (
+				46C020231FB439A1006C089E /* ChangeNickName */,
+				46C020221FB43990006C089E /* ChangeHeader */,
+				46C0201D1FB43789006C089E /* WBPersonDetailController.h */,
+				46C0201E1FB43789006C089E /* WBPersonDetailController.m */,
+				46C0201F1FB43789006C089E /* WBPersonDetailController.xib */,
+			);
+			path = PersonDetail;
+			sourceTree = "<group>";
+		};
+		46C020221FB43990006C089E /* ChangeHeader */ = {
+			isa = PBXGroup;
+			children = (
+				46C020241FB439B5006C089E /* WBChangeHeaderController.h */,
+				46C020251FB439B5006C089E /* WBChangeHeaderController.m */,
+				46C020261FB439B5006C089E /* WBChangeHeaderController.xib */,
+			);
+			path = ChangeHeader;
+			sourceTree = "<group>";
+		};
+		46C020231FB439A1006C089E /* ChangeNickName */ = {
+			isa = PBXGroup;
+			children = (
+				46C020291FB4448A006C089E /* WBChangeNickNameController.h */,
+				46C0202A1FB4448A006C089E /* WBChangeNickNameController.m */,
+				46C0202B1FB4448A006C089E /* WBChangeNickNameController.xib */,
+			);
+			path = ChangeNickName;
+			sourceTree = "<group>";
+		};
 		500DA24D86A040CD032EBFDF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -833,13 +881,16 @@
 				46639C3E1FAEE4F6008A7AB9 /* LaunchScreen.storyboard in Resources */,
 				465E47BD1FB05D2F0067ABED /* WBBlackboardListItemCell.xib in Resources */,
 				465E47C31FB060430067ABED /* WBBoardAddController.xib in Resources */,
+				46C0202D1FB4448A006C089E /* WBChangeNickNameController.xib in Resources */,
 				46639C3B1FAEE4F6008A7AB9 /* Assets.xcassets in Resources */,
 				465E47B11FB05C6C0067ABED /* WBHomePageCell.xib in Resources */,
+				46C020281FB439B5006C089E /* WBChangeHeaderController.xib in Resources */,
 				46A22DAD1FB19883003688BA /* WBTableEmptyView.xib in Resources */,
 				465E47A21FB04FB40067ABED /* WBMeHeaderView.xib in Resources */,
 				462922641FB310260076A4B9 /* WBQRScanResultController.xib in Resources */,
 				46639C851FAEF569008A7AB9 /* WBRegisterController.xib in Resources */,
 				4629225B1FB3088A0076A4B9 /* QRImageViewController.xib in Resources */,
+				46C020211FB43789006C089E /* WBPersonDetailController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -907,6 +958,7 @@
 			files = (
 				46A22D9A1FB18FB2003688BA /* WBMessageManager.m in Sources */,
 				46639C701FAEEC1E008A7AB9 /* UIView+Toast.m in Sources */,
+				46C020271FB439B5006C089E /* WBChangeHeaderController.m in Sources */,
 				465E478D1FB0454C0067ABED /* NSString+OPSize.m in Sources */,
 				46639C411FAEE4F6008A7AB9 /* main.m in Sources */,
 				4600BC401FB1C549008E0759 /* WBBoardDetailController.m in Sources */,
@@ -920,6 +972,7 @@
 				464ACCC61FB06815003778D9 /* WBMessageHistoryController.m in Sources */,
 				465E47A61FB050DC0067ABED /* WBMeMoreCell.m in Sources */,
 				46A22DA71FB1970D003688BA /* NSDate+Extension.m in Sources */,
+				46C0202C1FB4448A006C089E /* WBChangeNickNameController.m in Sources */,
 				46639C881FAF0C03008A7AB9 /* WBNavigationController.m in Sources */,
 				464ACCCA1FB069BB003778D9 /* WBMessageDetailController.m in Sources */,
 				46639C5F1FAEEB3E008A7AB9 /* UIColor+Hex.m in Sources */,
@@ -941,6 +994,7 @@
 				464ACCC11FB0662E003778D9 /* WBMessageEditController.m in Sources */,
 				465E47B01FB05C6C0067ABED /* WBHomePageCell.m in Sources */,
 				464ACCD31FB0A037003778D9 /* WBBoardModel.m in Sources */,
+				46C020201FB43789006C089E /* WBPersonDetailController.m in Sources */,
 				46639C331FAEE4F6008A7AB9 /* AppDelegate.m in Sources */,
 				464ACCD91FB0A06A003778D9 /* WBUserModel.m in Sources */,
 				46639CA81FAF17AF008A7AB9 /* WBHUD.m in Sources */,

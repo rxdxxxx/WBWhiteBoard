@@ -12,6 +12,7 @@
 #import "WBBoardListController.h"
 #import "WBQRScanViewController.h"
 #import "WBQRScanResultController.h"
+#import "WBPersonDetailController.h"
 
 @interface WBMEController ()<QRScanDelegate>
 @property (nonatomic, strong) WBMeHeaderView *headerView;
@@ -29,15 +30,23 @@
     self.tableView.tableHeaderView = self.headerView;
     [self.view addSubview:self.tableView];
     
+    __weak typeof(self)weakSelf = self;
+    self.headerView.tapCallback = ^{
+        WBPersonDetailController *vc = [WBPersonDetailController new];
+        [weakSelf.navigationController pushViewController:vc animated:YES];
+    };
     
+    [WBNotificationCenter addObserver:self selector:@selector(userHeaderChangeNotification) name:kNotificationUserChangeHeaderImage object:nil];
+    [WBNotificationCenter addObserver:self selector:@selector(userNameChangeNotification) name:kNotificationUserChangeUserName object:nil];
+
     
+    WBUserModel *userModel = [WBUserModel currentUser];
+    self.headerView.userNickLabel.text = userModel.displayName;
+    [self.headerView.userHeaderImageView sd_setImageWithURL:[NSURL URLWithString:userModel.avatarUrl] placeholderImage:kUserHeaderHoldImage];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    WBUserModel *userModel = [WBUserModel currentUser];
-    self.headerView.userNickLabel.text = userModel.displayName;
-    [self.headerView.userHeaderImageView sd_setImageWithURL:[NSURL URLWithString:userModel.avatarUrl] placeholderImage:kUserHeaderHoldImage];
 }
 
 - (void)viewDidLayoutSubviews{
@@ -108,6 +117,17 @@
 }
 
 #pragma mark -  Event Response
+- (void)userNameChangeNotification{
+    
+    WBUserModel *userModel = [WBUserModel currentUser];
+    self.headerView.userNickLabel.text = userModel.displayName;
+}
+
+-(void)userHeaderChangeNotification{
+    
+    WBUserModel *userModel = [WBUserModel currentUser];
+    [self.headerView.userHeaderImageView sd_setImageWithURL:[NSURL URLWithString:userModel.avatarUrl] placeholderImage:kUserHeaderHoldImage];
+}
 #pragma mark -  Private Methods
 #pragma mark -  Public Methods
 #pragma mark -  Getters and Setters

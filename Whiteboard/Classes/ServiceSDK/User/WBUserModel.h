@@ -8,6 +8,11 @@
 
 #import <AVOSCloud/AVOSCloud.h>
 
+
+#define kNotificationUserChangeHeaderImage @"kNotificationUserChangeHeaderImage"
+#define kNotificationUserChangeUserName @"kNotificationUserChangeUserName"
+
+
 @class WBBoardModel;
 
 @interface WBUserModel : AVUser
@@ -18,4 +23,23 @@
 
 - (NSString *)displayName;
 
+
+
+/**
+ 修改当前用户的头像
+
+ @param image 头像图片
+ */
++ (void)changeUserHeaderWithImage:(UIImage *)image
+                     successBlock:(void(^)(void))successBlock
+                      failedBlock:(void(^)(NSString *message))failedBlock;
+
+/**
+ 修改当前用户的昵称
+ 
+ @param nameString 新的昵称
+ */
++ (void)changeUserNicknameWithString:(NSString *)nameString
+                     successBlock:(void(^)(void))successBlock
+                      failedBlock:(void(^)(NSString *message))failedBlock;
 @end

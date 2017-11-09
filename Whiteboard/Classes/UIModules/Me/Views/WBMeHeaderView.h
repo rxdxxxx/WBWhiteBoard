@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *userHeaderImageView;
 @property (weak, nonatomic) IBOutlet UILabel *userNickLabel;
 
+@property (nonatomic, copy) void(^tapCallback)(void);
 
 @end

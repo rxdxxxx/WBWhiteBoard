@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WBChangeNickNameController">
+            <connections>
+                <outlet property="nickNameTextField" destination="VTl-kX-0VO" id="C9E-hn-xkm"/>
+                <outlet property="saveBtn" destination="gBS-k2-zhu" id="ycD-oj-lKa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKa-h2-BGU">
+                    <rect key="frame" x="0.0" y="110" width="375" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBS-k2-zhu">
+                            <rect key="frame" x="15" y="12.5" width="345" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="pnq-3X-uQo"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <inset key="titleEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="完成" backgroundImage="btn_placeholder">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="saveBtnClick:" destination="-1" eventType="touchUpInside" id="0pq-2N-Dn0"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="gBS-k2-zhu" firstAttribute="leading" secondItem="DKa-h2-BGU" secondAttribute="leading" constant="15" id="9t3-07-5bZ"/>
+                        <constraint firstItem="gBS-k2-zhu" firstAttribute="centerY" secondItem="DKa-h2-BGU" secondAttribute="centerY" id="Bmu-pG-Hrc"/>
+                        <constraint firstAttribute="height" constant="80" id="Vb4-RX-YcB"/>
+                        <constraint firstAttribute="trailing" secondItem="gBS-k2-zhu" secondAttribute="trailing" constant="15" id="dkq-lX-p2e"/>
+                        <constraint firstItem="gBS-k2-zhu" firstAttribute="centerX" secondItem="DKa-h2-BGU" secondAttribute="centerX" id="xhm-jf-8VF"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Wf8-vy-Yca"/>
+                </view>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入昵称" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="VTl-kX-0VO">
+                    <rect key="frame" x="16" y="40" width="343" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="apP-Ec-IZA"/>
+                    </constraints>
+                    <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="deviceRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称长度最大为17位" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTo-qh-AZ4">
+                    <rect key="frame" x="128" y="91" width="119.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="deviceRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="VTl-kX-0VO" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="04Y-ra-bCa"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="VTl-kX-0VO" secondAttribute="trailing" constant="16" id="FAa-9X-8nf"/>
+                <constraint firstItem="VTl-kX-0VO" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="Wiw-mT-BcE"/>
+                <constraint firstItem="DKa-h2-BGU" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="cCp-xP-GBm"/>
+                <constraint firstItem="DKa-h2-BGU" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="cah-2M-8Ou"/>
+                <constraint firstItem="vTo-qh-AZ4" firstAttribute="top" secondItem="VTl-kX-0VO" secondAttribute="bottom" constant="1" id="i3O-4F-Tmh"/>
+                <constraint firstItem="DKa-h2-BGU" firstAttribute="top" secondItem="VTl-kX-0VO" secondAttribute="bottom" constant="20" id="iMT-2z-LRB"/>
+                <constraint firstItem="vTo-qh-AZ4" firstAttribute="centerX" secondItem="VTl-kX-0VO" secondAttribute="centerX" id="j7g-ar-oNi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_placeholder" width="25" height="27"/>
+    </resources>
+</document>
