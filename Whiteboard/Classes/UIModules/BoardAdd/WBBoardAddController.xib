@@ -129,6 +129,7 @@
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQ9-tB-IES">
                                     <rect key="frame" x="148" y="67" width="207" height="50"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                     <state key="normal" title="点击切换封面" backgroundImage="bg_cell_full"/>
                                     <connections>
                                         <action selector="pickImageBtnClick" destination="-1" eventType="touchUpInside" id="Kde-xK-rmc"/>

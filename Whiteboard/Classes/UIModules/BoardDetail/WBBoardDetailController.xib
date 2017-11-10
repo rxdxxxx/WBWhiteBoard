@@ -133,6 +133,7 @@
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXi-z2-J1x">
                             <rect key="frame" x="156" y="87" width="204" height="50"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="点击切换封面" backgroundImage="bg_cell_full"/>
                             <connections>
                                 <action selector="pickImageBtnClick:" destination="-1" eventType="touchUpInside" id="wXQ-bs-xtR"/>
@@ -140,6 +141,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0T-33-krF">
                             <rect key="frame" x="156" y="17" width="204" height="50"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="编辑" backgroundImage="bg_cell_full">
                                 <color key="titleColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
@@ -179,6 +181,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="55" id="33d-ME-qol"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <inset key="titleEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="切换到这个白板" backgroundImage="bg_ib_full_6">
@@ -206,6 +209,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="55" id="Th0-z3-JNd"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <inset key="titleEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="生成二维码" backgroundImage="bg_ib_full_7">
@@ -233,6 +237,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="55" id="Gtd-Ms-3nh"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <inset key="titleEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="删除这个板子" backgroundImage="bg_ib_full_12">

@@ -14,6 +14,6 @@
 @property (nonatomic, strong) NSNumber *state; ///< 0: 正常 1:删除
 @property (nonatomic, strong) WBUserModel *createUser; ///< 创建人
 @property (nonatomic, strong) WBUserModel *updateUser; ///< 修改人
-@property (nonatomic, strong) WBBoardModel *blackboard; ///< 修改人
+@property (nonatomic, strong) WBBoardModel *blackboard; ///< 所属的板子
 
 @end

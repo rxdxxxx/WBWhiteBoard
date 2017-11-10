@@ -42,6 +42,9 @@
 }
 
 #pragma mark -  CustomDelegate
+- (void)tableEmptyViewDidClickAction:(WBTableEmptyView *)emptyView{
+    
+}
 #pragma mark -  Event Response
 #pragma mark -  Private Methods
 #pragma mark -  Public Methods

@@ -32,6 +32,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="55" id="wfc-jj-b5Y"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <inset key="titleEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="加入" backgroundImage="bg_ib_full_6">
@@ -147,6 +148,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="55" id="oEd-eN-6iD"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <inset key="titleEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="取消" backgroundImage="bg_ib_full_12">
