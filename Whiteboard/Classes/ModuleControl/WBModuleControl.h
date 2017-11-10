@@ -21,4 +21,10 @@
  */
 + (void)exchangeWindowRootControllerWithUserModel:(AVUser *)userModel;
 
+
+/**
+ 退出登录
+ */
++ (void)quit;
+
 @end

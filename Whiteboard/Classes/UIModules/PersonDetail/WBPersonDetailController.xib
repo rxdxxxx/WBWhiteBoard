@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -117,6 +118,34 @@
                         <outletCollection property="gestureRecognizers" destination="KKb-Aa-Ypz" appends="YES" id="5Cm-FN-d10"/>
                     </connections>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jS-7J-Yuo">
+                    <rect key="frame" x="0.0" y="280" width="375" height="80"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_ib_full_12" translatesAutoresizingMaskIntoConstraints="NO" id="XgQ-an-4jg">
+                            <rect key="frame" x="15" y="5" width="345" height="70"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="退出" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATI-P8-Q5H">
+                            <rect key="frame" x="169.5" y="30" width="35" height="21"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="XgQ-an-4jg" secondAttribute="bottom" constant="5" id="1sX-vX-ho1"/>
+                        <constraint firstItem="ATI-P8-Q5H" firstAttribute="centerY" secondItem="XgQ-an-4jg" secondAttribute="centerY" id="2yN-Wn-WKc"/>
+                        <constraint firstItem="XgQ-an-4jg" firstAttribute="leading" secondItem="9jS-7J-Yuo" secondAttribute="leading" constant="15" id="CIV-hV-T5c"/>
+                        <constraint firstItem="ATI-P8-Q5H" firstAttribute="centerX" secondItem="XgQ-an-4jg" secondAttribute="centerX" id="Eke-4O-Nru"/>
+                        <constraint firstAttribute="height" constant="80" id="M6L-XM-JG5"/>
+                        <constraint firstItem="XgQ-an-4jg" firstAttribute="top" secondItem="9jS-7J-Yuo" secondAttribute="top" constant="5" id="enz-mF-eph"/>
+                        <constraint firstAttribute="trailing" secondItem="XgQ-an-4jg" secondAttribute="trailing" constant="15" id="sYq-6s-kqY"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="R2e-TZ-Sgj" appends="YES" id="aiH-LX-NvI"/>
+                    </connections>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
@@ -126,6 +155,9 @@
                 <constraint firstItem="wH2-8Z-TEK" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="IZp-Qw-4Lf"/>
                 <constraint firstItem="wH2-8Z-TEK" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="QrA-DK-Roy"/>
                 <constraint firstItem="FRM-Rh-ZZS" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="Z1q-2a-M5Y"/>
+                <constraint firstItem="9jS-7J-Yuo" firstAttribute="top" secondItem="FRM-Rh-ZZS" secondAttribute="bottom" constant="100" id="ZiO-WP-H1w"/>
+                <constraint firstItem="9jS-7J-Yuo" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="cTM-G4-4UZ"/>
+                <constraint firstItem="9jS-7J-Yuo" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="nwM-ZW-zLj"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="-329" y="-81"/>
@@ -140,9 +172,15 @@
                 <action selector="tapUserNameCallBack:" destination="-1" id="Q2Y-1A-0RA"/>
             </connections>
         </tapGestureRecognizer>
+        <tapGestureRecognizer id="R2e-TZ-Sgj">
+            <connections>
+                <action selector="quitTapCallback:" destination="-1" id="I0B-bY-rXj"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="bg_cell_full" width="18" height="20"/>
+        <image name="bg_ib_full_12" width="12" height="20"/>
         <image name="ico_ac_s_other_13" width="124" height="139"/>
         <image name="ico_arrow_next" width="7" height="14"/>
     </resources>

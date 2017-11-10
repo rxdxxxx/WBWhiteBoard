@@ -62,6 +62,28 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (IBAction)quitTapCallback:(id)sender {
+    
+    UIAlertController *VC = [UIAlertController alertControllerWithTitle:@"是否确认退出?"
+                                                                message:nil
+                                                         preferredStyle:(UIAlertControllerStyleAlert)];
+    [VC addAction: [UIAlertAction actionWithTitle:@"确认"
+                                            style:(UIAlertActionStyleDefault)
+                                          handler:^(UIAlertAction * _Nonnull action)
+                    {
+                        [AVUser logOut];
+                        [WBModuleControl quit];
+                    }]];
+    
+    [VC addAction: [UIAlertAction actionWithTitle:@"取消"
+                                            style:(UIAlertActionStyleCancel)
+                                          handler:nil]];
+    
+    [self presentViewController:VC animated:YES completion:nil];
+    
+
+    
+}
 
 
 #pragma mark -  Private Methods

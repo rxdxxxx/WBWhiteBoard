@@ -12,8 +12,12 @@
 
 @implementation WBModuleControl
 + (UIViewController *)controllerFromDidFinishLaunching{
-    
-    return [[WBLoginController alloc] init];
+    AVUser *user = [AVUser currentUser];
+    if (user) {
+        return [self loginedControllerWithUserModel:user];
+    }else{
+        return [[WBLoginController alloc] init];
+    }
 }
 
 + (UIViewController *)loginedControllerWithUserModel:(AVUser *)userModel{
@@ -23,6 +27,14 @@
 + (void)exchangeWindowRootControllerWithUserModel:(AVUser *)userModel{
     
     UIViewController *vc = [WBModuleControl loginedControllerWithUserModel:userModel];
+    
+    [[UIApplication sharedApplication].delegate.window setRootViewController:vc];
+    [[UIApplication sharedApplication].delegate.window makeKeyAndVisible];
+}
+
++ (void)quit{
+    
+    UIViewController *vc = [[WBLoginController alloc] init];
     
     [[UIApplication sharedApplication].delegate.window setRootViewController:vc];
     [[UIApplication sharedApplication].delegate.window makeKeyAndVisible];
