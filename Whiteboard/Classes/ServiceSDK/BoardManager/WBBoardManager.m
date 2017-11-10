@@ -82,7 +82,7 @@
     [blackboardMapUser setObject:boardObj forKey:k_Blackboard];
     
     [blackboardMapUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-        
+        [WBNotificationCenter postNotificationName:kWBBoardManagerCreate object:nil];
         if (succeeded) {
             if (successBlock) {
                 successBlock();
@@ -115,7 +115,10 @@
         NSMutableArray *boardList = [NSMutableArray new];
 
         for (WBBoardMapUserModel *map in objects) {
-            [boardList addObject:map.blackboard];
+            if (map.blackboard) {
+                map.blackboard.mapObjID = map.objectId;
+                [boardList addObject:map.blackboard];
+            }
         }
         if (error == nil) {
             if (successBlock) {
@@ -224,5 +227,130 @@
     
     
     [self createBoardUserMap:boardObj successBlock:successBlock failedBlock:failedBlock];
+}
+
+#pragma mark - 删除板子
++ (void)quitBoard:(WBBoardModel *)board
+       successBlock:(void (^)(void))successBlock
+        failedBlock:(void (^)(NSString *message))failedBlock{
+    
+    if (board.mapObjID.length == 0) {
+        if (failedBlock) {
+            failedBlock(@"需要关系ID,才能进行退出操作");
+        }
+        return;
+    }
+    
+    // 可能一个板子下有多个人, 所以在退出时,删除关系, 不对班子进行删除
+    [AVObject deleteAllInBackground:@[[AVObject objectWithClassName:t_BlackboardUserMap objectId:board.mapObjID]]
+                              block:^(BOOL succeeded, NSError * _Nullable error)
+    {
+        
+        [WBNotificationCenter postNotificationName:kWBBoardManagerDelete object:nil];
+        if (succeeded) {
+            if (successBlock) {
+                successBlock();
+            }
+        }else{
+            if (failedBlock) {
+                failedBlock(error.localizedDescription);
+            }
+        }
+        
+    }];
+    
+
+}
+
+
+#pragma mark - 修改板子名称和封面
+
+
+/**
+ 修改封面或名称
+ 
+ @param board 被修改的板子
+ @param newName 板子新名称
+ @param coverImage 封面, 可以为 nil
+ */
++ (void)editBoardInfoWithBoard:(WBBoardModel *)board
+                  newBoardName:(NSString *)newName
+                 newCoverImage:(UIImage *)coverImage
+                  successBlock:(void (^)(void))successBlock
+                   failedBlock:(void (^)(NSString *message))failedBlock{
+    if (board == nil) {
+        if (failedBlock) {
+            failedBlock(@"这个板子有问题,换个姿势试试");
+        }
+        return;
+    }
+    
+    if (coverImage == nil) {
+        // 传进来的名字和原本的一致
+        if ([newName isEqualToString:board.boardName]) {
+            if (successBlock) {
+                successBlock();
+            }
+            return;
+        }
+        
+        
+        // 传进来的名字,是个空串
+        else if(newName.length == 0){
+            if (failedBlock) {
+                failedBlock(@"请输入正确的名称");
+            }
+            return;
+        }
+        
+    }
+    
+    // 成功回调的统一处理
+    AVBooleanResultBlock editBoardInfoFinishBlock = ^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            
+            [WBNotificationCenter postNotificationName:kWBBoardManagerUpdate object:nil];
+            
+            if (successBlock) {
+                successBlock();
+            }
+        }else{
+            if (failedBlock) {
+                failedBlock(error.localizedDescription);
+            }
+        }
+    };
+    
+    // 该封板,需要先上传图片
+    if (coverImage) {
+        
+        AVFile *file = [AVFile fileWithData:[UITools compressOriginalImage:coverImage toMaxDataSizeKBytes:50]];
+        [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            // 成功或失败处理...
+            if (succeeded) {
+                
+                // 修改板子名称
+                if (newName.length) {
+                    [board setObject:newName forKey:@"boardName"];
+                }
+                [board setObject:file.url forKey:@"coverUrl"];
+                
+                // 保存到云端
+                [board saveInBackgroundWithBlock:editBoardInfoFinishBlock];
+                
+            }else{
+                if (failedBlock) {
+                    failedBlock(error.localizedDescription);
+                }
+            }
+        }];
+    }else{
+        
+        
+        // 修改板子名称
+        [board setObject:newName forKey:@"boardName"];
+        [board saveInBackgroundWithBlock:editBoardInfoFinishBlock];
+    }
+    
 }
 @end

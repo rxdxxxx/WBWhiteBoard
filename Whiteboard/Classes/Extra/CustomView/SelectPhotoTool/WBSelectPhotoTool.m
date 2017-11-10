@@ -27,7 +27,7 @@
     
     
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    image = [UIImage imageWithData:[UITools compressOriginalImage:image toMaxDataSizeKBytes:200]];
+    image = [UIImage imageWithData:[UITools compressOriginalImage:image toMaxDataSizeKBytes:50]];
     
     dispatch_async(dispatch_get_main_queue(), ^(void) {
         [self.showController dismissViewControllerAnimated:YES completion:nil];

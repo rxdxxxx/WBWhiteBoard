@@ -23,11 +23,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setupUI];
+    
+    [self loadData];
+    [WBNotificationCenter addObserver:self selector:@selector(loadData) name:kWBBoardManagerDelete object:nil];
+    [WBNotificationCenter addObserver:self selector:@selector(loadData) name:kWBBoardManagerUpdate object:nil];
+    [WBNotificationCenter addObserver:self selector:@selector(loadData) name:kWBBoardManagerCreate object:nil];
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    [self loadData];
 }
 
 - (void)didReceiveMemoryWarning {

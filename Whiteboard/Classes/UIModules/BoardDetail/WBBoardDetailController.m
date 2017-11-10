@@ -70,10 +70,16 @@
     // 没选过图片
     if (self.pickerImage == nil) {
         // 输入了值,不是空, 而且和之前的内容也不一致
-        if ([self.boardNameLabel.text lcg_removeWhitespaceAndNewlineCharacterSet].length > 0) {
+        NSString *showText = [self.boardNameLabel.text lcg_removeWhitespaceAndNewlineCharacterSet];
+        
+        if (showText.length > 0) {
             self.rrRightBtn.enabled = ![self.boardNameLabel.text isEqualToString:self.boardModel.boardName];
         }
+        else if(showText.length == 0){
+            self.rrRightBtn.enabled = NO;
+        }
     }
+    
     
 }
 - (IBAction)editBtnclick:(UIButton *)sender {
@@ -126,11 +132,66 @@
     [self presentViewController:nav animated:YES completion:nil];
 }
 - (IBAction)deleteBoardBtnClick:(UIButton *)sender {
+    if([WBUserModel.currentUser.currentBlackboard.objectId isEqualToString:self.boardModel.objectId]){
+        [WBHUD showErrorMessage:@"不能删除使用中的板子" toView:self.view];
+        return;
+    }
+        
     
+    
+    
+    UIAlertController *VC = [UIAlertController alertControllerWithTitle:@"是否确认退出?"
+                                                                message:nil
+                                                         preferredStyle:(UIAlertControllerStyleAlert)];
+    [VC addAction: [UIAlertAction actionWithTitle:@"确认"
+                                            style:(UIAlertActionStyleDefault)
+                                          handler:^(UIAlertAction * _Nonnull action)
+                    {
+                        
+                        [WBHUD showMessage:@"退出中.." toView:self.view];
+                        
+                        [WBBoardManager quitBoard:self.boardModel
+                                       successBlock:^{
+                                           [WBHUD showSuccessMessage:@"退出成功" toView:self.view];
+                                           dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                               [self.navigationController popViewControllerAnimated:YES];
+                                           });
+                                           
+                                           
+                                           
+                                       } failedBlock:^(NSString *message) {
+                                           [WBHUD showErrorMessage:message toView:self.view];
+
+                                       }];
+                        
+                    }]];
+    
+    [VC addAction: [UIAlertAction actionWithTitle:@"取消"
+                                            style:(UIAlertActionStyleCancel)
+                                          handler:nil]];
+    
+    [self presentViewController:VC animated:YES completion:nil];
 }
 
 - (void)navRightBtnClick{
+    if (self.boardNameLabel.text.length == 0) {
+        [WBHUD showErrorMessage:@"给板子起个名字吧" toView:self.view];
+        return;
+    }
     
+    
+    [WBHUD showMessage:@"更新中..." toView:self.view];
+    [WBBoardManager editBoardInfoWithBoard:self.boardModel
+                              newBoardName:self.boardNameLabel.text
+                             newCoverImage:self.pickerImage
+                              successBlock:^
+    {
+        [WBHUD showSuccessMessage:@"修改成功" toView:self.view];
+        [self editBtnclick:self.editBtn];
+        
+    } failedBlock:^(NSString *message) {
+        [WBHUD showErrorMessage:message toView:self.view];
+    }];
     
     
 }

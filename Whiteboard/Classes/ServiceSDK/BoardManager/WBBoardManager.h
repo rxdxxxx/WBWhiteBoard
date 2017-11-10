@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+#define kWBBoardManagerDelete @"kWBBoardManagerDelete"
+#define kWBBoardManagerCreate @"kWBBoardManagerCreate"
+#define kWBBoardManagerUpdate @"kWBBoardManagerUpdate"
+
 @interface WBBoardManager : NSObject
 
 /**
@@ -71,4 +75,33 @@
 + (void)searchCurrentUserJoinBoard:(WBBoardModel *)boardModel
                       successBlock:(void (^)(BOOL isJoin))successBlock
                        failedBlock:(void (^)(NSString *message))failedBlock;
+
+
+#pragma mark - 退出板子
+/**
+ 退出板子
+
+ @param board 板子对象
+
+ */
++ (void)quitBoard:(WBBoardModel *)board
+   successBlock:(void (^)(void))successBlock
+    failedBlock:(void (^)(NSString *message))failedBlock;
+
+
+#pragma mark - 修改板子名称和封面
+
+
+/**
+ 修改封面或名称
+
+ @param board 被修改的板子
+ @param newName 板子新名称
+ @param coverImage 封面, 可以为 nil
+ */
++ (void)editBoardInfoWithBoard:(WBBoardModel *)board
+                  newBoardName:(NSString *)newName
+                 newCoverImage:(UIImage *)coverImage
+                  successBlock:(void (^)(void))successBlock
+                   failedBlock:(void (^)(NSString *message))failedBlock;
 @end

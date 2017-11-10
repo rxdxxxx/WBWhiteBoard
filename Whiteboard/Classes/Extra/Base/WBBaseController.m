@@ -14,7 +14,9 @@
 @end
 
 @implementation WBBaseController
-
+- (void)dealloc{
+    [WBNotificationCenter removeObserver:self];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

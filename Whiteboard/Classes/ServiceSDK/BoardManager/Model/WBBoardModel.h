@@ -15,4 +15,8 @@
 @property (nonatomic, copy) NSString *coverUrl;
 @property (nonatomic, copy) NSString *boardName;
 
+
+@property (nonatomic, copy) NSString *mapObjID;
+
+
 @end
