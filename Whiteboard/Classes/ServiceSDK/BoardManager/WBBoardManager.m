@@ -149,6 +149,7 @@
     [userModel setObject:board forKey:@"currentBlackboard"];
     [userModel saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if (succeeded) {
+            [WBNotificationCenter postNotificationName:kWBBoardManagerChangeUsingBoard object:nil];
             if (successBlock) {
                 successBlock();
             }

@@ -18,7 +18,8 @@
     }
 }
 
-
+#pragma mark - Subclass Methods
+#pragma mark - Public Methods
 
 + (void)changeUserHeaderWithImage:(UIImage *)image
                      successBlock:(void(^)(void))successBlock

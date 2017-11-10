@@ -40,14 +40,7 @@
     [self setupBoardUI];
     [self setupUI];
     [self editBtnMessage];
-    [WBBoardManager boardDetailWithObjectID:self.boardModel.objectId
-                               successBlock:^(WBBoardModel *boardModel)
-    {
-        
-    } failedBlock:^(NSString *message) {
-        
-    }];
-
+  
 }
 
 - (void)didReceiveMemoryWarning {
@@ -179,6 +172,7 @@
         return;
     }
     
+    [self.view endEditing:YES];
     
     [WBHUD showMessage:@"更新中..." toView:self.view];
     [WBBoardManager editBoardInfoWithBoard:self.boardModel

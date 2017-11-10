@@ -11,6 +11,7 @@
 #define kWBBoardManagerDelete @"kWBBoardManagerDelete"
 #define kWBBoardManagerCreate @"kWBBoardManagerCreate"
 #define kWBBoardManagerUpdate @"kWBBoardManagerUpdate"
+#define kWBBoardManagerChangeUsingBoard @"kWBBoardManagerChangeUsingBoard"
 
 @interface WBBoardManager : NSObject
 

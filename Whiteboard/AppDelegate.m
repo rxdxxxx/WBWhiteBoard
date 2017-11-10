@@ -16,7 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+
     [self avosRegister];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -26,7 +26,7 @@
     [self.window makeKeyAndVisible];
     
     
-    
+
     
     return YES;
 }
@@ -59,7 +59,12 @@
 }
 
 - (void)avosRegister{
-    
+
+#ifdef DEBUG
+#else
+    [AVOSCloud setAllLogsEnabled:false];
+#endif
+
     [WBBoardModel registerSubclass];
     [WBBoardMapUserModel registerSubclass];
     [WBUserModel registerSubclass];

@@ -67,6 +67,9 @@
                          toView:self.view];
         return;
     }
+
+    [self.view endEditing:YES];
+
     btn.userInteractionEnabled = NO;
 
     [WBMessageManager editMessageContentWithString:self.textView.text
@@ -90,7 +93,8 @@
                          toView:self.view];
         return;
     }
-    
+    [self.view endEditing:YES];
+
     btn.userInteractionEnabled = NO;
     [WBMessageManager createMessageWithContent:self.textView.text
                                   successBlock:^

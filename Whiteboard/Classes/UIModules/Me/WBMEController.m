@@ -38,7 +38,8 @@
     
     [WBNotificationCenter addObserver:self selector:@selector(userHeaderChangeNotification) name:kNotificationUserChangeHeaderImage object:nil];
     [WBNotificationCenter addObserver:self selector:@selector(userNameChangeNotification) name:kNotificationUserChangeUserName object:nil];
-
+    
+    [WBNotificationCenter addObserver:self selector:@selector(reloadTable) name:kWBBoardManagerChangeUsingBoard object:nil];
     
     WBUserModel *userModel = [WBUserModel currentUser];
     self.headerView.userNickLabel.text = userModel.displayName;
@@ -68,8 +69,13 @@
     WBMeMoreCell *cell = [WBMeMoreCell cellWithTableView:tableView];
     if (indexPath.row == 0) {
         cell.cellNameLabel.text = @"我的小白板";
+        // 2017年11月10日16:13:41 暂时拿不到current中的board信息
+        // NSString *coverUrl = WBUserModel.currentUser.currentBlackboard.coverUrl;
+        // [cell.currentUseingBoardImageView sd_setImageWithURL:[NSURL URLWithString:coverUrl] placeholderImage:kBoardHoldImage];
+        cell.currentUseingBoardImageView.image = nil;
     }else{
         cell.cellNameLabel.text = @"发现";
+        cell.currentUseingBoardImageView.image = nil;
     }
     return cell;
 }
@@ -129,6 +135,10 @@
     [self.headerView.userHeaderImageView sd_setImageWithURL:[NSURL URLWithString:userModel.avatarUrl] placeholderImage:kUserHeaderHoldImage];
 }
 #pragma mark -  Private Methods
+- (void)reloadTable{
+    [self.tableView reloadData];
+}
+
 #pragma mark -  Public Methods
 #pragma mark -  Getters and Setters
 

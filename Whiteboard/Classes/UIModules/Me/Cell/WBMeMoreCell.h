@@ -16,5 +16,6 @@
 
 
 @property (weak, nonatomic) IBOutlet UILabel *cellNameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *currentUseingBoardImageView;
 
 @end

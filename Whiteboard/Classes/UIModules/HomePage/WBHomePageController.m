@@ -23,13 +23,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self rr_initTitleView:@"小白板"];
+    
+    [self reloadTitleLabel];
+    [WBNotificationCenter addObserver:self selector:@selector(reloadTitleLabel) name:kWBBoardManagerChangeUsingBoard object:nil];
     
 
     [self.view addSubview:self.tableView];
     
 
 }
+
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -140,6 +143,19 @@
         [self.tableView reloadData];
 
     }];
+}
+
+
+- (void)reloadTitleLabel{
+//    2017年11月10日16:15:29 暂时拿不到board的数据
+//    WBUserModel *userModel = WBUserModel.currentUser;
+//    NSString *boardName = userModel.currentBlackboard.boardName;
+//    if (boardName.length) {
+//        [self rr_initTitleView:boardName];
+//    }else{
+//        [self rr_initTitleView:@"小白板"];
+//    }
+    [self rr_initTitleView:@"小白板"];
 }
 #pragma mark -  Public Methods
 #pragma mark -  Getters and Setters
