@@ -136,7 +136,7 @@
     
     // 修改属性
     [messageModel setObject:aNewString forKey:@"content"];
-    //[messageModel setObject:WBUserModel.currentUser forKey:@"updateUser"];
+    [messageModel setObject:WBUserModel.currentUser forKey:@"updateUser"];
     // 保存到云端
     [messageModel saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if (succeeded) {

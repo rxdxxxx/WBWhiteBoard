@@ -117,6 +117,9 @@
             [WBHUD showErrorMessage:message toView:self.view];
         }];
     }else{
+        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:result]];
+        
         [WBHUD showErrorMessage:@"这个不是我菜,换一个试试." toView:self.view];
     }
     

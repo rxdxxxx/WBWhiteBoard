@@ -28,6 +28,7 @@
     [WBNotificationCenter addObserver:self selector:@selector(loadData) name:kWBBoardManagerDelete object:nil];
     [WBNotificationCenter addObserver:self selector:@selector(loadData) name:kWBBoardManagerUpdate object:nil];
     [WBNotificationCenter addObserver:self selector:@selector(loadData) name:kWBBoardManagerCreate object:nil];
+    [WBNotificationCenter addObserver:self selector:@selector(loadData) name:kWBBoardManagerChangeUsingBoard object:nil];
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
