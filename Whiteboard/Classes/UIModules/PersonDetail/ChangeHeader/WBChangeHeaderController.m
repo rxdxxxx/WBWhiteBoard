@@ -45,7 +45,12 @@
 #pragma mark -  UITableViewDelegate
 #pragma mark -  CustomDelegate
 #pragma mark - WBSelectPhotoToolDelegate
+- (void)toolWillSelectImage:(WBSelectPhotoTool *)tool{
+    [WBHUD showMessage:@"处理中" toView:self.view];
+}
+
 - (void)tool:(WBSelectPhotoTool *)tool didSelectImage:(UIImage *)image{
+    [WBHUD hideForView:self.view];
     self.userHeaderImageView.image = image;
     self.pickerImage = image;
     self.saveBtn.enabled = YES;

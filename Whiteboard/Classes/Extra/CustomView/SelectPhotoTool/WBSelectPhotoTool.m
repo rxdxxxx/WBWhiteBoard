@@ -26,18 +26,23 @@
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     
-    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    image = [UIImage imageWithData:[UITools compressOriginalImage:image toMaxDataSizeKBytes:50]];
-    
-    dispatch_async(dispatch_get_main_queue(), ^(void) {
-        [self.showController dismissViewControllerAnimated:YES completion:nil];
+    __block UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [self.showController dismissViewControllerAnimated:YES completion:nil];
 
-        if ([self.delegate respondsToSelector:@selector(tool:didSelectImage:)]) {
-            [self.delegate tool:self didSelectImage:image];
-        }
-        
-    });
+    if ([self.delegate respondsToSelector:@selector(toolWillSelectImage:)]) {
+        [self.delegate toolWillSelectImage:self];
+    }
     
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
+        image = [UIImage imageWithData:[UITools compressOriginalImage:image toMaxDataSizeKBytes:50]];
+
+        
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            if ([self.delegate respondsToSelector:@selector(tool:didSelectImage:)]) {
+                [self.delegate tool:self didSelectImage:image];
+            }
+        });
+    });
 }
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {

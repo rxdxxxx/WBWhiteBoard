@@ -11,6 +11,8 @@
 
 @protocol WBSelectPhotoToolDelegate <NSObject>
 
+- (void)toolWillSelectImage:(WBSelectPhotoTool *)tool;
+
 - (void)tool:(WBSelectPhotoTool *)tool didSelectImage:(UIImage *)image;
 
 @end

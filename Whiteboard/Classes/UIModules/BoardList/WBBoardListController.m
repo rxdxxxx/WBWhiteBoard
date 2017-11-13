@@ -11,7 +11,7 @@
 #import "WBBoardAddController.h"
 #import "WBBoardDetailController.h"
 
-@interface WBBoardListController ()<UICollectionViewDelegate,UICollectionViewDataSource,WBTableEmptyViewDelegate>
+@interface WBBoardListController ()<UICollectionViewDelegate,UICollectionViewDataSource,WBTableEmptyViewDelegate,UIViewControllerPreviewingDelegate>
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @end
@@ -56,6 +56,15 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     WBBlackboardListItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(WBBlackboardListItemCell.class) forIndexPath:indexPath];
     cell.cellModel = self.dataArray[indexPath.row];
+    
+    if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable) {
+        NSLog(@"3D Touch  可用!");
+        //给cell注册3DTouch的peek（预览）和pop功能
+        __weak typeof(self)weakSelf = self;
+        [self registerForPreviewingWithDelegate:weakSelf sourceView:cell];
+    } else {
+        NSLog(@"3D Touch 无效");
+    }
     return cell;
 }
 
@@ -66,6 +75,31 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+
+#pragma mark - UIViewControllerPreviewingDelegate
+
+//peek(预览)
+- (nullable UIViewController *)previewingContext:(id <UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location
+{
+    //获取按压的cell所在行，[previewingContext sourceView]就是按压的那个视图
+    //NSIndexPath *indexPath = [self.collectionView indexPathForCell:(id)[previewingContext sourceView]];
+    
+    //设定预览的界面
+    WBBoardDetailController *childVC = [WBBoardDetailController new];
+    childVC.preferredContentSize = CGSizeMake(0.0f,500.0f);
+    
+    //调整不被虚化的范围，按压的那个cell不被虚化（轻轻按压时周边会被虚化，再少用力展示预览，再加力跳页至设定界面）
+    CGRect rect = CGRectMake(0, 0, self.view.frame.size.width,40);
+    previewingContext.sourceRect = rect;
+    
+    //返回预览界面
+    return childVC;
+}
+
+//pop（按用点力进入）
+- (void)previewingContext:(id <UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit {
+    [self showViewController:viewControllerToCommit sender:self];
+}
 
 #pragma mark -  CustomDelegate
 #pragma mark - WBTableEmptyViewDelegate
