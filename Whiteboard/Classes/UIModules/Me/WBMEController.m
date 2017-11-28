@@ -101,7 +101,7 @@
 #pragma mark -  CustomDelegate
 #pragma mark - QRScanDelegate
 - (void)qrScanResult:(NSString *)result viewController:(WBQRScanViewController *)qrScanVC{
-    [qrScanVC.navigationController popViewControllerAnimated:YES];
+    //[qrScanVC.navigationController popViewControllerAnimated:YES];
     
     if ([result hasPrefix:kQRCodePrefix]) {
         
@@ -117,10 +117,10 @@
             [WBHUD showErrorMessage:message toView:self.view];
         }];
     }else{
-        
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:result]];
-        
-        [WBHUD showErrorMessage:@"这个不是我菜,换一个试试." toView:self.view];
+
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:result]];
+//
+//        [WBHUD showErrorMessage:@"这个不是我菜,换一个试试." toView:self.view];
     }
     
 }

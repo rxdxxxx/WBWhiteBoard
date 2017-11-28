@@ -9,6 +9,7 @@
 #import "WBQRScanViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <ImageIO/ImageIO.h>
+#import "UIView+Toast.h"
 
 #define Width [UIScreen mainScreen].bounds.size.width
 #define Height [UIScreen mainScreen].bounds.size.height
@@ -90,6 +91,13 @@
     [self initScan];
     [_hud hide];
     _isFirstAppear = NO;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [super touchesBegan:touches withEvent:event];
+    
+    [self initScanLineView];
+    [_session startRunning];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -243,13 +251,21 @@
     return YES;
 }
 
+
+
+//计算rectOfInterest 注意x,y交换位置
 - (void)initScan
 {
     BOOL canInit = [self requestAuth];
     if (!canInit) {
         return;
     }
+    CGSize windowSize = [UIScreen mainScreen].bounds.size;
     
+    CGSize scanSize = CGSizeMake(windowSize.width*3/4, windowSize.width*3/4);
+    CGRect scanRect = CGRectMake((windowSize.width-scanSize.width)/2, (windowSize.height-scanSize.height)/2, scanSize.width, scanSize.height);
+    scanRect = CGRectMake(scanRect.origin.y/windowSize.height, scanRect.origin.x/windowSize.width, scanRect.size.height/windowSize.height,scanRect.size.width/windowSize.width);
+
     //获取摄像设备
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     
@@ -265,8 +281,10 @@
      3、举个例子如果我们想让扫描的处理区域是屏幕的下半部分，我们这样设置
      output.rectOfInterest = CGRectMake(0.5, 0, 0.5, 1);
      */
+
+    output.rectOfInterest = scanRect;//CGRectMake(0.1, 0.2, 0.5, 0.5);
+
     
-    output.rectOfInterest = CGRectMake(0.1, 0.2, 0.5, 0.5);
     //设置代理 在主线程里刷新
     [output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
     
@@ -289,7 +307,19 @@
     if ([_session canAddOutput:respondOutput]) [_session addOutput:respondOutput];
     
     //设置扫码支持的编码格式
-    output.metadataObjectTypes = @[AVMetadataObjectTypeQRCode, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code];
+    output.metadataObjectTypes = @[AVMetadataObjectTypeUPCECode,
+                                   AVMetadataObjectTypeCode39Code,
+                                   AVMetadataObjectTypeCode39Mod43Code,
+                                   AVMetadataObjectTypeEAN13Code,
+                                   AVMetadataObjectTypeEAN8Code,
+                                   AVMetadataObjectTypeCode93Code,
+                                   AVMetadataObjectTypeCode128Code,
+                                   AVMetadataObjectTypePDF417Code,
+                                   AVMetadataObjectTypeAztecCode,
+                                   AVMetadataObjectTypeInterleaved2of5Code,
+                                   AVMetadataObjectTypeITF14Code,
+                                   AVMetadataObjectTypeDataMatrixCode];
+
     
     _layer = [AVCaptureVideoPreviewLayer layerWithSession:_session];
     _layer.videoGravity = AVLayerVideoGravityResizeAspectFill;
@@ -324,7 +354,8 @@
         AVMetadataMachineReadableCodeObject *metaDataObject = [metadataObjects objectAtIndex:0];
         
         [self switchTorch:NO];
-        
+        [self.view makeToast:metaDataObject.stringValue];
+
         if ([self.delegate respondsToSelector:@selector(qrScanResult:viewController:)]) {
             [self.delegate performSelector:@selector(qrScanResult:viewController:) withObject:metaDataObject.stringValue withObject:self];
         }
